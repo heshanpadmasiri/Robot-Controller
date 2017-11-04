@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base.iml" group="openTCS-API-Base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_main.iml" group="openTCS-API-Base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_test.iml" group="openTCS-API-Base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection.iml" group="openTCS-API-Injection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_main.iml" group="openTCS-API-Injection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_test.iml" group="openTCS-API-Injection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback.iml" group="openTCS-CommAdapter-Loopback" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback_main.iml" group="openTCS-CommAdapter-Loopback" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-CommAdapter-Loopback/openTCS-CommAdapter-Loopback_test.iml" group="openTCS-CommAdapter-Loopback" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common.iml" group="openTCS-Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common_main.iml" group="openTCS-Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Common/openTCS-Common_test.iml" group="openTCS-Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation.iml" group="openTCS-Documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation_main.iml" group="openTCS-Documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Documentation/openTCS-Documentation_test.iml" group="openTCS-Documentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel.iml" group="openTCS-Kernel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_guiceConfig.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_guiceConfig.iml" group="openTCS-Kernel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_main.iml" group="openTCS-Kernel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Kernel/openTCS-Kernel_test.iml" group="openTCS-Kernel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview.iml" group="openTCS-PlantOverview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_guiceConfig.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_guiceConfig.iml" group="openTCS-PlantOverview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_main.iml" group="openTCS-PlantOverview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_test.iml" group="openTCS-PlantOverview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default.iml" group="openTCS-Strategies-Default" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default_main.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default_main.iml" group="openTCS-Strategies-Default" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default_test.iml" filepath="$PROJECT_DIR$/.idea/modules/openTCS-Strategies-Default/openTCS-Strategies-Default_test.iml" group="openTCS-Strategies-Default" />
+    </modules>
+  </component>
+</project>

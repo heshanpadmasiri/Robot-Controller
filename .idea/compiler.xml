@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="openTCS-API-Base_main" target="1.8" />
+      <module name="openTCS-API-Base_test" target="1.8" />
+      <module name="openTCS-API-Injection_main" target="1.8" />
+      <module name="openTCS-API-Injection_test" target="1.8" />
+      <module name="openTCS-CommAdapter-Loopback_main" target="1.8" />
+      <module name="openTCS-CommAdapter-Loopback_test" target="1.8" />
+      <module name="openTCS-Common_main" target="1.8" />
+      <module name="openTCS-Common_test" target="1.8" />
+      <module name="openTCS-Documentation_main" target="1.8" />
+      <module name="openTCS-Documentation_test" target="1.8" />
+      <module name="openTCS-Kernel_guiceConfig" target="1.8" />
+      <module name="openTCS-Kernel_main" target="1.8" />
+      <module name="openTCS-Kernel_test" target="1.8" />
+      <module name="openTCS-PlantOverview_guiceConfig" target="1.8" />
+      <module name="openTCS-PlantOverview_main" target="1.8" />
+      <module name="openTCS-PlantOverview_test" target="1.8" />
+      <module name="openTCS-Strategies-Default_main" target="1.8" />
+      <module name="openTCS-Strategies-Default_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.opentcs.thirdparty.jhotdraw:jhotdraw:7.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentcs.thirdparty.jhotdraw/jhotdraw/7.6/f2a47b4680e351b2bb2ba68700dcbebc06fd4bea/jhotdraw-7.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentcs.thirdparty.jhotdraw/jhotdraw/7.6/1ee87749fd185953abbb90c2ffa1f9db35aba952/jhotdraw-7.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
