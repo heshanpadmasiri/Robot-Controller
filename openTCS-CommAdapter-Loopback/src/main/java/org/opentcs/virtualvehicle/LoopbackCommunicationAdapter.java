@@ -76,6 +76,8 @@ public class LoopbackCommunicationAdapter
    * Whether the loopback adapter is initialized or not.
    */
   private boolean initialized;
+  
+  private SerialCommunication serialCommunication;
 
   /**
    * Creates a new instance.
@@ -97,7 +99,7 @@ public class LoopbackCommunicationAdapter
     this.vehicle = requireNonNull(vehicle, "vehicle");
     this.configuration = requireNonNull(configuration, "configuration");
     this.componentsFactory = requireNonNull(componentsFactory, "componentsFactory");
-    this.energyStorage = requireNonNull(energyStorage, "energyStorage");
+    this.energyStorage = requireNonNull(energyStorage, "energyStorage");    
   }
 
   @Override
@@ -114,7 +116,7 @@ public class LoopbackCommunicationAdapter
     }
 
     getProcessModel().setVehicleState(Vehicle.State.IDLE);
-
+    
     initialized = true;
   }
 
@@ -161,6 +163,11 @@ public class LoopbackCommunicationAdapter
     return (LoopbackVehicleModel) super.getProcessModel();
   }
 
+  public Vehicle getVehicle() {
+    return vehicle;
+  }  
+  
+
   @Override
   protected List<VehicleCommAdapterPanel> createAdapterPanels() {
     return Arrays.asList(componentsFactory.createPanel(this));
@@ -175,6 +182,12 @@ public class LoopbackCommunicationAdapter
       if(properties.get("side").equals("right")){
         left = false;
       }
+    }
+    byte[] message = {0,1,2,3,4,5,6};
+    try{
+     serialCommunication.sendMessage(this,message);
+    } catch(Exception ex){
+      LOG.debug("Unnable to send serial message!");
     }
     LOG.debug("left turn :" + left);
     // Reset the execution flag for single-step mode.
@@ -271,6 +284,13 @@ public class LoopbackCommunicationAdapter
 
   @Override
   protected synchronized void connectVehicle() {
+    try{
+      SerialCommunicationFactory serialCommunicationFactory;           
+      serialCommunicationFactory = new SerialCommunicationFactory(this);
+      this.serialCommunication = serialCommunicationFactory.getSerialCommunication();
+    }catch(Exception e){
+      System.out.println("Error!");
+    }
   }
 
   @Override
