@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:20:52" hostname="DESKTOP-UBTRRGA" time="0.094">
+  <properties/>
+  <testcase name="returnsNoActionForVehicleInParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.062"/>
+  <testcase name="returnsNullForUnavailableParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsNullforDontParkConfiguration" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
+  <testcase name="returnsNullForUnprocessableParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Nov 03, 2017 2:50:52 PM org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategy selectOrder
+WARNING: vehicle1: Did not find a suitable parking position.
+]]></system-err>
+</testsuite>

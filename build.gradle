@@ -2,8 +2,9 @@ buildscript {
   repositories {
     jcenter()
     maven {
-      url "https://plugins.gradle.org/m2/"
+      url "https://plugins.gradle.org/m2/"      
     }
+   
   }
   dependencies {
     // AsciiDoctor plugin(s)
@@ -18,6 +19,7 @@ buildscript {
     classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
     // Uses JApicmp to check binary compatibility with previous releases
     classpath 'me.champeau.gradle:japicmp-gradle-plugin:0.1.2'
+   
   }
 }
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.guing.components.properties.AnglePropertyTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:20:40" hostname="DESKTOP-UBTRRGA" time="2.26">
+  <properties/>
+  <testcase name="anglePropertyModulo" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="2.228"/>
+  <testcase name="anglePropertyEmtpy" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.032"/>
+  <testcase name="anglePropertyUnits" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyTest" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyUnknownUnit" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyNegativeValue" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyNoBlank" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyConversion" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

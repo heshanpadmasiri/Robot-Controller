@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:20:52" hostname="DESKTOP-UBTRRGA" time="0.016">
+  <properties/>
+  <testcase name="shouldReturnNoOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategyTest" time="0.0"/>
+  <testcase name="shouldReturnAvailableOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategyTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Nov 03, 2017 2:50:52 PM org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategy selectOrder
+INFO: driveOrders Optional[[]]
+]]></system-err>
+</testsuite>

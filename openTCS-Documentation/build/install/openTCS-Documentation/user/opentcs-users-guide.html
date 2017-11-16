@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="author" content="The openTCS developers">
+<title>openTCS: User&#8217;s Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+body{-webkit-font-smoothing:antialiased}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>openTCS: User&#8217;s Guide</h1>
+<div class="details">
+<span id="author" class="author">The openTCS developers</span><br>
+<span id="email" class="email"><a href="mailto:info@opentcs.org">info@opentcs.org</a></span><br>
+<span id="revdate">openTCS 4.7.0-SNAPSHOT</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_purpose_of_the_software">1.1. Purpose of the software</a></li>
+<li><a href="#_system_requirements">1.2. System requirements</a></li>
+<li><a href="#_further_documentation">1.3. Further documentation</a></li>
+<li><a href="#_questions_and_problem_reports">1.4. Questions and problem reports</a></li>
+</ul>
+</li>
+<li><a href="#_system_overview">2. System overview</a>
+<ul class="sectlevel2">
+<li><a href="#_system_components_and_structure">2.1. System components and structure</a></li>
+<li><a href="#_elements_of_plant_models">2.2. Elements of plant models</a>
+<ul class="sectlevel3">
+<li><a href="#_layout_coordinates_vs_model_coordinates">2.2.1. Layout coordinates vs model coordinates</a></li>
+<li><a href="#_generic_element_properties">2.2.2. Generic element properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_operating_the_system">3. Operating the system</a>
+<ul class="sectlevel2">
+<li><a href="#_starting_the_system">3.1. Starting the system</a>
+<ul class="sectlevel3">
+<li><a href="#_starting_in_modelling_mode">3.1.1. Starting in modelling mode</a></li>
+<li><a href="#_starting_in_plant_operation_mode">3.1.2. Starting in plant operation mode</a></li>
+</ul>
+</li>
+<li><a href="#_constructing_a_new_plant_model">3.2. Constructing a new plant model</a>
+<ul class="sectlevel3">
+<li><a href="#_starting_components_for_plant_modelling">3.2.1. Starting components for plant modelling</a></li>
+<li><a href="#_adding_elements_to_the_plant_model">3.2.2. Adding elements to the plant model</a></li>
+<li><a href="#_saving_the_plant_model">3.2.3. Saving the plant model</a></li>
+</ul>
+</li>
+<li><a href="#_operating_the_system_2">3.3. Operating the system</a>
+<ul class="sectlevel3">
+<li><a href="#_starting_components_for_system_operation">3.3.1. Starting components for system operation</a></li>
+<li><a href="#_configuring_vehicle_drivers">3.3.2. Configuring vehicle drivers</a></li>
+<li><a href="#_creating_a_transport_order">3.3.3. Creating a transport order</a></li>
+<li><a href="#_withdrawing_transport_orders_using_the_plant_overview_client">3.3.4. Withdrawing transport orders using the plant overview client</a></li>
+<li><a href="#_continuous_creation_of_transport_orders">3.3.5. Continuous creation of transport orders</a></li>
+<li><a href="#_statistics_reports_about_transport_orders_and_vehicles">3.3.6. Statistics reports about transport orders and vehicles</a></li>
+<li><a href="#_removing_a_vehicle_from_a_running_system">3.3.7. Removing a vehicle from a running system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_default_strategies">4. Default strategies</a>
+<ul class="sectlevel2">
+<li><a href="#_default_dispatcher">4.1. Default dispatcher</a></li>
+<li><a href="#_default_router">4.2. Default router</a></li>
+<li><a href="#_default_scheduler">4.3. Default scheduler</a></li>
+</ul>
+</li>
+<li><a href="#_configuring_opentcs">5. Configuring openTCS</a>
+<ul class="sectlevel2">
+<li><a href="#_kernel_configuration">5.1. Kernel configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_kernel_application_configuration_entries">5.1.1. Kernel application configuration entries</a></li>
+<li><a href="#_control_center_configuration_entries">5.1.2. Control center configuration entries</a></li>
+<li><a href="#_order_pool_configuration_entries">5.1.3. Order pool configuration entries</a></li>
+<li><a href="#_vehicle_communication_configuration_entries">5.1.4. Vehicle communication configuration entries</a></li>
+<li><a href="#_default_dispatcher_configuration_entries">5.1.5. Default dispatcher configuration entries</a></li>
+<li><a href="#_default_router_configuration_entries">5.1.6. Default router configuration entries</a></li>
+<li><a href="#_rmi_kernel_interface_configuration_entries">5.1.7. RMI kernel interface configuration entries</a></li>
+<li><a href="#_xml_host_interface_configuration_entries">5.1.8. XML host interface configuration entries</a></li>
+<li><a href="#_virtual_vehicle_configuration_entries">5.1.9. Virtual vehicle configuration entries</a></li>
+</ul>
+</li>
+<li><a href="#_plant_overview_configuration">5.2. Plant Overview configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_plant_overview_application_configuration_entries">5.2.1. Plant Overview application configuration entries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_advanced_usage_examples">6. Advanced usage examples</a>
+<ul class="sectlevel2">
+<li><a href="#_configuring_automatic_startup">6.1. Configuring automatic startup</a></li>
+<li><a href="#_automatically_selecting_a_specific_vehicle_driver_on_startup">6.2. Automatically selecting a specific vehicle driver on startup</a></li>
+<li><a href="#_initializing_a_virtual_vehicle_s_position_automatically_on_startup">6.3. Initializing a virtual vehicle&#8217;s position automatically on startup</a></li>
+<li><a href="#_running_kernel_and_plant_overview_on_separate_systems">6.4. Running kernel and plant overview on separate systems</a></li>
+<li><a href="#_configuring_automatic_parking_and_recharging">6.5. Configuring automatic parking and recharging</a></li>
+<li><a href="#_selecting_the_cost_factors_used_for_routing">6.6. Selecting the cost factors used for routing</a></li>
+<li><a href="#_configuring_order_pool_cleanup">6.7. Configuring order pool cleanup</a></li>
+<li><a href="#_using_model_element_properties_for_project_specific_data">6.8. Using model element properties for project-specific data</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_introduction">1. Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_purpose_of_the_software">1.1. Purpose of the software</h3>
+<div class="paragraph">
+<p>openTCS is a control system software for (fleets of) automatic vehicles.
+It was primarily developed for the coordination of automated guided vehicles (AGV), but it is generally conceivable to use it with other automatic vehicles like mobile robots or quadrocopters, as openTCS controls the vehicles independent of their specific characteristics like track guidance system or load handling device.
+This is achieved by integrating vehicles into the system via pluggable drivers, similar to device drivers in operating systems.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_system_requirements">1.2. System requirements</h3>
+<div class="paragraph">
+<p>To run openTCS, a Java Runtime Environment (JRE) version 1.8 or later is required. (The directory <code>bin</code> of the installed JRE, for example <code>C:/Program Files/Java/jre1.8.0/bin</code>, should be included in the enviroment variable PATH to be able to use the included start scripts.)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_further_documentation">1.3. Further documentation</h3>
+<div class="paragraph">
+<p>If you intend to extend and customize openTCS, please also see the Developer&#8217;s Guide and the JavaDoc documentation that is part of the openTCS distribution.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_questions_and_problem_reports">1.4. Questions and problem reports</h3>
+<div class="paragraph">
+<p>If you have questions about this manual, the openTCS project or about using or extending openTCS, please contact the development team by using the discussion forums at <a href="http://sourceforge.net/projects/opentcs/" class="bare">http://sourceforge.net/projects/opentcs/</a> or by sending an e-mail to <a href="mailto:info@opentcs.org">info@opentcs.org</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you encounter technical problems using openTCS, please remember to include enough data in your problem report to help the developers help you, e.g.:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The applications' log files, contained in the subdirectory <code>log/</code> of both the kernel and the plant overview application</p>
+</li>
+<li>
+<p>The plant model you are working with, contained in the subdirectory <code>data/</code> of the kernel and/or plant overview application</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_system_overview">2. System overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_system_components_and_structure">2.1. System components and structure</h3>
+<div class="paragraph">
+<p>openTCS consists of the following components running as separate processes and working together in a client-server architecture:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kernel (server process), running vehicle-independent strategies and drivers for controlled vehicles</p>
+</li>
+<li>
+<p>Clients</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Plant overview for modelling and visualizing the plant model</p>
+</li>
+<li>
+<p>Arbitrary clients for comunicating with other systems, e.g. for process control or warehouse management</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/opentcs_system_arch.png" alt="opentcs system arch">
+</div>
+<div class="title">Figure 1. The architecture of openTCS</div>
+</div>
+<div class="paragraph">
+<p>The purpose of the openTCS kernel is to provide an abstract driving model of a transportation system/plant, to manage transport orders and to compute routes for the vehicles.
+Clients can communicate with this server process to, for instance, modify the plant model, to visualize the driving course and the processing of transport orders and to create new transport orders.
+For user interaction, the kernel provides a graphical user interface titled Kernel Control Center.</p>
+</div>
+<div class="paragraph">
+<p>Three major strategy modules within the kernel implement processing of transport orders:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A dispatcher that decides which transport order should be processed by which vehicle.
+Additionally, it needs to decide what vehicles should do in certain situation, e.g. when there aren&#8217;t any transport orders or when a vehicle is running low on energy.</p>
+</li>
+<li>
+<p>A router which finds optimal routes for vehicles to reach their destinations.</p>
+</li>
+<li>
+<p>A scheduler that manages resource allocations for traffic management, i.e. to avoid vehicles crashing into each other.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The openTCS distribution comes with default implementations for each of these strategies.
+These implementations can be easily replaced by a developer to adapt to environment-specific requirements.</p>
+</div>
+<div class="paragraph">
+<p>The driver framework that is part of the openTCS kernel manages communication channels and associates vehicle drivers with vehicles.
+A vehicle driver is an adapter between kernel and vehicle and translates each vehicle-specific communication protocol to the kernel&#8217;s internal communication schemes and vice versa.
+Furthermore, a driver may offer low-level functionality to the user via the kernel&#8217;s graphical user interface, e.g. manually sending telegrams to the associated vehicle.
+By using suitable vehicle drivers, vehicles of different types can be managed simultaneously by a single openTCS instance.</p>
+</div>
+<div class="paragraph">
+<p>The plant overview client that is part of the openTCS distribution allows editing of plant models, which can be loaded into the kernel.
+This includes, for instance, the definition of load-change stations, driving tracks and vehicles.
+In the kernel&#8217;s plant operation mode, the plant overview client is used to display the transportation system&#8217;s general state and any active transport processes, and to create new transport orders interactively.</p>
+</div>
+<div class="paragraph">
+<p>Other clients, e.g. to control higher-level plant processes, can be implemented and attached.
+For Java clients, the openTCS kernel provides an interface based on Java RMI (Remote Method Invocation).
+A host interface for creating transport orders using XML telegrams sent via TCP/IP connections is also available.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_elements_of_plant_models">2.2. Elements of plant models</h3>
+<div class="paragraph">
+<p>In openTCS, a plant model consists of the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Points</em> are logical mappings of discrete positions reported by a vehicle.
+In plant operation mode, vehicles move from one point to another in the model.
+A point can have one of the following types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Halt position:
+Indicates a position at which a vehicle may halt temporarily, e.g. for executing an operation.
+The vehicle is also expected to report in when it arrives at such a position.
+It may not park here for longer than necessary, though.
+Halt position is the default type for points when modelling with the plant overview client.</p>
+</li>
+<li>
+<p>Reporting position:
+Indicates a position at which a vehicle is expected to report in.
+Halting or even parking at such a position is not allowed.
+Therefore a route that only consists of reporting points will be unroutable because the vehicle is not able to halt at any position.</p>
+</li>
+<li>
+<p>Park position:
+Indicates a position at which a vehicle may halt for longer periods of time when it is not processing orders.
+The vehicle is also expected to report in when it arrives at such a position.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>Paths</em> are connections between points that are navigable for vehicles.</p>
+</li>
+<li>
+<p><em>Locations</em> are places at which vehicles may execute special operations (change their load, charge their battery etc.).
+To be reachable for any vehicle in the model, a location needs to be linked to at least one point.</p>
+</li>
+<li>
+<p><em>Vehicles</em> map real vehicles for the purpose of visualizing their positions and other characteristics.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Furthermore, there is an abstract element that is only used indirectly:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Location types</em> group stations and define operations that can be executed by vehicles at these stations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The attributes of these elements that are relevant for the driving course model, e.g. the coordinates of a point or the length of a path, can be edited using the plant overview client.</p>
+</div>
+<div class="sect3">
+<h4 id="_layout_coordinates_vs_model_coordinates">2.2.1. Layout coordinates vs model coordinates</h4>
+<div class="paragraph">
+<p>A point has two sets of coordinates: layout coordinates and model coordinates.
+The layout coordinates are merely intended for the graphical presentation in the plant overview client, while the model coordinates are data that a vehicle driver could potentially use or send to the vehicle it communicates with (e.g. if the vehicle needs the exact coordinates of a destination point for navigation).
+Both coordinate sets are not tied to each other per se, i.e. they may differ.
+This is to allow coordinates that the system works with internally to be different from the presentation; for example, you may want to provide a distorted view on the driving course simply because some paths in your plant are very long and you mainly want to view all points/locations closely
+together.
+Dragging points and therefore changing their position in the graphical presentation only affects the corresponding layout coordinates.</p>
+</div>
+<div class="paragraph">
+<p>To synchronize the layout coordinates with the model coordinates or the other way around you have two options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <span class="menuseq"><span class="menu">Actions</span>&#160;&#9656; <span class="menuitem">Copy model values to layout</span></span> or <span class="menuseq"><span class="menu">Actions</span>&#160;&#9656; <span class="menuitem">Copy layout values to model</span></span> to synchronize them globally.</p>
+</li>
+<li>
+<p>Select a single layout element, right click it and select <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Copy model values to layout</span></span> or <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Copy layout values to model</span></span> to synchronize them only for the selected element.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_generic_element_properties">2.2.2. Generic element properties</h4>
+<div class="paragraph">
+<p>Furthermore, it is possible to define arbitrary additional attributes as key-value pairs for all driving course elements, which for example can be read and evaluated by vehicle drivers or client software.
+Both the key and the value can be arbitrary character strings.
+For example, a key-value pair <code>"IP address"</code>:<code>"192.168.23.42"</code> could be defined for a vehicle in the model, stating which IP address is to be used to communicate with the vehicle; a vehicle driver could now check during runtime whether a value for the key <code>"IP address"</code> was defined, and if yes, use it to automatically configure the communication channel to the vehicle.
+Another use for these generic attributes can be vehicle-specific actions to be executed on certain paths in the model.
+If a vehicle should, for instance, issue an acoustic warning and/or turn on the right-hand direction indicator when currently on a certain path,
+attributes with the keys <code>"acoustic warning"</code> and/or <code>"right-hand direction indicator"</code> could be defined for this path and evaluated by the respective vehicle driver.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_operating_the_system">3. Operating the system</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_starting_the_system">3.1. Starting the system</h3>
+<div class="paragraph">
+<p>To create or to edit the plant model of a transport system, the openTCS Plant Overview application has to be started in modelling mode.
+To use it as a transportation control system based on an existing plant model, it has to be started in plant operation mode.
+Starting a component is done by executing the respective Unix shell script (<code>*.sh</code>) or Windows batch file (<code>*.bat</code>).
+By manipulating the script and adding <code>-Dopentcs.initialmode=</code> followed by <code>operating</code> or <code>modelling</code> you can automatically start in the specific mode.</p>
+</div>
+<div class="sect3">
+<h4 id="_starting_in_modelling_mode">3.1.1. Starting in modelling mode</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the plant overview client (<code>startPlantOverview.bat/.sh</code>) and select 'Modelling mode'.</p>
+</li>
+<li>
+<p>The plant overview will start with a new, empty model, but you can also load a model from a file (<span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Load Model</span></span>) or the current kernel model (<span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Load current kernel model</span></span>).
+The latter option requires a running kernel that the Plant Overview client can connect to and that has loaded an existing plant model.</p>
+</li>
+<li>
+<p>Use the graphical user interface of the plant overview client to create an arbitrary driving course for your respective application/project.
+How you can add elements like points, paths and vehicles to your driving course is explained in detail in <a href="#_constructing_a_new_plant_model">Constructing a new plant model</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_starting_in_plant_operation_mode">3.1.2. Starting in plant operation mode</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshot_plant_overview.png" alt="screenshot plant overview">
+</div>
+<div class="title">Figure 2. Plant overview client displaying plant model</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the kernel (<code>startKernel.bat/.sh</code>).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select the saved model and plant operation mode in the dialog window shown and click OK.</p>
+<div class="paragraph">
+<p>If this is your first time running the kernel, you need to persist the current plant model first.
+Start the kernel with an empty model instead and select <span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Persist model in the kernel</span></span> in the plant overview (also see &lt;&lt;Saving the plant model).</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Start the plant overview client (<code>startPlantOverview.bat/.sh</code>) and select 'Operating mode'.</p>
+</li>
+<li>
+<p>Select the tab <b class="button">Vehicle drivers</b> in the kernel control center.
+Then select, configure and start driver for each vehicle in the model.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The list on the left-hand side of the window shows all vehicles in the chosen model.</p>
+</li>
+<li>
+<p>A detailed view for a vehicle can be seen on the right-hand side of the driver panel after double-clicking on the vehicle in the list.
+The specific design of this detailed view depends on the driver associated with the vehicle.
+Usually, status information sent by the vehicle (e.g. current position and mode of operation) is displayed and low-level settings (e.g. for the vehicle&#8217;s IP address) are provided here.</p>
+</li>
+<li>
+<p>Right-clicking on the list of vehicles shows a popup menu that allows to attach or detach drivers for selected vehicles.</p>
+</li>
+<li>
+<p>For a vehicle to be controlled by the system, a driver needs to be attached to the vehicle and enabled.
+(For testing purposes without real vehicles that could communicate with the system, the so-called loopback driver can be used, which provides a virtual vehicle or simulates a real one.)
+How you attach and enable a vehicle driver is explained in detail in <a href="#_configuring_vehicle_drivers">Configuring vehicle drivers</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshot_driver_panel.png" alt="screenshot driver panel">
+</div>
+<div class="title">Figure 3. Driver panel with detailed view of a vehicle</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constructing_a_new_plant_model">3.2. Constructing a new plant model</h3>
+<div class="paragraph">
+<p>These instructions roughly show how a new plant model is created and filled with driving course elements so that it can eventually be used in plant operation mode.</p>
+</div>
+<div class="sect3">
+<h4 id="_starting_components_for_plant_modelling">3.2.1. Starting components for plant modelling</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the plant overview client (<code>startPlantOverview.bat/.sh</code>) and select 'Modelling mode'.</p>
+</li>
+<li>
+<p>Wait until the graphical user interface of the plant overview client is shown.</p>
+</li>
+<li>
+<p>You can now add driving course components to the empty model. Whenever you want to start over, select <span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">New Model</span></span> from the main menu.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_elements_to_the_plant_model">3.2.2. Adding elements to the plant model</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/screenshot_modelling.png" alt="screenshot modelling">
+</div>
+<div class="title">Figure 4. Control elements in the plant overview client (modelling mode)</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create three points by selecting the point tool from the driving course elements toolbar (see red frame in the screenshot above) and click on three positions on the drawing area.</p>
+</li>
+<li>
+<p>Link the three points with paths to a closed loop by</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>selecting the path tool by double-click.</p>
+</li>
+<li>
+<p>clicking on a point, dragging the path to the next point and releasing the mouse button there.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create two locations by double-clicking the location tool and clicking on any two free positions on the drawing area.
+As a location type does not yet exist in the plant model, a new one is created implicitly when creating the first location, which can be seen in the tree view to the left of the drawing area.</p>
+</li>
+<li>
+<p>Link the two locations with (different) points by</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>double-clicking on the link tool.</p>
+</li>
+<li>
+<p>clicking on a location, dragging the link to a point and releasing the mouse button.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a new vehicle by clicking on the vehicle button in the course elements toolbar.</p>
+</li>
+<li>
+<p>Define the allowed operations for vehicles at the newly created locations by</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>selecting the locations' type in the tree view to the left of the drawing area (see blue frame in the screenshot above).</p>
+</li>
+<li>
+<p>clicking the value cell labelled <code>"Actions"</code> in the property window below the tree view.</p>
+</li>
+<li>
+<p>entering the allowed locations as arbitrary text in the dialog shown, for instance <code>"Load cargo"</code> and <code>"Unload cargo"</code>.</p>
+</li>
+<li>
+<p>Optionally, you can choose a symbol for locations of the selected type by editing the property <code>"Symbol"</code>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+You will not be able to create any transport orders and assign them to vehicles unless you create locations in your plant model, link these locations to points in the driving course and define the operations that vehicles may execute with the respective location types.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_saving_the_plant_model">3.2.3. Saving the plant model</h4>
+<div class="paragraph">
+<p>You have two options to save the model: on your local hard drive or in a running kernel instance the plant overview is connected to.</p>
+</div>
+<div class="sect4">
+<h5 id="_saving_the_model_locally">3.2.3.1. Saving the model locally</h5>
+<div class="paragraph">
+<p>Select <span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Save Model</span></span> or <span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Save Model As&#8230;&#8203;</span></span> and enter an arbitrary name for the model.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_persisting_the_model_in_a_running_kernel">3.2.3.2. Persisting the model in a running kernel</h5>
+<div class="paragraph">
+<p>Select <span class="menuseq"><span class="menu">File</span>&#160;&#9656; <span class="menuitem">Persist model in the kernel</span></span> and your model will be persisted in the kernel, letting you switch to the operating mode.
+This, though, requires you to save it locally first.
+Note that the model that was previously persisted in the kernel will be replaced, as the kernel can only keep a single model at a time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_operating_the_system_2">3.3. Operating the system</h3>
+<div class="paragraph">
+<p>These instructions explain how the newly created model that was persisted in the kernel can be used in plant operation mode, how vehicle drivers are used and how transport orders can be created and processed by a vehicle.</p>
+</div>
+<div class="sect3">
+<h4 id="_starting_components_for_system_operation">3.3.1. Starting components for system operation</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the kernel (<code>startKernel.bat/.sh</code>).</p>
+</li>
+<li>
+<p>Wait until the dialog for selecting a plant model is shown.</p>
+</li>
+<li>
+<p>Select the saved model you created, select plant operation mode, and click <b class="button">OK</b>.</p>
+</li>
+<li>
+<p>Start the plant overview client (<code>startPlantOverview.bat/.sh</code>), select 'Operating mode' and wait until its graphical user interface is shown.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuring_vehicle_drivers">3.3.2. Configuring vehicle drivers</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Switch to the kernel control center window.</p>
+</li>
+<li>
+<p>Associate the vehicle with the loopback driver by right-clicking on the vehicle in the vehicle list of the driver panel and selecting the menu entry <span class="menuseq"><span class="menu">Driver</span>&#160;&#9656; <span class="menuitem">Loopback adapter (virtual vehicle)</span></span>.</p>
+</li>
+<li>
+<p>Open the detailed view of the vehicle by double-clicking on the vehicle&#8217;s name in the list.</p>
+</li>
+<li>
+<p>In the detailed view of the vehicle that is now shown to the right of the vehicle list, select the tab <b class="button">Loopback options</b>.</p>
+</li>
+<li>
+<p>Enable the driver by ticking the checkbox <b class="button">Enable loopback adapter</b> in the <b class="button">Loopback options</b> tab or the checkbox in the <b class="button">Enabled?</b> column of the vehicle list.</p>
+</li>
+<li>
+<p>In the loopback options tab or in the vehicles list, select a point from the plant model to have the loopback adapter report this point to the kernel as the (virtual) vehicle&#8217;s current position.
+(In a real-world application, a vehicle driver communicating with a real vehicle would automatically report the vehicle&#8217;s current position to the kernel as soon as it is known.)</p>
+</li>
+<li>
+<p>In the vehicle driver&#8217;s loopback options tab, set the vehicle&#8217;s state to <code>IDLE</code> to let the kernel know that the vehicle is now in a state that allows it to receive and process orders.</p>
+</li>
+<li>
+<p>Switch to the plant overview client.
+An icon representing the vehicle should now be shown at the point on which you placed it using the loopback driver.</p>
+</li>
+<li>
+<p>Right-click on the vehicle and select <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Dispatch Vehicle</span></span> to allow the kernel to dispatch the vehicle.
+The vehicle is then available for processing orders, which is indicated by a processing state <code>IDLE</code> in the property panel at the bottom left of the plant overview client&#8217;s window.
+(You can revert this by right-clicking on the vehicle and selecting <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Withdraw TO and Disable Vehicle</span></span> in the context menu.
+The processing state shown is now <code>UNAVAILABLE</code> and the vehicle will not be dispatched for transport orders any more.)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_a_transport_order">3.3.3. Creating a transport order</h4>
+<div class="paragraph">
+<p>To create a transport order, the plant overview client provides a dialog window presented when selecting <span class="menuseq"><span class="menu">Actions</span>&#160;&#9656; <span class="menuitem">Transport Order</span></span> in the menu.
+Transport orders are defined as a sequence of destination locations at which actions are to be performed by the vehicle processing the order.
+You can select a destination location and action from a dropdown menu.
+You may also optionally select the vehicle intended to process this order.
+If none is explicitly selected, the control system automatically assigns the order to a vehicle according to its internal strategies - with the default strategy, it will pick the vehicle that will most likely finish the transport order the soonest.
+Furthermore, a transport order can be given a deadline specifying the point of time at which the order should be finished at the latest.
+This deadline will primarily be considered when there are multiple transport orders in the pool and openTCS needs to decide which to assign next.</p>
+</div>
+<div class="paragraph">
+<p>To create a new transport order, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the menu entry <span class="menuseq"><span class="menu">Actions</span>&#160;&#9656; <span class="menuitem">Transport Order</span></span>.</p>
+</li>
+<li>
+<p>In the dialog shown, click the <b class="button">Add</b> button and select a location as the destination and an operation which the vehicle should perform there.
+You can add an arbitrary number of destinations to the order this way.
+They will be processed in the given order.</p>
+</li>
+<li>
+<p>After creating the transport order with the given destinations by clicking <b class="button">OK</b>, the kernel will check for a vehicle that can process the order.
+If a vehicle is found, it is assigned the order immediately and the route computed for it will be highlighted in the plant overview client.
+The loopback driver simulates the vehicle&#8217;s movement to the destinations and the execution of the operations.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_withdrawing_transport_orders_using_the_plant_overview_client">3.3.4. Withdrawing transport orders using the plant overview client</h4>
+<div class="paragraph">
+<p>A transport order can be withdrawn from a vehicle that is currently processing it.
+This can be done by right-clicking on the respective vehicle in the plant overview client and selecting <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Withdraw Transport Order</span></span>.
+The processing of the order will be cancelled and the vehicle (driver) will not receive any further drive orders.
+Processing of this transport order <em>cannot</em> be resumed later.
+Instead, a new transport order will have to be created.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_continuous_creation_of_transport_orders">3.3.5. Continuous creation of transport orders</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The plant overview client can easily be extended via custom plugins.
+As a reference, a simple load generator plugin is included which also serves as a demonstration of how the system looks like during operation here.
+Details about how custom plugins can be created and integrated into the plant overview client can be found in the developer&#8217;s guide.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the plant overview client, select <span class="menuseq"><span class="menu">View</span>&#160;&#9656; <span class="submenu">Plugins</span>&#160;&#9656; <span class="menuitem">Continuous load</span></span> from the menu.</p>
+</li>
+<li>
+<p>Choose a trigger for creating new transport orders:
+New orders will either be created once only, or if the number of active orders in the system drops below a specified limit, or after a specified timeout has expired.</p>
+</li>
+<li>
+<p>By using an order profile you may decide if the transport orders&#8217; destinations should be chosen randomly or if you want to choose them yourself.</p>
+<div class="paragraph">
+<p>Using <b class="button">Create orders randomly</b>, you define the number of transport orders that are to be generated at a time, and the number of destinations a single transport order should contain.
+Since the destinations will be selected randomly, the orders created might not necessarily make sense for a real-world system.</p>
+</div>
+<div class="paragraph">
+<p>Using <b class="button">Create orders according to definition</b>, you can define an arbitrary number of transport orders, each with an arbitrary number of destinations and properties, and save and load your list of transport orders.</p>
+</div>
+</li>
+<li>
+<p>Start the order generator by activating the corresponding checkbox at the bottom of the <b class="button">Continuous load</b> panel.
+The load generator will then generate transport orders according to its configuration until the checkbox is deactivated or the panel is closed.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statistics_reports_about_transport_orders_and_vehicles">3.3.6. Statistics reports about transport orders and vehicles</h4>
+<div class="paragraph">
+<p>While running in plant operation mode, the openTCS kernel collects data about processed, finished and failed transport orders as well as busy and idle vehicles.
+It writes this data to log files in the <code>log/statistics/</code> subdirectory.
+To see a basic statistics report for the order processing in a plant operation session, you can use another plugin for the plant overview client that comes with the openTCS distribution:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the plant overview client, select <span class="menuseq"><span class="menu">View</span>&#160;&#9656; <span class="submenu">Plugins</span>&#160;&#9656; <span class="menuitem">Statistics</span></span> from the menu.</p>
+</li>
+<li>
+<p>Click the <b class="button">Read input file</b> button and select a log file from <code>log/statistics/</code> in the kernel application&#8217;s directory.</p>
+</li>
+<li>
+<p>The panel will then show an accumulation of the data collected in the statistics log file you opened.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As the steps above should indicate, the statistics plugin currently does not provide a live view on statistical data in a running plant operation session.
+The report is an offline report that can be generated only after a plant operation session has ended.
+Future versions of openTCS may include a live report plugin that collects data directly from the openTCS kernel instead of reading the data from a log file.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_removing_a_vehicle_from_a_running_system">3.3.7. Removing a vehicle from a running system</h4>
+<div class="paragraph">
+<p>There may be situations in which you want to remove a single vehicle from a system, e.g. because the vehicle temporarily cannot be controlled by openTCS due to a hardware defect that has to be dealt with first.
+The following steps will ensure that no further transport orders are assigned to the vehicle and that the resources it might still be occupying are freed for use by other vehicles.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the plant overview client, right-click on the vehicle and select <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Withdraw TO and Disable Vehicle</span></span> to disable the vehicle for transport order processing.</p>
+</li>
+<li>
+<p>In the kernel control center, disable the vehicle&#8217;s driver by unticking the checkbox <b class="button">Enable loopback adapter</b> in the <b class="button">Loopback options</b> tab or the checkbox in the <b class="button">Enabled?</b> column of the vehicle list.</p>
+</li>
+<li>
+<p>In the kernel control center, right-click on the vehicle in the vehicle list and select <span class="menuseq"><span class="menu">Context menu</span>&#160;&#9656; <span class="menuitem">Reset vehicle position</span></span> to free the point in the driving course that the vehicle is occupying.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_strategies">4. Default strategies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>openTCS comes with a default implementation for each of the strategy modules.
+These implementations can easily be replaced to adapt to project-specific requirements.
+(See developer&#8217;s guide.)</p>
+</div>
+<div class="sect2">
+<h3 id="_default_dispatcher">4.1. Default dispatcher</h3>
+<div class="paragraph">
+<p>When a transport order becomes dispatchable, the dispatcher needs to decide which vehicle should process it.
+To make this decision, the default dispatcher takes the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The default dispatcher checks which vehicles are available and not currently processing a transport order.
+If there are no such vehicles, the incoming transport order is postponed without a vehicle assignment.</p>
+</li>
+<li>
+<p>The default dispatcher requests the potential routes from the router for all vehicle candidates in case they were selected for the incoming transport order.
+If no viable route is available for any of the vehicles, the incoming transport order is postponed without a vehicle assignment.</p>
+</li>
+<li>
+<p>From all vehicles with viable routes, the one with the lowest routing costs is assigned to the incoming transport order.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When a vehicle becomes available, the dispatcher needs to decide which transport order it should process.
+To make this decision, the default dispatcher takes the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If the vehicle&#8217;s energy level is not <em>critical</em> and transport orders are available, the default dispatcher will select the most urgent one (according to its deadline) for which a route can be computed.</p>
+</li>
+<li>
+<p>If the vehicle&#8217;s energy level is <em>degraded</em> and automatic recharging is enabled, an order is created for the vehicle to recharge at a recharging location.</p>
+</li>
+<li>
+<p>If the vehicle is not currently at a parking position and there are unoccupied parking positions, an order is created for the vehicle to move to one of them.</p>
+</li>
+<li>
+<p>If none of the previous steps assigned an order to the vehicle, it is left at its current position.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When sending a vehicle to a recharge location or parking position, the closest (according to the router) unoccupied position is selected by default.
+It is possible to assign fixed positions to vehicles instead, by setting properties with the following keys on them:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tcs:preferredParkingPosition</code>:
+Expected to be the name of a point in the model.
+If this point is already occupied, the closest unoccupied parking position (if any) is selected instead.</p>
+</li>
+<li>
+<p><code>tcs:assignedParkingPosition</code>:
+Expected to be the name of a point in the model.
+If this point is already occupied, the vehicle is not sent to any other parking position, i.e. remains where it is.
+Takes precedence over <code>tcs:preferredParkingPosition</code>.</p>
+</li>
+<li>
+<p><code>tcs:preferredRechargeLocation</code>:
+Expected to be the name of a location.
+If this location is already occupied, the closest unoccupied recharging location (if any) is selected instead.</p>
+</li>
+<li>
+<p><code>tcs:assignedRechargeLocation</code>:
+Expected to be the name of a location.
+If this location is already occupied, the vehicle is not sent to any other recharging location.
+Takes precedence over <code>tcs:preferredRechargeLocation</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_router">4.2. Default router</h3>
+<div class="paragraph">
+<p>The default router finds the cheapest route from one position in the driving course to another one.
+(It uses an implementation of <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra&#8217;s algorithm</a> to do that.)
+It takes into account paths that have been locked, but not positions and/or assumed future behaviour of other vehicles.
+As a result, it does not route around slower or stopped vehicles blocking the way.</p>
+</div>
+<div class="paragraph">
+<p>The cost function used for evaluating the edges of the graph can be configured&#8201;&#8212;&#8201;see <a href="#_default_router_configuration_entries">Default router configuration entries</a>.
+The default cost function for a path simply evaluates to the path&#8217;s length, so the cheapest route by default is the shortest one.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to treat vehicles in a plant differently when computing their routes.
+This may be desirable if they have different characteristics and actually have different optimal routes through the driving course.
+For this to work, the paths in the model or the cost function used need to reflect reflect this difference.
+This isn&#8217;t done by default&#8201;&#8212;&#8201;the default router computes routes for all vehicles the same way unless told otherwise.
+To let the router know that it should compute routes for a vehicle separately, set a property with the key <code>tcs:routingGroup</code> to an integer value other than zero.
+(Vehicles that have the same integer value set share the same routing table, and zero is the default value for all vehicles.)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_scheduler">4.3. Default scheduler</h3>
+<div class="paragraph">
+<p>The default scheduler implements a simple strategy for traffic management.
+It does this by allowing only mutually exclusive use of resources in the plant model (points and paths, primarily):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When an allocation of a set of resources for a vehicle is requested, the scheduler expands this set to the effective resource set (in case any resources are part of a block area) and checks whether the allocation can be granted immediately.
+If yes, the allocation is made.
+If not, the allocation is queued for later.</p>
+</li>
+<li>
+<p>Whenever resources are freed (e.g. when a vehicle has finished its movement to the next point and the vehicle driver reports this to the kernel), the allocations waiting in the queue are checked (in the order the requests happened).
+Any allocations that can now be made are made.
+Allocations that cannot be made are kept waiting.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This strategy ensures that resources are used when they are available.
+It does not, however, strictly ensure fairness/avoid starvation:
+Vehicles waiting for allocation of a large resource set may theoretically wait forever if other vehicles can keep allocating subsets of those resources continuously.
+Such situations are likely a hint at problems in the plant model graph&#8217;s topology, which is why this deficiency is considered acceptable for the default implementation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_opentcs">5. Configuring openTCS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kernel_configuration">5.1. Kernel configuration</h3>
+<div class="paragraph">
+<p>The kernel application reads its configuration data from two files&#8201;&#8212;&#8201;<code>config/opentcs-kernel-defaults.properties</code> and <code>config/opentcs-kernel.properties</code>.
+(Both files must exist.)
+It is good practice to leave the first one untouched and set overriding values and project-specific configuration data in the second one.</p>
+</div>
+<div class="sect3">
+<h4 id="_kernel_application_configuration_entries">5.1.1. Kernel application configuration entries</h4>
+<div class="paragraph">
+<p>The kernel application itself can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration options with prefix 'kernelapp'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selectModelOnStartup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to show the model selection dialog on startup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">loadModelOnStartup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically load the kernel&#8217;s model on startup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">autoAttachDriversOnStartup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically attach drivers on startup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">autoEnableDriversOnStartup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically enable drivers on startup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">saveModelOnTerminateModelling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to implicitly save the model when leaving modelling state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">saveModelOnTerminateOperating</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to implicitly save the model when leaving operating state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">updateRoutingTopologyOnPathLockChange</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to implicitly update the router&#8217;s topology when a path is (un)locked.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_control_center_configuration_entries">5.1.2. Control center configuration entries</h4>
+<div class="paragraph">
+<p>The kernel&#8217;s control center GUI can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Configuration options with prefix 'controlcenter'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the kernel control center GUI should be enabled on startup.<br>
+(EXPERIMENTAL)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The application&#8217;s current language.<br>
+Valid values: 'English', 'German'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">loggingAreaCapacity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum number of characters in the logging text area.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_order_pool_configuration_entries">5.1.3. Order pool configuration entries</h4>
+<div class="paragraph">
+<p>The kernel&#8217;s transport order pool can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Configuration options with prefix 'orderpool'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sweepAge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The minimum age of orders to remove in a sweep (in ms).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sweepInterval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The interval between sweeps (in ms).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_vehicle_communication_configuration_entries">5.1.4. Vehicle communication configuration entries</h4>
+<div class="paragraph">
+<p>General communication with vehicles can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. Configuration options with prefix 'vehicles'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ignoreUnknownReportedPositions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to ignore unknown positions reported by a vehicle.<br>
+If not ignored, unknown positions reset the vehicle&#8217;s position in the course model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_default_dispatcher_configuration_entries">5.1.5. Default dispatcher configuration entries</h4>
+<div class="paragraph">
+<p>The default dispatcher can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 5. Configuration options with prefix 'defaultdispatcher'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parkIdleVehicles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically create parking orders idle vehicles.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rechargeIdleVehicles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically create recharge orders for idle vehicles.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">assignRedundantOrders</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether orders to the current position with no operation should be assigned.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dismissUnroutableTransportOrders</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether unroutable incoming transport orders should be marked as UNROUTABLE.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">idleVehicleRedispatchingInterval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The interval between redispatching of vehicles.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_default_router_configuration_entries">5.1.6. Default router configuration entries</h4>
+<div class="paragraph">
+<p>The default router can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 6. Configuration options with prefix 'defaultrouter'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">routeToCurrentPosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to compute a route even if the vehicle is already at the destination.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The shortest path algorithm can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 7. Configuration options with prefix 'defaultrouter.shortestpath'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">algorithm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The routing algorithm to be used. Valid values:<br>
+'DIJKSTRA': Routes are computed using Dijkstra&#8217;s algorithm.<br>
+'FLOYD_WARSHALL': Routes are computed using Floyd-Warshall algorithm.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">edgeEvaluators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of strings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The types of route evaluators/cost factors to be used.<br>
+Results of multiple evaluators are added up. Valid values:<br>
+'DISTANCE': A route&#8217;s cost is the sum of the lengths of its paths.<br>
+'TRAVELTIME': A route&#8217;s cost is the vehicle&#8217;s expected driving time to the destination.<br>
+'TURNS': A route&#8217;s cost is the number of turns/direction changes on it.<br>
+'EXPLICIT': A route&#8217;s cost is the sum of the explicitly given costs of its paths.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_rmi_kernel_interface_configuration_entries">5.1.7. RMI kernel interface configuration entries</h4>
+<div class="paragraph">
+<p>The kernel&#8217;s RMI interface can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 8. Configuration options with prefix 'rmikernelinterface'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registryHost</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The host name/IP address of the RMI registry.<br>
+If 'localhost' and not running already, a RMI registry will be started.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registryPort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The TCP port of the RMI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remoteKernelPort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The TCP port of the remote kernel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clientSweepInterval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The interval for cleaning out inactive clients (in ms).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_xml_host_interface_configuration_entries">5.1.8. XML host interface configuration entries</h4>
+<div class="paragraph">
+<p>The kernel&#8217;s XML-based host interface can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 9. Configuration options with prefix 'xmlhostinterface'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ordersServerPort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The TCP port on which to listen for incoming order connections.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ordersIdleTimeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time (in ms) after which idle connections are closed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ordersInputLimit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum number of bytes read from sockets before closing the connection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusServerPort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The TCP port on which to listen for incoming status channel connections.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusMessageSeparator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A string to be used for separating subsequent status messages in the stream.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_virtual_vehicle_configuration_entries">5.1.9. Virtual vehicle configuration entries</h4>
+<div class="paragraph">
+<p>The virtual vehicle (loopback communication adapter) can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 10. Configuration options with prefix 'virtualvehicle'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commandQueueCapacity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The adapter&#8217;s command queue capacity.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rechargeOperation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The string to be treated as a recharge operation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">simulationTimeFactor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Double</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The simulation time factor.<br>
+1.0 is real time, greater values speed up simulation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profilesMaxFileSize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum allowed size (in bytes) for a profiles description file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plant_overview_configuration">5.2. Plant Overview configuration</h3>
+<div class="paragraph">
+<p>The plant overview application reads its configuration data from two files&#8201;&#8212;&#8201;<code>config/opentcs-plantoverview-defaults.properties</code> and <code>config/opentcs-plantoverview.properties</code>.
+(Both files must exist.)
+It is good practice to leave the first one untouched and set overriding values and project-specific configuration data in the second one.</p>
+</div>
+<div class="sect3">
+<h4 id="_plant_overview_application_configuration_entries">5.2.1. Plant Overview application configuration entries</h4>
+<div class="paragraph">
+<p>The plant overview application itself can be configured using the following configuration entries:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 11. Configuration options with prefix 'plantoverviewapp'</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The plant overview application&#8217;s locale.<br>
+Valid values: 'English', 'German'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">initialMode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The plant overview application&#8217;s mode on startup.<br>
+Valid values: 'MODELLING', 'OPERATING', 'ASK'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameMaximized</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the GUI window should be maximized on startup.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameBoundsWidth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The GUI window&#8217;s configured width in pixels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameBoundsHeight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The GUI window&#8217;s configured height in pixels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameBoundsX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The GUI window&#8217;s configured x-coordinate on screen in pixels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameBoundsY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The GUI window&#8217;s configured y-coordinate on screen in pixels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">connectionBookmarks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of &lt;hostname:port&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The configured connection bookmarks.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">locationThemeClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the class to be used for the location theme.<br>
+Must be a class extending org.opentcs.components.plantoverview.LocationTheme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vehicleThemeClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the class to be used for the vehicle theme.<br>
+Must be a class extending org.opentcs.components.plantoverview.VehicleTheme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ignoreVehiclePrecisePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether reported precise positions should be ignored displaying vehicles.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ignoreVehicleOrientationAngle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether reported orientation angles should be ignored displaying vehicles.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_usage_examples">6. Advanced usage examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_automatic_startup">6.1. Configuring automatic startup</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To have the kernel automatically load a plant model on startup, set the kernel application&#8217;s configuration parameter <code>kernelapp.loadModelOnStartup</code> to <code>true</code>.</p>
+</li>
+<li>
+<p>To suppress the startup dialog that is normally shown by the kernel application on startup, set its configuration parameter <code>kernelapp.selectModelOnStartup</code> to <code>false</code>.</p>
+</li>
+<li>
+<p>For automatic attachment of vehicle drivers to vehicles on startup, set the kernel application&#8217;s configuration parameter <code>kernelapp.autoAttachDriversOnStartup</code> to <code>true</code>.</p>
+</li>
+<li>
+<p>To automatically enable vehicle drivers on startup, set the kernel application&#8217;s configuration parameter <code>kernelapp.autoEnableDriversOnStartup</code> to <code>true</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatically_selecting_a_specific_vehicle_driver_on_startup">6.2. Automatically selecting a specific vehicle driver on startup</h3>
+<div class="paragraph">
+<p>Automatic attachment of vehicle drivers by default works as follows:
+The kernel asks every available vehicle driver if it can attach to a given vehicle and selects the first one that can.
+It asks the loopback driver last, as that one is always available and can attach to any vehicle, but should not prevent actual vehicle drivers to be attached.
+As a result, if there is only one driver for your vehicle(s), you usually do not have to do anything for it to be selected.</p>
+</div>
+<div class="paragraph">
+<p>In some less common cases, you may have multiple vehicle drivers registered with the kernel that can all attach to the vehicles in your plant model.
+To automatically select a specific driver in such cases, set a property with the key <code>tcs:preferredAdapterClass</code> on the vehicles, with its value being the name of the Java class implementing the driver&#8217;s adapter factory.
+(If you do not know this class name, ask the developer who provided the vehicle driver to you for it.)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initializing_a_virtual_vehicle_s_position_automatically_on_startup">6.3. Initializing a virtual vehicle&#8217;s position automatically on startup</h3>
+<div class="paragraph">
+<p>Even during the development or simulation phase of a project, repeatedly setting a virtual vehicle&#8217;s initial position manually via the loopback driver&#8217;s user interface can be tiresome and possibly error-prone.
+To automatically set a vehicle&#8217;s initial position when the loopback driver is enabled, you can store the initial position in the respective plant model by doing the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the plant overview client in modelling mode.</p>
+</li>
+<li>
+<p>In the plant overview client&#8217;s tree view of the plant model, select a vehicle.</p>
+</li>
+<li>
+<p>In the table showing the vehicle&#8217;s properties, click into the value field labelled <b class="button">Initial position</b>.
+In the dialog shown, select the initial position for this vehicle from the model&#8217;s list of points.</p>
+</li>
+<li>
+<p>Save the model and persist it in the kernel as described in <a href="#_saving_the_plant_model">Saving the plant model</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Whenever you attach the loopback driver to the modified vehicle after doing this, it will automatically report the vehicle&#8217;s position to be the one that you selected.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_kernel_and_plant_overview_on_separate_systems">6.4. Running kernel and plant overview on separate systems</h3>
+<div class="paragraph">
+<p>The kernel and the plant overview client communicate via Java&#8217;s Remote Method Invocation (RMI) mechanism.
+This makes it possible to run the kernel and the plant overview client on separate systems, as long as a network connection between these systems exists and is usable.</p>
+</div>
+<div class="paragraph">
+<p>By default, the plant overview client is configured to connect to a kernel running on the same system.
+To connect it to a kernel running on a remote system, e.g. on a host named myhost.example.com, set the plant overview application&#8217;s configuration parameter <code>plantoverviewapp.connectionBookmarks</code> to <code>myhost.example.com:1099</code>.
+The configuration value can be a comma-separated list of host:port pairs.
+The plant overview will automatically try to connect to the first host in the list.
+If that fails, it will show a dialog to select an entry or enter a different address.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_automatic_parking_and_recharging">6.5. Configuring automatic parking and recharging</h3>
+<div class="paragraph">
+<p>By default, idle vehicles remain where they are after processing their last transport order.
+You can change this in the kernel&#8217;s configuration file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To order vehicles to charging locations automatically, set the configuration parameter <code>defaultdispatcher.rechargeIdleVehicles</code> to <code>true</code>.
+The default dispatcher will then look for locations at which the idle vehicle&#8217;s recharge operation is possible and create orders to send it to such a location (if unoccupied).
+(Note that the string used for the operation is driver-specific.)</p>
+</li>
+<li>
+<p>To order vehicles to parking positions automatically, set the configuration parameter <code>defaultdispatcher.parkIdleVehicles</code> to <code>true</code>.
+The default dispatcher will then look for unoccupied parking positions and create orders to send the idle vehicle there.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_selecting_the_cost_factors_used_for_routing">6.6. Selecting the cost factors used for routing</h3>
+<div class="paragraph">
+<p>The default router can evaluate the costs for routes based on different factors.
+You can select which factors should be taken into account by setting the configuration parameter <code>defaultrouter.routeEvaluators</code> in the kernel&#8217;s configuration file to one or more of the following key words (separated by commas):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>HOPS</code>: Routing costs are measured by the number of hops/paths travelled along the route.</p>
+</li>
+<li>
+<p><code>DISTANCE</code>: Routing costs are measured by the sum of the lengths of paths travelled.</p>
+</li>
+<li>
+<p><code>TRAVELTIME</code>: Routing costs are measured by the sum of the times required for travelling each path on a route.
+The travel times are computed using the length of the respective path and the maximum speed with which a vehicle may move on it.</p>
+</li>
+<li>
+<p><code>TURNS</code>: Routing costs are measured by the number of changes of the vehicle&#8217;s orientation on a route.
+To specify an orientation for a vehicle on a path, set a property on that path with a key of <code>"tcs:travelOrientation"</code> and an arbitrary string as the value.
+If, and only if, the values of subsequent paths on a route differ, a penalty is added to the costs of that route.
+This penalty can be configured by setting the configuration entry <code>defaultrouter.turnCosts</code> to an integer value (default: 5000).</p>
+</li>
+<li>
+<p><code>EXPLICIT</code>: Routing costs are measured by the sum of the costs explicitly specified by the modelling user.
+Explicit costs can be specified for every single path in the model using the plant overview client.
+(Select a path and set its <b class="button">Costs</b> property to an arbitrary integer value.)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When specifying more than one of these key words, the respective costs computed are added up.
+For example, when set to <code>"DISTANCE, TURNS"</code>, costs for routes are computed as the sum of the paths' lengths and the penalties for orientation changes.
+If none of these entries is set, costs for routes are computed by the paths' lengths by default (<code>DISTANCE</code>).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_order_pool_cleanup">6.7. Configuring order pool cleanup</h3>
+<div class="paragraph">
+<p>By default, openTCS checks every minute for finished or failed transport orders that are older than 24 hours.
+These orders are removed from the pool.
+To customize this behaviour, do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the configuration entry <code>orderpool.sweepInterval</code> to a value according to your needs.
+The default value is 60.000 (milliseconds, corresponding to an interval of one minute).</p>
+</li>
+<li>
+<p>Set the configuration entry <code>orderpool.sweepAge</code> to a maximum age of finished orders according to your needs.
+The default value is 86.400.000 (milliseconds, corresponding to 24 hours that a finished order should be kept in the pool).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_model_element_properties_for_project_specific_data">6.8. Using model element properties for project-specific data</h3>
+<div class="paragraph">
+<p>Every object in the plant model - i.e. points, paths, locations, location types and vehicles - can be augmented with arbitrary project-specific data that can be used, e.g. by vehicle drivers, custom client applications, etc..
+Possible uses for such data could be informing the vehicle driver about additional actions to be performed by a vehicle when moving along a path in the model (e.g. flashing direction indicators, displaying a text string on a display, giving an acoustic warning) or controlling the behaviour of peripheral systems (e.g. automatic fire protection gates).</p>
+</div>
+<div class="paragraph">
+<p>The data can be stored in properties, i.e. key-value pairs attached to the model elements, where both the key and the corresponding value are text strings.
+These key-value pairs can be created and edited using the plant overview client:
+Simply select the model element you want to add a key-value pair to and click into the value field labelled <b class="button">Miscellaneous</b> in the properties table.
+In the dialog shown, set the key-value pairs you need to store your project-specific information.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For your project-specific key-value pairs, you may specify arbitrary keys.
+openTCS itself will not make any use of this data; it will merely store it and provide it for custom vehicle drivers and/or other extensions.
+You should, however, not use any keys starting with <code>"tcs:"</code> for storing project-specific data.
+Any keys with this prefix are reserved for official openTCS features, and using them could lead to collisions.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+</div>
+</div>
+</body>
+</html>

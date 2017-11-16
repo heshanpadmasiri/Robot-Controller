@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:20:52" hostname="DESKTOP-UBTRRGA" time="0.016">
+  <properties/>
+  <testcase name="testNotRecoveredWhenUnfinishedOrders" classname="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" time="0.0"/>
+  <testcase name="testNotRecoveredWhenNoVehicles" classname="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" time="0.0"/>
+  <testcase name="testRecoveredWhenFullEnergyAndAllOrdersFinished" classname="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" time="0.0"/>
+  <testcase name="testNotRecoveredWhenNoEnergy" classname="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" time="0.016"/>
+  <testcase name="testRecoveredWhenFullEnergyAndNoOrders" classname="org.opentcs.strategies.basic.recovery.NESRecoveryEvaluatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

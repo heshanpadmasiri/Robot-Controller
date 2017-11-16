@@ -1,0 +1,133 @@
+20171103-14:57:52-582 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-11-03 14:39:47), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20171103-14:57:52-691 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20171103-14:57:52-801 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20171103-14:57:52-801 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20171103-14:57:54-989 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
+20171103-14:57:56-317 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20171103-14:58:24-790 [INFO|org.opentcs.kernel.controlcenter.KernelControlCenter@AWT-EventQueue-0] [menuButtonModelActionPerformed()]: Loading model: unnamed
+20171103-14:58:24-962 [INFO|org.opentcs.kernel.controlcenter.KernelControlCenter@AWT-EventQueue-0] [menuButtonModelActionPerformed()]: Finished loading the model.
+20171103-14:59:10-996 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171103-14:59:11-012 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20171103-14:59:11-137 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-145911.txt...
+20171103-14:59:37-949 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171103-14:59:37-949 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-14:59:37-949 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-14:59:37-949 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171103-14:59:37-949 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171103-14:59:38-449 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'MODELLING'
+20171103-15:02:00-139 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171103-15:02:00-154 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-150200.txt...
+20171103-15:03:19-987 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@RMI TCP Connection(9)-192.168.56.1] [terminate()]: Terminating connection listener...
+20171103-15:03:19-987 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-15:03:19-987 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-15:03:19-987 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@RMI TCP Connection(9)-192.168.56.1] [terminate()]: Connection listener thread has terminated.
+20171103-15:03:20-002 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@RMI TCP Connection(9)-192.168.56.1] [terminate()]: Terminating...
+20171103-15:03:20-503 [INFO|org.opentcs.kernel.StandardKernel@RMI TCP Connection(9)-192.168.56.1] [setState()]: Switching kernel to state 'MODELLING'
+20171103-15:03:20-909 [INFO|org.opentcs.kernel.StandardKernel@RMI TCP Connection(9)-192.168.56.1] [setState()]: Switching kernel to state 'OPERATING'
+20171103-15:03:20-956 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@RMI TCP Connection(9)-192.168.56.1] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-150320.txt...
+20171103-15:03:27-047 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171103-15:03:27-047 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-15:03:27-047 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-15:03:27-047 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171103-15:03:27-047 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171103-15:03:27-547 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'MODELLING'
+20171103-15:03:39-142 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171103-15:03:39-157 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-150339.txt...
+20171103-15:04:13-932 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-7cb4527f-6e6b-4533-b8d9-ce581e254b52 as ACTIVE
+20171103-15:04:13-932 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-7cb4527f-6e6b-4533-b8d9-ce581e254b52 as DISPATCHABLE
+20171103-15:09:00-684 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171103-15:09:00-684 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-15:09:00-684 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-15:09:00-684 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171103-15:09:00-684 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171103-15:09:01-199 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'MODELLING'
+20171103-15:09:42-235 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171103-15:09:42-250 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-150942.txt...
+20171103-15:10:31-512 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-6fd24bb3-c40d-4eb4-a9c5-b9428a1e83a7 as ACTIVE
+20171103-15:10:31-512 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-6fd24bb3-c40d-4eb4-a9c5-b9428a1e83a7 as DISPATCHABLE
+20171103-15:12:03-241 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-15:12:03-241 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-15:12:03-241 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-15:12:04-522 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-15:12:04-522 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-15:12:04-522 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(21)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-15:13:03-108 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-36f3dd6d-31a7-4b34-b23f-b785c0a94be3 as ACTIVE
+20171103-15:13:03-108 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-36f3dd6d-31a7-4b34-b23f-b785c0a94be3 as DISPATCHABLE
+20171103-15:13:10-685 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-15:13:10-685 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-15:13:10-685 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-15:13:14-857 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-15:13:14-857 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-15:13:14-857 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(23)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-15:13:24-622 [INFO|org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategy@DefaultDispatcher-dispatcherTask] [selectOrder()]: driveOrders Optional[[Route{steps=[Point-0003, Point-0004, Point-0008, Point-0009, Point-0011, Point-0013, Point-0018, Point-0019, Point-0022, Point-0056, Point-0023, Point-0024, Point-0025, Point-0030, Point-0032], costs=101434} -> Point-0032:MOVE]]
+20171103-15:15:29-068 [INFO|org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategy@DefaultDispatcher-dispatcherTask] [selectOrder()]: driveOrders Optional[[Route{steps=[Point-0028, Point-0029, Point-0035, Point-0036, Point-0034, Point-0014, Point-0008, Point-0009, Point-0011, Point-0013, Point-0018, Point-0019, Point-0022, Point-0056, Point-0023, Point-0024, Point-0025, Point-0026], costs=119160} -> Goods in north 01:Load cargo, Route{steps=[Point-0027, Point-0032, Point-0028, Point-0029, Point-0035, Point-0036, Point-0034, Point-0014, Point-0008, Point-0009, Point-0011, Point-0013, Point-0018, Point-0019, Point-0017, Point-0020, Point-0021], costs=118852} -> Goods out 02:Unload cargo]]
+20171103-15:56:30-472 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171103-15:56:30-549 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-15:56:30-549 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-15:56:30-550 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171103-15:56:30-552 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171103-15:56:31-091 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20171103-15:56:31-413 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20171103-15:56:32-451 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.
+20171103-15:56:38-493 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-11-03 14:39:47), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20171103-15:56:38-640 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20171103-15:56:38-714 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20171103-15:56:38-714 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20171103-15:56:41-601 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20171103-15:56:46-187 [INFO|org.opentcs.kernel.KernelStarter@main] [startKernel()]: Loaded model: Demo-01
+20171103-15:56:46-195 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'OPERATING'
+20171103-15:56:46-216 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@main] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20171103-15:56:46-258 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@main] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171103-155646.txt...
+20171103-15:58:31-703 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-4826a651-6d02-4646-84bb-5229931370a3 as ACTIVE
+20171103-15:58:31-725 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-4826a651-6d02-4646-84bb-5229931370a3 as DISPATCHABLE
+20171103-15:59:00-164 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-903d8412-a1e7-4b32-92b7-a4d675118e5d as ACTIVE
+20171103-15:59:00-167 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher$DispatcherTask@DefaultDispatcher-dispatcherTask] [dispatchTransportOrderRaw()]: Marking transport order TOrder-903d8412-a1e7-4b32-92b7-a4d675118e5d as DISPATCHABLE
+20171103-16:00:21-801 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-16:00:21-802 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-16:00:21-803 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-16:00:24-736 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-02
+20171103-16:00:24-737 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-03
+20171103-16:00:24-739 [WARNING|org.opentcs.kernel.vehicles.NullVehicleController@RMI TCP Connection(6)-192.168.56.1] [sendCommAdapterMessage()]: No comm adapter attached to vehicle Vehicle-04
+20171103-16:00:39-503 [INFO|org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategy@DefaultDispatcher-dispatcherTask] [selectOrder()]: driveOrders Optional[[Route{steps=[Point-0003, Point-0005, Point-0007, Point-0010], costs=21266} -> Point-0010:MOVE]]
+20171103-16:01:05-474 [INFO|org.opentcs.strategies.basic.dispatching.orderselection.TransportOrderSelectionStrategy@DefaultDispatcher-dispatcherTask] [selectOrder()]: driveOrders Optional[[Route{steps=[Point-0011, Point-0013, Point-0018, Point-0019, Point-0017, Point-0020], costs=48031} -> Goods out 01:NOP]]
+20171103-16:05:54-082 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171103-16:05:54-085 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171103-16:05:54-085 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171103-16:05:54-085 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171103-16:05:54-088 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171103-16:05:54-599 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20171103-16:05:54-600 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20171103-16:05:55-602 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.
+20171105-11:44:43-742 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-11-03 14:39:47), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20171105-11:44:43-873 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20171105-11:44:44-122 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20171105-11:44:44-123 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20171105-11:44:50-185 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20171105-11:45:09-372 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171105-11:45:09-382 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20171105-11:45:09-529 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171105-114509.txt...
+20171105-11:46:34-051 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171105-11:46:34-052 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171105-11:46:34-053 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171105-11:46:34-053 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171105-11:46:34-055 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171105-11:46:34-560 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20171105-11:46:34-561 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20171105-11:46:35-564 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.
+20171106-17:05:51-954 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-11-03 14:39:47), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20171106-17:05:52-063 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20171106-17:05:52-172 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20171106-17:05:52-188 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20171106-17:05:56-032 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20171106-17:05:58-986 [INFO|org.opentcs.kernel.KernelStarter@main] [startKernel()]: Loaded model: test2_1
+20171106-17:05:58-987 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'OPERATING'
+20171106-17:05:59-001 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@main] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20171106-17:05:59-118 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@main] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171106-170558.txt...
+20171106-17:06:02-483 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171106-17:06:02-483 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171106-17:06:02-483 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171106-17:06:02-483 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171106-17:06:02-483 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171106-17:06:02-983 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20171106-17:06:02-983 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20171106-17:06:03-983 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.

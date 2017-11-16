@@ -196,7 +196,7 @@ public class LoopbackCommunicationAdapter
       Map<String,String> properties = cmd.getStep().getPath().getProperties();
       if(properties.containsKey("side")){
         if(properties.get("side").equals("right")){
-          state |= 4;
+          state |= 1;
         }
       }
       String operation = cmd.getOperation();

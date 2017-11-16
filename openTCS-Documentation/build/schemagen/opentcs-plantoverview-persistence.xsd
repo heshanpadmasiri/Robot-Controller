@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <xs:element name="Block" type="block"/>
+
+  <xs:element name="Group" type="group"/>
+
+  <xs:element name="Layout" type="layout"/>
+
+  <xs:element name="Link" type="link"/>
+
+  <xs:element name="Location" type="location"/>
+
+  <xs:element name="LocationType" type="locationType"/>
+
+  <xs:element name="OtherGraphicalElement" type="otherGraphicalElement"/>
+
+  <xs:element name="Path" type="path"/>
+
+  <xs:element name="Point" type="point"/>
+
+  <xs:element name="StaticRoute" type="staticRoute"/>
+
+  <xs:element name="Vehicle" type="vehicle"/>
+
+  <xs:element name="angleProperty" type="angleCourseProperty"/>
+
+  <xs:element name="booleanProperty" type="booleanCourseProperty"/>
+
+  <xs:element name="colorProperty" type="colorCourseProperty"/>
+
+  <xs:element name="coordinateProperty" type="coordinateCourseProperty"/>
+
+  <xs:element name="coursePointProperty" type="coursePointCourseProperty"/>
+
+  <xs:element name="integerProperty" type="integerCourseProperty"/>
+
+  <xs:element name="keyValueProperty" type="keyValueCourseProperty"/>
+
+  <xs:element name="keyValueSetEntries" type="keyValueSetListWrapper"/>
+
+  <xs:element name="keyValueSetProperty" type="keyValueSetCourseProperty"/>
+
+  <xs:element name="lengthProperty" type="lengthCourseProperty"/>
+
+  <xs:element name="linkActionProperty" type="linkActionsCourseProperty"/>
+
+  <xs:element name="locationThemeProperty" type="locationThemeCourseProperty"/>
+
+  <xs:element name="locationTypeProperty" type="locationTypeCourseProperty"/>
+
+  <xs:element name="model" type="courseModel"/>
+
+  <xs:element name="percentProperty" type="percentCourseProperty"/>
+
+  <xs:element name="selectionProperty" type="selectionCourseProperty"/>
+
+  <xs:element name="speedProperty" type="speedCourseProperty"/>
+
+  <xs:element name="stringList" type="stringListWrapper"/>
+
+  <xs:element name="stringProperty" type="stringCourseProperty"/>
+
+  <xs:element name="stringSetProperty" type="stringSetCourseProperty"/>
+
+  <xs:element name="symbolProperty" type="symbolCourseProperty"/>
+
+  <xs:element name="tripleProperty" type="tripleCourseProperty"/>
+
+  <xs:element name="vehicleThemeProperty" type="vehicleThemeCourseProperty"/>
+
+  <xs:complexType name="courseModel">
+    <xs:sequence>
+      <xs:element name="element" type="courseElement" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="courseElement" abstract="true">
+    <xs:sequence>
+      <xs:element name="treeViewName" type="xs:string"/>
+      <xs:element name="property" type="courseObjectProperty" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="courseObjectProperty" abstract="true">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string"/>
+      <xs:element name="value" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stringCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="integerCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="angleCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="booleanCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="colorCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="coordinateCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="coursePointCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="keyValueCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="keyValueSetCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="lengthCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="linkActionsCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="locationThemeCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="locationTypeCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="percentCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="selectionCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="speedCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="stringSetCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="symbolCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tripleCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehicleThemeCourseProperty">
+    <xs:complexContent>
+      <xs:extension base="courseObjectProperty">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="block">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="group">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="layout">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="link">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="location">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="locationType">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="otherGraphicalElement">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="path">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="point">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="staticRoute">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehicle">
+    <xs:complexContent>
+      <xs:extension base="courseElement">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="keyValueSetListWrapper">
+    <xs:complexContent>
+      <xs:extension base="arrayList">
+        <xs:sequence>
+          <xs:element ref="keyValueProperty" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="arrayList">
+    <xs:complexContent>
+      <xs:extension base="abstractList">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractList" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="abstractCollection">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractCollection" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="stringListWrapper">
+    <xs:complexContent>
+      <xs:extension base="arrayList">
+        <xs:sequence>
+          <xs:element name="string" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

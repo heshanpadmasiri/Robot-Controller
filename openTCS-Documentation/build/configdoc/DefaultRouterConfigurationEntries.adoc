@@ -1,0 +1,26 @@
+.Configuration options with prefix 'defaultrouter'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|routeToCurrentPosition
+|Boolean
+|Whether to compute a route even if the vehicle is already at the destination.
+
+|===
+
+.Configuration options with prefix 'defaultrouter'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|routeToCurrentPosition
+|Boolean
+|Whether to compute a route even if the vehicle is already at the destination.
+
+|===
+

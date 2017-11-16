@@ -5,5 +5,5 @@ license {
   // exclude "**/*"
   include "**/*.java"
   exclude "**/package-info.java"
-  strictCheck true
+  strictCheck false
 }

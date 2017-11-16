@@ -1,0 +1,58 @@
+.Configuration options with prefix 'defaultdispatcher'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|parkIdleVehicles
+|Boolean
+|Whether to automatically create parking orders idle vehicles.
+
+|rechargeIdleVehicles
+|Boolean
+|Whether to automatically create recharge orders for idle vehicles.
+
+|assignRedundantOrders
+|Boolean
+|Whether orders to the current position with no operation should be assigned.
+
+|dismissUnroutableTransportOrders
+|Boolean
+|Whether unroutable incoming transport orders should be marked as UNROUTABLE.
+
+|idleVehicleRedispatchingInterval
+|Integer
+|The interval between redispatching of vehicles.
+
+|===
+
+.Configuration options with prefix 'defaultdispatcher'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|parkIdleVehicles
+|Boolean
+|Whether to automatically create parking orders idle vehicles.
+
+|rechargeIdleVehicles
+|Boolean
+|Whether to automatically create recharge orders for idle vehicles.
+
+|assignRedundantOrders
+|Boolean
+|Whether orders to the current position with no operation should be assigned.
+
+|dismissUnroutableTransportOrders
+|Boolean
+|Whether unroutable incoming transport orders should be marked as UNROUTABLE.
+
+|idleVehicleRedispatchingInterval
+|Integer
+|The interval between redispatching of vehicles.
+
+|===
+

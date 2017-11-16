@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.kernel.vehicles.StandardVehicleManagerPoolTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-11-05T15:56:37" hostname="DESKTOP-UBTRRGA" time="0.028">
+  <properties/>
+  <testcase name="testThrowsNPEIfCommAdapterIsNull" classname="org.opentcs.kernel.vehicles.StandardVehicleManagerPoolTest" time="0.025"/>
+  <testcase name="testThrowsNPEIfVehicleNameIsNull" classname="org.opentcs.kernel.vehicles.StandardVehicleManagerPoolTest" time="0.0"/>
+  <testcase name="testThrowsExceptionForUnknownVehicleName" classname="org.opentcs.kernel.vehicles.StandardVehicleManagerPoolTest" time="0.001"/>
+  <testcase name="testThrowsNPEIfDetachingNullVehicleName" classname="org.opentcs.kernel.vehicles.StandardVehicleManagerPoolTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

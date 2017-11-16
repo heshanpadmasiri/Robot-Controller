@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.opentcs.util.configuration.ConfigurationStoreTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:19:21" hostname="DESKTOP-UBTRRGA" time="0.36">
+  <properties/>
+  <testcase name="testgetByte" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.36"/>
+  <testcase name="testgetLong" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetFloat" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetShort" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetBoolean" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetDouble" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testConfigurationStore" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetString" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetInteger" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <testcase name="testgetNamespace" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,58 @@
+.Configuration options with prefix 'xmlhostinterface'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|ordersServerPort
+|Integer
+|The TCP port on which to listen for incoming order connections.
+
+|ordersIdleTimeout
+|Integer
+|The time (in ms) after which idle connections are closed.
+
+|ordersInputLimit
+|Integer
+|The maximum number of bytes read from sockets before closing the connection.
+
+|statusServerPort
+|Integer
+|The TCP port on which to listen for incoming status channel connections.
+
+|statusMessageSeparator
+|String
+|A string to be used for separating subsequent status messages in the stream.
+
+|===
+
+.Configuration options with prefix 'xmlhostinterface'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|ordersServerPort
+|Integer
+|The TCP port on which to listen for incoming order connections.
+
+|ordersIdleTimeout
+|Integer
+|The time (in ms) after which idle connections are closed.
+
+|ordersInputLimit
+|Integer
+|The maximum number of bytes read from sockets before closing the connection.
+
+|statusServerPort
+|Integer
+|The TCP port on which to listen for incoming status channel connections.
+
+|statusMessageSeparator
+|String
+|A string to be used for separating subsequent status messages in the stream.
+
+|===
+

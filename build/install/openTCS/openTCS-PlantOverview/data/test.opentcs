@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <element xsi:type="layout">
+        <treeViewName>Layout</treeViewName>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">VLayout-1</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>scaleX</key>
+            <value xsi:type="xs:double">50.0</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>scaleY</key>
+            <value xsi:type="xs:double">50.0</value>
+        </property>
+    </element>
+    <element xsi:type="point">
+        <treeViewName></treeViewName>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_X</key>
+            <value xsi:type="xs:string">-10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_Y</key>
+            <value xsi:type="xs:string">-20</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_ORIENTATION_ANGLE</key>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0001</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:string">8000</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:string">21000</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>Type</key>
+            <value xsi:type="xs:string">HALT</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelXPosition</key>
+            <value xsi:type="xs:double">8000.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelYPosition</key>
+            <value xsi:type="xs:double">21000.0</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>vehicleOrientationAngle</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+    </element>
+    <element xsi:type="point">
+        <treeViewName></treeViewName>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_X</key>
+            <value xsi:type="xs:string">-10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_Y</key>
+            <value xsi:type="xs:string">-20</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_ORIENTATION_ANGLE</key>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0002</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:string">16000</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:string">19500</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>Type</key>
+            <value xsi:type="xs:string">HALT</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelXPosition</key>
+            <value xsi:type="xs:double">16000.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelYPosition</key>
+            <value xsi:type="xs:double">19500.0</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>vehicleOrientationAngle</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+    </element>
+    <element xsi:type="point">
+        <treeViewName></treeViewName>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_X</key>
+            <value xsi:type="xs:string">-10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_Y</key>
+            <value xsi:type="xs:string">-20</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_ORIENTATION_ANGLE</key>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0003</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:string">17500</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:string">13500</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>Type</key>
+            <value xsi:type="xs:string">HALT</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelXPosition</key>
+            <value xsi:type="xs:double">17500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelYPosition</key>
+            <value xsi:type="xs:double">13500.0</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>vehicleOrientationAngle</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+    </element>
+    <element xsi:type="path">
+        <treeViewName></treeViewName>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>CONTROL_POINTS</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0001 --- Point-0002</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>cost</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:string">Point-0002</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">163.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>locked</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="speedCourseProperty">
+            <key>maxReverseVelocity</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="speedCourseProperty">
+            <key>maxVelocity</key>
+            <value xsi:type="xs:double">1000.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:string">Point-0001</value>
+        </property>
+    </element>
+    <element xsi:type="path">
+        <treeViewName></treeViewName>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>CONTROL_POINTS</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0002 --- Point-0003</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>cost</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:string">Point-0003</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">124.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>locked</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="speedCourseProperty">
+            <key>maxReverseVelocity</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="speedCourseProperty">
+            <key>maxVelocity</key>
+            <value xsi:type="xs:double">1000.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:string">Point-0002</value>
+        </property>
+    </element>
+    <element xsi:type="locationType">
+        <treeViewName>Location type LType-0001</treeViewName>
+        <property xsi:type="stringSetCourseProperty">
+            <key>AllowedOperations</key>
+            <value xsi:type="stringListWrapper"/>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">LType-0001</value>
+        </property>
+        <property xsi:type="symbolCourseProperty">
+            <key>tcs:defaultLocationTypeSymbol</key>
+        </property>
+    </element>
+    <element xsi:type="locationType">
+        <treeViewName>Location type LType-0002</treeViewName>
+        <property xsi:type="stringSetCourseProperty">
+            <key>AllowedOperations</key>
+            <value xsi:type="stringListWrapper"/>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">LType-0002</value>
+        </property>
+        <property xsi:type="symbolCourseProperty">
+            <key>tcs:defaultLocationTypeSymbol</key>
+        </property>
+    </element>
+    <element xsi:type="locationType">
+        <treeViewName>Location type LType-0003</treeViewName>
+        <property xsi:type="stringSetCourseProperty">
+            <key>AllowedOperations</key>
+            <value xsi:type="stringListWrapper"/>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">LType-0003</value>
+        </property>
+        <property xsi:type="symbolCourseProperty">
+            <key>tcs:defaultLocationTypeSymbol</key>
+        </property>
+    </element>
+    <element xsi:type="location">
+        <treeViewName></treeViewName>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_X</key>
+            <value xsi:type="xs:string">-10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_Y</key>
+            <value xsi:type="xs:string">-20</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_ORIENTATION_ANGLE</key>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Location-0001</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:string">6250</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:string">18250</value>
+        </property>
+        <property xsi:type="locationTypeCourseProperty">
+            <key>Type</key>
+            <value xsi:type="xs:string">LType-0001</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelXPosition</key>
+            <value xsi:type="xs:double">2500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelYPosition</key>
+            <value xsi:type="xs:double">16500.0</value>
+        </property>
+        <property xsi:type="symbolCourseProperty">
+            <key>tcs:defaultLocationSymbol</key>
+        </property>
+    </element>
+    <element xsi:type="location">
+        <treeViewName></treeViewName>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_X</key>
+            <value xsi:type="xs:string">-10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_OFFSET_Y</key>
+            <value xsi:type="xs:string">-20</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>LABEL_ORIENTATION_ANGLE</key>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Location-0002</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:string">17750</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:string">11750</value>
+        </property>
+        <property xsi:type="locationTypeCourseProperty">
+            <key>Type</key>
+            <value xsi:type="xs:string">LType-0001</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelXPosition</key>
+            <value xsi:type="xs:double">11500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>modelYPosition</key>
+            <value xsi:type="xs:double">9000.0</value>
+        </property>
+        <property xsi:type="symbolCourseProperty">
+            <key>tcs:defaultLocationSymbol</key>
+        </property>
+    </element>
+    <element xsi:type="link">
+        <treeViewName></treeViewName>
+        <property xsi:type="linkActionsCourseProperty">
+            <key>AllowedOperations</key>
+            <value xsi:type="stringListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0001 --- Location-0001</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:string">Location-0001</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:string">Point-0001</value>
+        </property>
+    </element>
+    <element xsi:type="link">
+        <treeViewName></treeViewName>
+        <property xsi:type="linkActionsCourseProperty">
+            <key>AllowedOperations</key>
+            <value xsi:type="stringListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Point-0003 --- Location-0002</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:string">Location-0002</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:string">Point-0003</value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <treeViewName>Vehicle Vehicle-0001</treeViewName>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevel</key>
+            <value xsi:type="xs:double">100.0</value>
+        </property>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevelCritical</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevelGood</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>EnergyState</key>
+            <value xsi:type="xs:string">GOOD</value>
+        </property>
+        <property xsi:type="coursePointCourseProperty">
+            <key>InitialPosition</key>
+            <value xsi:type="xs:string">Point-0001</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>Length</key>
+            <value xsi:type="xs:double">1.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>Loaded</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Vehicle-0001</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>NextPoint</key>
+            <value xsi:type="xs:string">null</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>OrientationAngle</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Point</key>
+            <value xsi:type="xs:string">null</value>
+        </property>
+        <property xsi:type="tripleCourseProperty">
+            <key>PrecisePosition</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>ProcState</key>
+            <value xsi:type="xs:string">UNAVAILABLE</value>
+        </property>
+        <property xsi:type="colorCourseProperty">
+            <key>ROUTE_COLOR</key>
+            <value xsi:type="xs:int">-65536</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>State</key>
+            <value xsi:type="xs:string">UNKNOWN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentOrderSequenceName</key>
+            <value xsi:type="xs:string">null</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentTransportOrderName</key>
+            <value xsi:type="xs:string">null</value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <treeViewName>Vehicle Vehicle-0002</treeViewName>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevel</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevelCritical</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="percentCourseProperty">
+            <key>EnergyLevelGood</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>EnergyState</key>
+            <value xsi:type="xs:string">CRITICAL</value>
+        </property>
+        <property xsi:type="coursePointCourseProperty">
+            <key>InitialPosition</key>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>Length</key>
+            <value xsi:type="xs:double">1.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>Loaded</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">Vehicle-0002</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>NextPoint</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>OrientationAngle</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Point</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="tripleCourseProperty">
+            <key>PrecisePosition</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>ProcState</key>
+            <value xsi:type="xs:string">UNAVAILABLE</value>
+        </property>
+        <property xsi:type="colorCourseProperty">
+            <key>ROUTE_COLOR</key>
+            <value xsi:type="xs:int">-16776961</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>State</key>
+            <value xsi:type="xs:string">UNKNOWN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentOrderSequenceName</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentTransportOrderName</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+    </element>
+</model>

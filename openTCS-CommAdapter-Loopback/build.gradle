@@ -1,6 +1,12 @@
 apply from: "${rootDir}/gradle/license-headers.gradle"
 
+repositories {
+  mavenCentral()
+}
+
 dependencies {
+  // https://mvnrepository.com/artifact/org.rxtx/rxtx
+  compile group: 'org.rxtx', name: 'rxtx', version: '2.1.7'
   compile project(':openTCS-API-Injection')
   compile project(':openTCS-Common')
 }
