@@ -7,15 +7,22 @@
  */
 package org.opentcs.virtualvehicle;
 
+import org.opentcs.data.model.Vehicle;
+
 public class SerialCommunicationFactory {
     private static final SerialCommunication SERIAL_COMMUNICATION = new SerialCommunication();
-    private static long vehicleId = 0;
+    private static Byte vehicleId = 0;
         
     
-    public SerialCommunicationFactory(LoopbackCommunicationAdapter communicationAdapter){        
+    public SerialCommunicationFactory(LoopbackCommunicationAdapter CommunicationAdapter){        
         synchronized(SERIAL_COMMUNICATION){
-          SERIAL_COMMUNICATION.connectToCommunicationAdapter(vehicleId, communicationAdapter);
+          SERIAL_COMMUNICATION.connectToCommunicationAdapter(vehicleId, CommunicationAdapter);
           vehicleId++;
+        }
+        try{
+         SERIAL_COMMUNICATION.connect("COM2");
+        } catch (Exception e){
+          System.out.println("Error");
         }
     }
 

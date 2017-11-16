@@ -12,17 +12,19 @@ import gnu.io.*;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class SerialCommunication {   
-    private Map<Byte,LoopbackCommunicationAdapter> idToNameMap;
-    private Map<LoopbackCommunicationAdapter,Byte> NameToIdMap;
+    private static Map<Byte,LoopbackCommunicationAdapter> idToNameMap;
+    private static Map<LoopbackCommunicationAdapter,Byte> NameToIdMap;
+    private static Map<Byte,MovementCommandMessage> messageLog;
     static byte[] outMessage;
 
   public SerialCommunication() {
       idToNameMap = new HashMap<>();
       NameToIdMap = new HashMap<>();
       outMessage = new byte[4];
-      
+      messageLog = new TreeMap<>();
   }
   
   public void connectToCommunicationAdapter(Byte id, LoopbackCommunicationAdapter communicationAdapter){
@@ -31,12 +33,15 @@ public class SerialCommunication {
     NameToIdMap.put(communicationAdapter,id);
   }
   
-  public void sendMessage(LoopbackCommunicationAdapter communicationAdapter,byte[] message){
+  public void sendMessage(LoopbackCommunicationAdapter communicationAdapter,MovementCommandMessage commandMessage){
      assert(NameToIdMap.containsKey(communicationAdapter));
-     message[0] = 65;
-     message[1] = 67;
-     outMessage = message;
-     
+     byte[] message = commandMessage.getSerialMessage();
+     byte commandId = (byte)(messageLog.size()+1);
+     byte id = NameToIdMap.get(communicationAdapter);
+     message[3] = id;
+     message[4] = commandId;     
+     outMessage = message;    
+     messageLog.put(commandId, commandMessage);
   }    
   
   void connect ( String portName ) throws Exception
@@ -85,22 +90,40 @@ public class SerialCommunication {
             this.in = in;
         }
         
-        public void serialEvent(SerialPortEvent arg0) {
-            int data;
-          
+        public void serialEvent(SerialPortEvent arg0) { 
             try
             {
-                int len = 0;
-                while ( ( data = in.read()) > -1 )
-                {
-                    System.out.println(data);
-                    if ( data == '\n' ) {
-                        break;
-                    }
-                    buffer[len++] = (byte) data;
+                int[] header = new int[3];
+                int data;
+                for(int i = 0;i < 3;i++){
+                    data = in.read();
+                    header[i] = data;
                 }
-                //System.out.print(new String(buffer,0,len));
-                buffer = new byte[1024];
+                if (header[0] == 'A'){
+                  byte[] message = new byte[5];
+                  in.read(message, 0, 5);
+                  byte id = message[0];
+                  byte orderId = message[1];
+                  byte state = message[2];
+                  byte isComplete = message[3];
+                  byte isError = message[4];
+                  if(isComplete == 1){
+                    MovementCommandMessage cmd = messageLog.get(orderId);
+                    idToNameMap.get(id).processMessage(cmd);
+                  }
+                }
+                else if (header[0] == 'S'){
+                  byte[] message = new byte[5];
+                  in.read(message, 0, 5);
+                  StatusMessage statusMessage = new StatusMessage(message[1]);
+                  idToNameMap.get(message[0]).processMessage(statusMessage);
+                }
+                else if(header[0] == 'E'){
+                  byte[] message = new byte[3];
+                  in.read(message, 0, 3);
+                  EmergencyMessage eMessage = new EmergencyMessage();
+                  idToNameMap.get(message[0]).processMessage(eMessage);
+                }
             }
             catch ( IOException e )
             {

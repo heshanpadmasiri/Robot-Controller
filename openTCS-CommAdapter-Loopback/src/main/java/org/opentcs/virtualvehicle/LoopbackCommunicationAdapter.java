@@ -9,9 +9,11 @@ package org.opentcs.virtualvehicle;
 
 import com.google.inject.assistedinject.Assisted;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import static java.util.Objects.requireNonNull;
+import java.util.Queue;
 import javax.inject.Inject;
 import org.opentcs.data.ObjectPropConstants;
 import org.opentcs.data.model.Vehicle;
@@ -78,6 +80,8 @@ public class LoopbackCommunicationAdapter
   private boolean initialized;
   
   private SerialCommunication serialCommunication;
+  
+  
 
   /**
    * Creates a new instance.
@@ -173,23 +177,53 @@ public class LoopbackCommunicationAdapter
     return Arrays.asList(componentsFactory.createPanel(this));
   }
 
+  private byte[] getByteMessage(MovementCommand cmd,byte[] header){
+      byte[] message = new byte[8];
+      for(int i = 0; i < header.length;i++){
+        message[i] = header[i];
+      }
+      byte state = 0;
+      int speed = cmd.getStep().getPath().getMaxVelocity();
+      if(speed == 0){
+        message[5] = 0;
+      } else if(speed == 200){
+        message[5] = 1;
+      } else if(speed == 500){
+        message[5] = 2;
+      } else if(speed == 1000){
+        message[5] = 3;
+      }
+      Map<String,String> properties = cmd.getStep().getPath().getProperties();
+      if(properties.containsKey("side")){
+        if(properties.get("side").equals("right")){
+          state |= 4;
+        }
+      }
+      String operation = cmd.getOperation();
+      message[6] = state;
+      if(cmd.isFinalMovement()){
+        message[7] = 1;
+      }
+      return message;
+  }
+  
   @Override
   public synchronized void sendCommand(MovementCommand cmd) {    
     assert cmd != null;
-    Map<String,String> properties = cmd.getStep().getPath().getProperties();
-    boolean left = true;
-    if(properties.containsKey("side")){
-      if(properties.get("side").equals("right")){
-        left = false;
-      }
-    }
-    byte[] message = {0,1,2,3,4,5,6};
+    //{vehicleId,rightTurn,Operation,Speed,FinalOperation}
+    
+    byte[] header = {'A','G','V'};
+    byte[] message = getByteMessage(cmd,header);
+    
+    MovementCommandMessage commandMessage= new MovementCommandMessage(cmd,false,message); 
     try{
-     serialCommunication.sendMessage(this,message);
+     System.out.println(message[2] + "--" + message[3]);     
+      
+     serialCommunication.sendMessage(this,commandMessage);
     } catch(Exception ex){
       LOG.debug("Unnable to send serial message!");
     }
-    LOG.debug("left turn :" + left);
+    
     // Reset the execution flag for single-step mode.
     singleStepExecutionAllowed = false;
     // Don't do anything else - the command will be put into the sentQueue
@@ -203,8 +237,31 @@ public class LoopbackCommunicationAdapter
       SetSpeedMultiplier lsMessage = (SetSpeedMultiplier) message;
       int multiplier = lsMessage.getMultiplier();
       getProcessModel().setVehiclePaused(multiplier == 0);
+    }else if(message instanceof EnergyStateMessage){
+      EnergyStateMessage eSMessage = (EnergyStateMessage) message;
+      getProcessModel().setVehicleEnergyLevel(eSMessage.getCurrentEnergyState());
+    }else if(message instanceof VehicleStateMessage){
+      VehicleStateMessage vSMessage = (VehicleStateMessage) message;
+      getProcessModel().setVehicleState(vSMessage.getCurrentState());
+    }else if(message instanceof MovementCommandMessage){
+      //Todo: get the movement command
+      MovementCommandMessage mCMessage = (MovementCommandMessage) message;
+      
+      MovementCommand sentCmd = getSentQueue().poll();
+      MovementCommand curCmd = mCMessage.getCommand();
+      if (sentCmd != null && sentCmd.equals(curCmd)) {
+        // Let the vehicle manager know we've finished this command.
+        LOG.debug("Movement order" + curCmd.toString() + "executed");
+        getProcessModel().commandExecuted(curCmd);
+      }
+    }else if(message instanceof StatusMessage){
+      StatusMessage sMessage = (StatusMessage) message;
+      LOG.debug("Voltage Reading: " + sMessage.getVoltage());
+    }else if(message instanceof EmergencyMessage){
+      LOG.debug("Emergency message detected");
     }
   }
+    
 
   @Override
   public synchronized void initVehiclePosition(String newPos) {
