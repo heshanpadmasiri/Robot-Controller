@@ -10,30 +10,34 @@ package org.opentcs.virtualvehicle;
 
 import gnu.io.*;
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
-public class SerialCommunication {   
-    private static Map<Byte,LoopbackCommunicationAdapter> idToNameMap;
-    private static Map<LoopbackCommunicationAdapter,Byte> NameToIdMap;
-    private static Map<Byte,MovementCommandMessage> messageLog;
+public class SerialCommunication {      
+    private static ConcurrentMap<Byte,LoopbackCommunicationAdapter> idToNameMap;
+    private static ConcurrentMap<LoopbackCommunicationAdapter,Byte> NameToIdMap;
+    private static ConcurrentMap<Byte,MovementCommandMessage> messageLog;
     static byte[] outMessage;
 
   public SerialCommunication() {
-      idToNameMap = new HashMap<>();
-      NameToIdMap = new HashMap<>();
+      idToNameMap = new ConcurrentHashMap<>();
+      NameToIdMap = new ConcurrentHashMap<>();
       outMessage = new byte[4];
-      messageLog = new TreeMap<>();
+      messageLog = new ConcurrentHashMap<>();
   }
   
-  public void connectToCommunicationAdapter(Byte id, LoopbackCommunicationAdapter communicationAdapter){
+  public static synchronized void clearCommunications() {
+    outMessage = new byte[4];
+  }
+  
+  public static synchronized void connectToCommunicationAdapter(Byte id, LoopbackCommunicationAdapter communicationAdapter){
     assert(!idToNameMap.containsKey(id) && !NameToIdMap.containsKey(communicationAdapter));
     idToNameMap.put(id, communicationAdapter);
     NameToIdMap.put(communicationAdapter,id);
   }
   
-  public void sendMessage(LoopbackCommunicationAdapter communicationAdapter,MovementCommandMessage commandMessage){
+  public static synchronized void sendMessage(LoopbackCommunicationAdapter communicationAdapter,MovementCommandMessage commandMessage){
      assert(NameToIdMap.containsKey(communicationAdapter));
      byte[] message = commandMessage.getSerialMessage();
      byte commandId = (byte)(messageLog.size()+1);
@@ -44,7 +48,7 @@ public class SerialCommunication {
      messageLog.put(commandId, commandMessage);
   }    
   
-  void connect ( String portName ) throws Exception
+    synchronized void  connect ( String portName ) throws Exception
     {
         CommPortIdentifier portIdentifier = CommPortIdentifier.getPortIdentifier(portName);
         if ( portIdentifier.isCurrentlyOwned() )
