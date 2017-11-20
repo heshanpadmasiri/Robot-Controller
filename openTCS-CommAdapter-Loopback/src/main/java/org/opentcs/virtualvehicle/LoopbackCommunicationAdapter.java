@@ -144,9 +144,10 @@ public class LoopbackCommunicationAdapter
     if (!isEnabled()) {
       getProcessModel().getVelocityController().addVelocityListener(getProcessModel());
       // Create task for vehicle simulation.
-      vehicleSimulationTask = new VehicleSimulationTask();
-      Thread simThread = new Thread(vehicleSimulationTask, getName() + "-simulationTask");
-      simThread.start();
+      //vehicleSimulationTask = new VehicleSimulationTask();
+      //Thread simThread = new Thread(vehicleSimulationTask, getName() + "-simulationTask");
+      //simThread.start();
+      LOG.debug("vehicle communications ennabled");
     }
     super.enable();
   }
@@ -155,8 +156,9 @@ public class LoopbackCommunicationAdapter
   public synchronized void disable() {
     if (isEnabled()) {
       // Disable vehicle simulation.
-      vehicleSimulationTask.terminate();
-      vehicleSimulationTask = null;
+      //vehicleSimulationTask.terminate();
+      //vehicleSimulationTask = null;
+      LOG.debug("vehicle communications dissabled");
       getProcessModel().getVelocityController().removeVelocityListener(getProcessModel());
     }
     super.disable();
@@ -243,17 +245,19 @@ public class LoopbackCommunicationAdapter
     }else if(message instanceof VehicleStateMessage){
       VehicleStateMessage vSMessage = (VehicleStateMessage) message;
       getProcessModel().setVehicleState(vSMessage.getCurrentState());
-    }else if(message instanceof MovementCommandMessage){
-      //Todo: get the movement command
-      MovementCommandMessage mCMessage = (MovementCommandMessage) message;
-      
+    }else if(message instanceof MovementCommandMessage){      
+      MovementCommandMessage mCMessage = (MovementCommandMessage) message;      
       MovementCommand sentCmd = getSentQueue().poll();
       MovementCommand curCmd = mCMessage.getCommand();
       if (sentCmd != null && sentCmd.equals(curCmd)) {
         // Let the vehicle manager know we've finished this command.
         LOG.debug("Movement order" + curCmd.toString() + "executed");
         getProcessModel().commandExecuted(curCmd);
-      }
+        if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
+              getProcessModel().setVehicleState(Vehicle.State.IDLE);
+              serialCommunication.clearCommunications();
+          }
+      }      
     }else if(message instanceof StatusMessage){
       StatusMessage sMessage = (StatusMessage) message;
       LOG.debug("Voltage Reading: " + sMessage.getVoltage());
