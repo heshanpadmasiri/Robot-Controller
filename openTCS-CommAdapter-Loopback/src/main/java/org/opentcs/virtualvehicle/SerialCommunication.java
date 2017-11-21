@@ -65,6 +65,7 @@ public class SerialCommunication {
                 serialPort.setSerialPortParams(57600,SerialPort.DATABITS_8,SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);
                 
                 InputStream in = serialPort.getInputStream();
+                serialPort.notifyOnDataAvailable(true);
                 OutputStream out = serialPort.getOutputStream();
                                
                 (new Thread(new SerialWriter(out))).start();
