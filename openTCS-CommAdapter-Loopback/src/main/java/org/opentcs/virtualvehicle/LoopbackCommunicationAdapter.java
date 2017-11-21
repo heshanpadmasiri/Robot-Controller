@@ -135,6 +135,7 @@ public class LoopbackCommunicationAdapter
       LOG.debug("Not initialized.");
       return;
     }
+    SerialCommunication.disconnectAdapter(this);
     super.terminate();
     initialized = false;
   }

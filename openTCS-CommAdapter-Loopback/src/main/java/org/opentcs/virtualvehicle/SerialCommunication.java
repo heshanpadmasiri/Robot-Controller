@@ -10,7 +10,6 @@ package org.opentcs.virtualvehicle;
 
 import gnu.io.*;
 import java.io.*;
-import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -18,6 +17,7 @@ public class SerialCommunication {
     private static ConcurrentMap<Byte,LoopbackCommunicationAdapter> idToNameMap;
     private static ConcurrentMap<LoopbackCommunicationAdapter,Byte> NameToIdMap;
     private static ConcurrentMap<Byte,MovementCommandMessage> messageLog;
+    private static SerialPort serialPort;
     static byte[] outMessage;
 
   public SerialCommunication() {
@@ -61,7 +61,7 @@ public class SerialCommunication {
             
             if ( commPort instanceof SerialPort )
             {
-                SerialPort serialPort = (SerialPort) commPort;
+                serialPort = (SerialPort) commPort;
                 serialPort.setSerialPortParams(57600,SerialPort.DATABITS_8,SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);
                 
                 InputStream in = serialPort.getInputStream();
@@ -81,6 +81,17 @@ public class SerialCommunication {
         }     
     }
     
+    public static void disconnectAdapter(LoopbackCommunicationAdapter adapter){
+       Byte id = NameToIdMap.get(adapter);
+       if(id != null){
+         NameToIdMap.remove(adapter);
+         idToNameMap.remove(id);
+         if(NameToIdMap.isEmpty()){
+           serialPort.removeEventListener();
+         }
+       }
+    }
+    
     /**
      * Handles the input coming from the serial port. A new line character
      * is treated as the end of a block in this example. 
@@ -98,37 +109,43 @@ public class SerialCommunication {
         public void serialEvent(SerialPortEvent arg0) { 
             try
             {
-                int[] header = new int[3];
-                int data;
-                for(int i = 0;i < 3;i++){
-                    data = in.read();
-                    header[i] = data;
-                }
-                if (header[0] == 'A'){
-                  byte[] message = new byte[5];
-                  in.read(message, 0, 5);
-                  byte id = message[0];
-                  byte orderId = message[1];
-                  byte state = message[2];
-                  byte isComplete = message[3];
-                  byte isError = message[4];
-                  if(isComplete == 1){
-                    MovementCommandMessage cmd = messageLog.get(orderId);
-                    idToNameMap.get(id).processMessage(cmd);
+                byte[] header = new byte[3];
+                in.read(header, 0, 3);
+              
+              switch (header[0]) {
+                case 'A':
+                  {
+                    byte[] message = new byte[5];
+                    in.read(message, 0, 5);
+                    byte id = message[0];
+                    byte orderId = message[1];
+                    byte state = message[2];
+                    byte isComplete = message[3];
+                    byte isError = message[4];
+                    if(isComplete == 1){
+                      MovementCommandMessage cmd = messageLog.get(orderId);
+                      idToNameMap.get(id).processMessage(cmd);
+                    } break;
                   }
-                }
-                else if (header[0] == 'S'){
-                  byte[] message = new byte[5];
-                  in.read(message, 0, 5);
-                  StatusMessage statusMessage = new StatusMessage(message[1]);
-                  idToNameMap.get(message[0]).processMessage(statusMessage);
-                }
-                else if(header[0] == 'E'){
-                  byte[] message = new byte[3];
-                  in.read(message, 0, 3);
-                  EmergencyMessage eMessage = new EmergencyMessage();
-                  idToNameMap.get(message[0]).processMessage(eMessage);
-                }
+                case 'S':
+                  {
+                    byte[] message = new byte[5];
+                    in.read(message, 0, 5);
+                    StatusMessage statusMessage = new StatusMessage(message[1]);
+                    idToNameMap.get(message[0]).processMessage(statusMessage);
+                    break;
+                  }
+                case 'E':
+                  {
+                    byte[] message = new byte[3];
+                    in.read(message, 0, 3);
+                    EmergencyMessage eMessage = new EmergencyMessage();
+                    idToNameMap.get(message[0]).processMessage(eMessage);
+                    break;
+                  }
+                default:
+                  break;
+              }
             }
             catch ( IOException e )
             {
