@@ -45,7 +45,7 @@ public class SerialCommunication {
      message[3] = id;
      message[4] = commandId;     
      outMessage = message;    
-     messageLog.put(commandId, commandMessage);
+     messageLog.put(id, commandMessage);
   }    
   
     synchronized void  connect ( String portName ) throws Exception
@@ -123,7 +123,7 @@ public class SerialCommunication {
                     byte isComplete = message[3];
                     byte isError = message[4];
                     if(isComplete == 1){
-                      MovementCommandMessage cmd = messageLog.get(orderId);
+                      MovementCommandMessage cmd = messageLog.get(id);
                       idToNameMap.get(id).processMessage(cmd);
                     } break;
                   }
