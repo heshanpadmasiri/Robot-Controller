@@ -20,7 +20,7 @@ public class SerialCommunicationFactory {
           vehicleId++;
         }
         try{
-         SERIAL_COMMUNICATION.connect("COM2");
+         SERIAL_COMMUNICATION.connect("COM6");
         } catch (Exception e){
           System.out.println("Error");
         }
