@@ -23,6 +23,7 @@
     <orderEntry type="library" name="Gradle: com.google.inject.extensions:guice-multibindings:4.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jdom:jdom2:2.0.6" level="project" />
     <orderEntry type="library" name="Gradle: net.engio:mbassador:1.1.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.rxtx:rxtx:2.1.7" level="project" />
     <orderEntry type="library" name="Gradle: org.jgrapht:jgrapht-core:1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.json:json:20160212" level="project" />
     <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-core:3.1.2" level="project" />

@@ -222,7 +222,7 @@ public class LoopbackCommunicationAdapter
     try{
      System.out.println(message[2] + "--" + message[3]);     
       
-     serialCommunication.sendMessage(this,commandMessage);
+     SerialCommunication.sendMessage(this,commandMessage);
     } catch(Exception ex){
       LOG.debug("Unnable to send serial message!");
     }
@@ -254,9 +254,10 @@ public class LoopbackCommunicationAdapter
         // Let the vehicle manager know we've finished this command.
         LOG.debug("Movement order" + curCmd.toString() + "executed");
         getProcessModel().commandExecuted(curCmd);
+        getProcessModel().setVehiclePosition(curCmd.getStep().getDestinationPoint().getName());
         if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
               getProcessModel().setVehicleState(Vehicle.State.IDLE);
-              serialCommunication.clearCommunications();
+              SerialCommunication.clearCommunications();
           }
       }      
     }else if(message instanceof StatusMessage){

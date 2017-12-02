@@ -11,6 +11,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.rxtx:rxtx:2.1.7" level="project" />
     <orderEntry type="module" module-name="openTCS-API-Injection_main" />
     <orderEntry type="module" module-name="openTCS-Common_main" />
     <orderEntry type="module" module-name="openTCS-API-Base_main" />

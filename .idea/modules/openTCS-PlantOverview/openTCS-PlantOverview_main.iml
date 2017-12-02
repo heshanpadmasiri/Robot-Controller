@@ -31,10 +31,10 @@
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.opentcs.thirdparty.dockingframes:docking-frames-common:sources:1.1.2p11" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.opentcs.thirdparty.dockingframes:docking-frames-core:sources:1.1.2p11" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.cfg4j:cfg4j-core:sources:4.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.opentcs.thirdparty.jhotdraw:jhotdraw:sources:7.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.cfg4j:cfg4j-core:sources:4.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.opentcs.thirdparty.dockingframes:docking-frames-common:sources:1.1.2p11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:javadoc:1.7.21" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.opentcs.thirdparty.dockingframes:docking-frames-core:sources:1.1.2p11" level="project" />
   </component>
 </module>
