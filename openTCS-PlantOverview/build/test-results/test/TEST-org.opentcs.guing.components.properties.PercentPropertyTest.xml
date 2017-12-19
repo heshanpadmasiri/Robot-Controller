@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.components.properties.PercentPropertyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:20:42" hostname="DESKTOP-UBTRRGA" time="0.015">
+<testsuite name="org.opentcs.guing.components.properties.PercentPropertyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:20:18" hostname="DESKTOP-UBTRRGA" time="0.021">
   <properties/>
-  <testcase name="percentPropertyNoBlank" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
-  <testcase name="percentPropertyTest" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
-  <testcase name="percentPropertyEmtpy" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
-  <testcase name="percentPropertyGreaterValue" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
-  <testcase name="percentPropertyNegativeValue" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
-  <testcase name="percentPropertyUnknownUnit" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.0"/>
+  <testcase name="percentPropertyNoBlank" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.008"/>
+  <testcase name="percentPropertyTest" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.001"/>
+  <testcase name="percentPropertyEmtpy" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.001"/>
+  <testcase name="percentPropertyGreaterValue" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.002"/>
+  <testcase name="percentPropertyNegativeValue" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.003"/>
+  <testcase name="percentPropertyUnknownUnit" classname="org.opentcs.guing.components.properties.PercentPropertyTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -21,26 +21,3 @@ Valid values: 'English', 'German'
 
 |===
 
-.Configuration options with prefix 'controlcenter'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|enable
-|Boolean
-|Whether the kernel control center GUI should be enabled on startup. +
-(EXPERIMENTAL)
-
-|language
-|String
-|The application's current language. +
-Valid values: 'English', 'German'
-
-|loggingAreaCapacity
-|Integer
-|The maximum number of characters in the logging text area.
-
-|===
-

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-11-05T15:56:38" hostname="DESKTOP-UBTRRGA" time="0.06">
+<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:55" hostname="DESKTOP-UBTRRGA" time="0.035">
   <properties/>
-  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.047"/>
+  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.023"/>
   <testcase name="shouldOutputSampleResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Nov 05, 2017 9:26:38 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
+  <system-err><![CDATA[Dec 19, 2017 3:49:55 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="scriptResponse" parsingSuccessful="true" id="test.tcs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -13,7 +13,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </response>
 </tcsResponseSet>
 
-Nov 05, 2017 9:26:38 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
+Dec 19, 2017 3:49:55 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="transportResponse" executionSuccessful="true" orderName="TOrder-0001" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

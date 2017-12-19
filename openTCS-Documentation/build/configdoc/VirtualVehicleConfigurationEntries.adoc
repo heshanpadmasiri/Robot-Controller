@@ -24,29 +24,3 @@
 
 |===
 
-.Configuration options with prefix 'virtualvehicle'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|commandQueueCapacity
-|Integer
-|The adapter's command queue capacity.
-
-|rechargeOperation
-|String
-|The string to be treated as a recharge operation.
-
-|simulationTimeFactor
-|Double
-|The simulation time factor. +
-1.0 is real time, greater values speed up simulation.
-
-|profilesMaxFileSize
-|Long
-|The maximum allowed size (in bytes) for a profiles description file.
-
-|===
-

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.virtualvehicle.SimulatingEnergyStorageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-14T05:56:51" hostname="DESKTOP-UBTRRGA" time="0.003">
+<testsuite name="org.opentcs.virtualvehicle.SimulatingEnergyStorageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:18" hostname="DESKTOP-UBTRRGA" time="0.008">
   <properties/>
-  <testcase name="testInvariants" classname="org.opentcs.virtualvehicle.SimulatingEnergyStorageTest" time="0.003"/>
+  <testcase name="testInvariants" classname="org.opentcs.virtualvehicle.SimulatingEnergyStorageTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

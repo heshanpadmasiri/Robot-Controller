@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.workingset.TCSObjectPoolTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2017-11-05T15:56:37" hostname="DESKTOP-UBTRRGA" time="0.045">
+<testsuite name="org.opentcs.kernel.workingset.TCSObjectPoolTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:54" hostname="DESKTOP-UBTRRGA" time="0.036">
   <properties/>
-  <testcase name="shouldReturnObjectsByPattern" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.002"/>
-  <testcase name="shouldRemoveObjectsByName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
-  <testcase name="testUniqueNameGenerator" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.038"/>
-  <testcase name="shouldEmitEventForCreatedObject" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.002"/>
-  <testcase name="shouldRemoveObjectByRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
-  <testcase name="shouldReturnObjectByClassAndRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
+  <testcase name="shouldReturnObjectsByPattern" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
+  <testcase name="shouldRemoveObjectsByName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
+  <testcase name="testUniqueNameGenerator" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.018"/>
+  <testcase name="shouldEmitEventForCreatedObject" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.003"/>
+  <testcase name="shouldRemoveObjectByRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.003"/>
+  <testcase name="shouldReturnObjectByClassAndRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.002"/>
   <testcase name="shouldThrowIfAddingExistingName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
-  <testcase name="shouldReturnObjectByClassAndName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
-  <testcase name="shouldReturnObjectByRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
+  <testcase name="shouldReturnObjectByClassAndName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
+  <testcase name="shouldReturnObjectByRef" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
   <testcase name="shouldReturnObjectByName" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
-  <testcase name="shouldReturnObjectsByClass" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
-  <testcase name="shouldReturnObjectsByClassAndPattern" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
+  <testcase name="shouldReturnObjectsByClass" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.0"/>
+  <testcase name="shouldReturnObjectsByClassAndPattern" classname="org.opentcs.kernel.workingset.TCSObjectPoolTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

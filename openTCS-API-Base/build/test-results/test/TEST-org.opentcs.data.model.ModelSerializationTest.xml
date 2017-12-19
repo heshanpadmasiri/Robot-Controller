@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.data.model.ModelSerializationTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:19:18" hostname="DESKTOP-UBTRRGA" time="1.641">
+<testsuite name="org.opentcs.data.model.ModelSerializationTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:10" hostname="DESKTOP-UBTRRGA" time="1.314">
   <properties/>
-  <testcase name="shouldSerializeAndDeserializePath" classname="org.opentcs.data.model.ModelSerializationTest" time="1.078"/>
-  <testcase name="shouldSerializeAndDeserializeLocationType" classname="org.opentcs.data.model.ModelSerializationTest" time="0.0"/>
-  <testcase name="shouldSerializeAndDeserializeBlock" classname="org.opentcs.data.model.ModelSerializationTest" time="0.0"/>
-  <testcase name="shouldSerializeAndDeserializeGroup" classname="org.opentcs.data.model.ModelSerializationTest" time="0.0"/>
-  <testcase name="shouldSerializeAndDeserializePoint" classname="org.opentcs.data.model.ModelSerializationTest" time="0.078"/>
-  <testcase name="shouldSerializeAndDeserializeStaticRoute" classname="org.opentcs.data.model.ModelSerializationTest" time="0.0"/>
-  <testcase name="shouldSerializeAndDeserializeLocation" classname="org.opentcs.data.model.ModelSerializationTest" time="0.0"/>
-  <testcase name="shouldSerializeAndDeserializeVehicle" classname="org.opentcs.data.model.ModelSerializationTest" time="0.485"/>
+  <testcase name="shouldSerializeAndDeserializePath" classname="org.opentcs.data.model.ModelSerializationTest" time="1.165"/>
+  <testcase name="shouldSerializeAndDeserializeLocationType" classname="org.opentcs.data.model.ModelSerializationTest" time="0.004"/>
+  <testcase name="shouldSerializeAndDeserializeBlock" classname="org.opentcs.data.model.ModelSerializationTest" time="0.005"/>
+  <testcase name="shouldSerializeAndDeserializeGroup" classname="org.opentcs.data.model.ModelSerializationTest" time="0.003"/>
+  <testcase name="shouldSerializeAndDeserializePoint" classname="org.opentcs.data.model.ModelSerializationTest" time="0.052"/>
+  <testcase name="shouldSerializeAndDeserializeStaticRoute" classname="org.opentcs.data.model.ModelSerializationTest" time="0.002"/>
+  <testcase name="shouldSerializeAndDeserializeLocation" classname="org.opentcs.data.model.ModelSerializationTest" time="0.004"/>
+  <testcase name="shouldSerializeAndDeserializeVehicle" classname="org.opentcs.data.model.ModelSerializationTest" time="0.075"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

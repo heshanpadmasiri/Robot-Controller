@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.persistence.DrivingCoursePersistenceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-03T09:19:49" hostname="DESKTOP-UBTRRGA" time="0.969">
+<testsuite name="org.opentcs.util.persistence.DrivingCoursePersistenceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:24" hostname="DESKTOP-UBTRRGA" time="0.929">
   <properties/>
-  <testcase name="testToXml" classname="org.opentcs.util.persistence.DrivingCoursePersistenceTest" time="0.969"/>
+  <testcase name="testToXml" classname="org.opentcs.util.persistence.DrivingCoursePersistenceTest" time="0.929"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Nov 03, 2017 2:49:50 PM org.opentcs.util.persistence.DrivingCoursePersistenceTest testToXml
+  <system-err><![CDATA[Dec 19, 2017 3:49:25 PM org.opentcs.util.persistence.DrivingCoursePersistenceTest testToXml
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model version="0.0.2" name="Demo">
     <point name="Point1" id="0" xPosition="1" yPosition="2" zPosition="3" vehicleOrientationAngle="NaN" type="HALT_POSITION">
@@ -50,7 +50,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </visualLayout>
 </model>
 
-Nov 03, 2017 2:49:50 PM org.opentcs.util.persistence.DrivingCoursePersistenceTest validateXml
+Dec 19, 2017 3:49:25 PM org.opentcs.util.persistence.DrivingCoursePersistenceTest validateXml
 INFO: Xml is valid
 ]]></system-err>
 </testsuite>
