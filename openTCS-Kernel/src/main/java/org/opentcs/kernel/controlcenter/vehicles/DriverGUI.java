@@ -220,6 +220,12 @@ public class DriverGUI
       comboBox.setSelectedIndex(0);
     }
     else {
+      String vehicleName = vehicleEntry.getVehicleName();
+      VehicleCommAdapterFactory defaultFactory = commAdapterRegistry.findFactoriesFor(vehicleEntry.getVehicle()).get(0);
+      attachManager.attachAdapterToVehicle(vehicleName, defaultFactory);
+      LinkedList<VehicleEntry> temp = new LinkedList<>();
+      temp.add(vehicleEntry);
+      enableCommAdapters(temp);
       comboBox.setSelectedItem(vehicleEntry.getCommAdapterFactory());
     }
     
