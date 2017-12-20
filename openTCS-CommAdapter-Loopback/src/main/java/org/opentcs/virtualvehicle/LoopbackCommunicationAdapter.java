@@ -179,8 +179,15 @@ public class LoopbackCommunicationAdapter
   protected List<VehicleCommAdapterPanel> createAdapterPanels() {
     return Arrays.asList(componentsFactory.createPanel(this));
   }
-
+  
+  private byte getOrderId(MovementCommand cmd){
+    Map<String,String> data = cmd.getStep().getDestinationPoint().getProperties();
+    assert data.containsKey("id");
+    return Byte.decode(data.get("id"));
+  }
+  
   private byte[] getByteMessage(MovementCommand cmd,byte[] header){
+    // Todo insert command id
       byte[] message = new byte[8];
       for(int i = 0; i < header.length;i++){
         message[i] = header[i];
@@ -207,6 +214,7 @@ public class LoopbackCommunicationAdapter
       if(cmd.isFinalMovement()){
         message[7] = 1;
       }
+      message[4] = getOrderId(cmd);
       return message;
   }
   

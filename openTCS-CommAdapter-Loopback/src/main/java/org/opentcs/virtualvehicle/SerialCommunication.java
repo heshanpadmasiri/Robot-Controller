@@ -10,6 +10,7 @@ package org.opentcs.virtualvehicle;
 
 import gnu.io.*;
 import java.io.*;
+import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -37,15 +38,13 @@ public class SerialCommunication {
     NameToIdMap.put(communicationAdapter,id);
   }
   
-  public static synchronized void sendMessage(LoopbackCommunicationAdapter communicationAdapter,MovementCommandMessage commandMessage){
+  public static synchronized void sendMessage(LoopbackCommunicationAdapter communicationAdapter,MovementCommandMessage commandMessage){    
      assert(NameToIdMap.containsKey(communicationAdapter));
-     byte[] message = commandMessage.getSerialMessage();
-     byte commandId = (byte)(messageLog.size()+1);
+     byte[] message = commandMessage.getSerialMessage();     
      byte id = NameToIdMap.get(communicationAdapter);
-     message[3] = id;
-     message[4] = commandId;     
+     message[3] = id;     
      outMessage = message;    
-     messageLog.put(id, commandMessage);
+     messageLog.put(outMessage[4], commandMessage); // movement messages identified by the 4th byte of the message
   }    
   
     synchronized void  connect ( String portName ) throws Exception
@@ -95,6 +94,7 @@ public class SerialCommunication {
     /**
      * Handles the input coming from the serial port. A new line character
      * is treated as the end of a block in this example. 
+     * print the message recieved to the std out
      */
     public static class SerialReader implements SerialPortEventListener 
     {
@@ -115,30 +115,36 @@ public class SerialCommunication {
               switch (header[0]) {
                 case 'A':
                   {
+                    System.out.println("AGV Message:");
                     byte[] message = new byte[5];
                     in.read(message, 0, 5);
+                    System.out.println(Arrays.toString(message));
                     byte id = message[0];
                     byte orderId = message[1];
                     byte state = message[2];
                     byte isComplete = message[3];
                     byte isError = message[4];
                     if(isComplete == 1){
-                      MovementCommandMessage cmd = messageLog.get(id);
+                      MovementCommandMessage cmd = messageLog.get(orderId);
                       idToNameMap.get(id).processMessage(cmd);
                     } break;
                   }
                 case 'S':
                   {
+                    System.out.println("Status message");
                     byte[] message = new byte[5];
                     in.read(message, 0, 5);
+                    System.out.println(Arrays.toString(message));
                     StatusMessage statusMessage = new StatusMessage(message[1]);
                     idToNameMap.get(message[0]).processMessage(statusMessage);
                     break;
                   }
                 case 'E':
                   {
+                    System.out.println("Emergency message");
                     byte[] message = new byte[3];
                     in.read(message, 0, 3);
+                    System.out.println(Arrays.toString(message));
                     EmergencyMessage eMessage = new EmergencyMessage();
                     idToNameMap.get(message[0]).processMessage(eMessage);
                     break;
