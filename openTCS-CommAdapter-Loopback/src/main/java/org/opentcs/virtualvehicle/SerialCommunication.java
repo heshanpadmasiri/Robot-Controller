@@ -19,6 +19,8 @@ public class SerialCommunication {
     private static ConcurrentMap<LoopbackCommunicationAdapter,Byte> NameToIdMap;
     private static ConcurrentMap<Byte,MovementCommandMessage> messageLog;
     private static SerialPort serialPort;
+    private static InputStream in;
+    private static OutputStream out;
     static byte[] outMessage;
 
   public SerialCommunication() {
@@ -44,7 +46,7 @@ public class SerialCommunication {
      byte id = NameToIdMap.get(communicationAdapter);
      message[3] = id;     
      outMessage = message;    
-     messageLog.put(outMessage[4], commandMessage); // movement messages identified by the 4th byte of the message
+     System.out.println("Message updated to:" + Arrays.toString(outMessage));
   }    
   
     synchronized void  connect ( String portName ) throws Exception
@@ -63,9 +65,9 @@ public class SerialCommunication {
                 serialPort = (SerialPort) commPort;
                 serialPort.setSerialPortParams(57600,SerialPort.DATABITS_8,SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);
                 
-                InputStream in = serialPort.getInputStream();
+                in = serialPort.getInputStream();
                 serialPort.notifyOnDataAvailable(true);
-                OutputStream out = serialPort.getOutputStream();
+                out = serialPort.getOutputStream();
                                
                 (new Thread(new SerialWriter(out))).start();
                 
@@ -82,11 +84,23 @@ public class SerialCommunication {
     
     public static void disconnectAdapter(LoopbackCommunicationAdapter adapter){
        Byte id = NameToIdMap.get(adapter);
+       System.out.println("Disconnecting adapter");
        if(id != null){
          NameToIdMap.remove(adapter);
          idToNameMap.remove(id);
          if(NameToIdMap.isEmpty()){
            serialPort.removeEventListener();
+           if(serialPort != null){
+             try{
+               serialPort.removeEventListener();
+               serialPort.close();
+               in.close();
+               out.close();
+             } catch(IOException ex){
+               System.out.println("Serial streamclosing failed!");
+               ex.printStackTrace();
+             }
+           }
          }
        }
     }
@@ -187,6 +201,7 @@ public class SerialCommunication {
           try
             {        
                 Thread.sleep(100);
+                System.out.println("Message:" + Arrays.toString(outMessage) + " written");
                 this.out.write(outMessage);
             }
             catch ( IOException e )
