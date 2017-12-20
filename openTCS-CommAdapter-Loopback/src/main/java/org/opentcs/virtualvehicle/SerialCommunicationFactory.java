@@ -16,11 +16,11 @@ public class SerialCommunicationFactory {
     
     public SerialCommunicationFactory(LoopbackCommunicationAdapter CommunicationAdapter){        
         synchronized(SERIAL_COMMUNICATION){
-          SERIAL_COMMUNICATION.connectToCommunicationAdapter(vehicleId, CommunicationAdapter);
-          vehicleId++;
+          SerialCommunication.connectToCommunicationAdapter(vehicleId, CommunicationAdapter); 
         }
         try{
-         SERIAL_COMMUNICATION.connect("COM6");
+          //Change the com port when needed
+          SERIAL_COMMUNICATION.connect("COM6");
         } catch (Exception e){
           System.out.println("Error");
         }
