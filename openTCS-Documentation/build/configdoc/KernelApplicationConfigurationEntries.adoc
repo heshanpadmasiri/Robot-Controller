@@ -35,3 +35,77 @@
 
 |===
 
+.Configuration options with prefix 'kernelapp'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|selectModelOnStartup
+|Boolean
+|Whether to show the model selection dialog on startup.
+
+|loadModelOnStartup
+|Boolean
+|Whether to automatically load the kernel's model on startup.
+
+|autoAttachDriversOnStartup
+|Boolean
+|Whether to automatically attach drivers on startup.
+
+|autoEnableDriversOnStartup
+|Boolean
+|Whether to automatically enable drivers on startup.
+
+|saveModelOnTerminateModelling
+|Boolean
+|Whether to implicitly save the model when leaving modelling state.
+
+|saveModelOnTerminateOperating
+|Boolean
+|Whether to implicitly save the model when leaving operating state.
+
+|updateRoutingTopologyOnPathLockChange
+|Boolean
+|Whether to implicitly update the router's topology when a path is (un)locked.
+
+|===
+
+.Configuration options with prefix 'kernelapp'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|selectModelOnStartup
+|Boolean
+|Whether to show the model selection dialog on startup.
+
+|loadModelOnStartup
+|Boolean
+|Whether to automatically load the kernel's model on startup.
+
+|autoAttachDriversOnStartup
+|Boolean
+|Whether to automatically attach drivers on startup.
+
+|autoEnableDriversOnStartup
+|Boolean
+|Whether to automatically enable drivers on startup.
+
+|saveModelOnTerminateModelling
+|Boolean
+|Whether to implicitly save the model when leaving modelling state.
+
+|saveModelOnTerminateOperating
+|Boolean
+|Whether to implicitly save the model when leaving operating state.
+
+|updateRoutingTopologyOnPathLockChange
+|Boolean
+|Whether to implicitly update the router's topology when a path is (un)locked.
+
+|===
+

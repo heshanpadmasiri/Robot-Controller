@@ -22,3 +22,51 @@ Results of multiple evaluators are added up. Valid values: +
 
 |===
 
+.Configuration options with prefix 'defaultrouter.shortestpath'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|algorithm
+|Strings
+|The routing algorithm to be used. Valid values: +
+'DIJKSTRA': Routes are computed using Dijkstra's algorithm. +
+'FLOYD_WARSHALL': Routes are computed using Floyd-Warshall algorithm.
+
+|edgeEvaluators
+|List of strings
+|The types of route evaluators/cost factors to be used. +
+Results of multiple evaluators are added up. Valid values: +
+'DISTANCE': A route's cost is the sum of the lengths of its paths. +
+'TRAVELTIME': A route's cost is the vehicle's expected driving time to the destination. +
+'TURNS': A route's cost is the number of turns/direction changes on it. +
+'EXPLICIT': A route's cost is the sum of the explicitly given costs of its paths.
+
+|===
+
+.Configuration options with prefix 'defaultrouter.shortestpath'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|algorithm
+|Strings
+|The routing algorithm to be used. Valid values: +
+'DIJKSTRA': Routes are computed using Dijkstra's algorithm. +
+'FLOYD_WARSHALL': Routes are computed using Floyd-Warshall algorithm.
+
+|edgeEvaluators
+|List of strings
+|The types of route evaluators/cost factors to be used. +
+Results of multiple evaluators are added up. Valid values: +
+'DISTANCE': A route's cost is the sum of the lengths of its paths. +
+'TRAVELTIME': A route's cost is the vehicle's expected driving time to the destination. +
+'TURNS': A route's cost is the number of turns/direction changes on it. +
+'EXPLICIT': A route's cost is the sum of the explicitly given costs of its paths.
+
+|===
+

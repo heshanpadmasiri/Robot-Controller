@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.KernelStateOperatingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:51" hostname="DESKTOP-UBTRRGA" time="2.346">
+<testsuite name="org.opentcs.kernel.KernelStateOperatingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-20T06:54:40" hostname="DESKTOP-UBTRRGA" time="1.967">
   <properties/>
-  <testcase name="shouldInitializeExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="1.297"/>
-  <testcase name="terminateKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.542"/>
+  <testcase name="shouldInitializeExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.954"/>
+  <testcase name="terminateKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.506"/>
   <testcase name="initializeKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.003"/>
   <testcase name="shouldTerminateExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.503"/>
   <system-out><![CDATA[]]></system-out>

@@ -24,3 +24,55 @@ If 'localhost' and not running already, a RMI registry will be started.
 
 |===
 
+.Configuration options with prefix 'rmikernelinterface'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|registryHost
+|String
+|The host name/IP address of the RMI registry. +
+If 'localhost' and not running already, a RMI registry will be started.
+
+|registryPort
+|Integer
+|The TCP port of the RMI.
+
+|remoteKernelPort
+|Integer
+|The TCP port of the remote kernel.
+
+|clientSweepInterval
+|Long
+|The interval for cleaning out inactive clients (in ms).
+
+|===
+
+.Configuration options with prefix 'rmikernelinterface'
+[cols="2,1,3", options="header"]
+|===
+|Key
+|Type
+|Description
+
+|registryHost
+|String
+|The host name/IP address of the RMI registry. +
+If 'localhost' and not running already, a RMI registry will be started.
+
+|registryPort
+|Integer
+|The TCP port of the RMI.
+
+|remoteKernelPort
+|Integer
+|The TCP port of the remote kernel.
+
+|clientSweepInterval
+|Long
+|The interval for cleaning out inactive clients (in ms).
+
+|===
+

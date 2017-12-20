@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:54" hostname="DESKTOP-UBTRRGA" time="0.345">
+<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-20T06:54:42" hostname="DESKTOP-UBTRRGA" time="0.58">
   <properties/>
-  <testcase name="shouldMarshallAndUnmarshall" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.261"/>
-  <testcase name="shouldOutputSampleOrder" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.035"/>
-  <testcase name="shouldOutputSampleScriptOrder" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.048"/>
+  <testcase name="shouldMarshallAndUnmarshall" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.5"/>
+  <testcase name="shouldOutputSampleOrder" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.044"/>
+  <testcase name="shouldOutputSampleScriptOrder" classname="org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest" time="0.036"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 19, 2017 3:49:54 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldMarshallAndUnmarshall
+  <system-err><![CDATA[Dec 20, 2017 12:24:42 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldMarshallAndUnmarshall
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
-    <order xsi:type="transport" deadline="2017-12-19T15:49:54.823+05:30" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2017-12-20T12:24:42.870+05:30" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Location 1" operation="Load">
             <property key="Key 1" value="Value 1"/>
             <property key="Key 2" value="Value 2"/>
@@ -18,7 +18,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
             <property key="Key 2" value="Value 2"/>
         </destination>
     </order>
-    <order xsi:type="transport" deadline="2017-12-19T15:49:54.824+05:30" intendedVehicle="Vehicle-02" id="TransportOrder-02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2017-12-20T12:24:42.871+05:30" intendedVehicle="Vehicle-02" id="TransportOrder-02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Location 3" operation="Load">
             <property key="Key 1" value="Value 1"/>
             <property key="Key 2" value="Value 2"/>
@@ -30,10 +30,10 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </order>
 </tcsOrderSet>
 
-Dec 19, 2017 3:49:55 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldOutputSampleOrder
+Dec 20, 2017 12:24:43 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldOutputSampleOrder
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
-    <order xsi:type="transport" deadline="2017-12-19T15:49:55.085+05:30" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2017-12-20T12:24:43.370+05:30" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Storage 01" operation="Load cargo"/>
         <destination locationName="Storage 02" operation="Unoad cargo"/>
         <property key="waitBefore" value="Unload"/>
@@ -49,7 +49,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </order>
 </tcsOrderSet>
 
-Dec 19, 2017 3:49:55 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldOutputSampleScriptOrder
+Dec 20, 2017 12:24:43 PM org.opentcs.kernel.xmlorders.binding.TCSOrderSetTest shouldOutputSampleScriptOrder
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
     <order xsi:type="transportScript" fileName="test.tcs" id="test.tcs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
