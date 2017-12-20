@@ -125,8 +125,14 @@ public class SerialCommunication {
                     byte isComplete = message[3];
                     byte isError = message[4];
                     if(isComplete == 1){
-                      MovementCommandMessage cmd = messageLog.get(orderId);
-                      idToNameMap.get(id).processMessage(cmd);
+                      if(messageLog.containsKey(orderId)){
+                        System.out.println("Order:" + orderId + " completion recieved");
+                        MovementCommandMessage cmd = messageLog.get(orderId);
+                        messageLog.remove(orderId);
+                        idToNameMap.get(id).processMessage(cmd);
+                      } else {
+                        System.out.println("Invalid order id no such order");
+                      }                      
                     } break;
                   }
                 case 'S':
