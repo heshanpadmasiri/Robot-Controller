@@ -47,6 +47,7 @@ public class SerialCommunication {
      message[3] = id;     
      outMessage = message;    
      System.out.println("Message updated to:" + Arrays.toString(outMessage));
+     messageLog.put(message[4],commandMessage);
   }    
   
     synchronized void  connect ( String portName ) throws Exception
