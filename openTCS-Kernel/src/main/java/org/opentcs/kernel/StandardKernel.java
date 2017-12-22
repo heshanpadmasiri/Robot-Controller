@@ -122,6 +122,8 @@ final class StandardKernel
    */
   private KernelState kernelState;
 
+  private StandardKernel kernel;
+  
   /**
    * Creates a new kernel.
    *
@@ -152,9 +154,15 @@ final class StandardKernel
 
     initialized = true;
     LOG.debug("Starting kernel thread");
+    kernel = this;
     Thread kernelThread = new Thread(this, "kernelThread");
     kernelThread.start();
   }
+
+  public StandardKernel getKernel() {
+    assert initialized; // make sure kernal is initialized other wise will return a null pointer
+    return kernel;
+  }  
 
   @Override
   public boolean isInitialized() {

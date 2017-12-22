@@ -139,6 +139,7 @@ public class LoopbackCommunicationAdapterPanel
      }
      loadPropertiesFromProfile(profile); */
     profilesPanel.setVisible(false);
+    TransportOrderCreatorFactory.getTransportOrderCreator().setKernel(this.kernel);
   }
 
   @Override

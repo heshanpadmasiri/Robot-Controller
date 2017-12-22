@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca90455-52a0-4f91-b234-3013693974ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_rxtx_rxtx_2_1_7.xml" />
+    <list default="true" id="dca90455-52a0-4f91-b234-3013693974ed" name="Default" comment="Basic infrastructure of external transport order generation added">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreatorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-4.7.0-sr-d41d8cd98f00b204e9800998ecf8427e" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-4.7.0-sr-d41d8cd98f00b204e9800998ecf8427e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-API-Base-7858e166035efd72b099ba04a37e8061" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-API-Base-7858e166035efd72b099ba04a37e8061" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-API-Inje-037bd783a8fbeec570332ce84407e1e8" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-API-Inje-037bd783a8fbeec570332ce84407e1e8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-CommAdap-b0e7c5ea3fd29b326e2a1ddecd2ea982" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-CommAdap-b0e7c5ea3fd29b326e2a1ddecd2ea982" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Common-2e54a6bb3e5a682e4281d72d5b0cc579" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Common-2e54a6bb3e5a682e4281d72d5b0cc579" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Document-e0bb3f98c37746bf4489fc7411b015c9" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Document-e0bb3f98c37746bf4489fc7411b015c9" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Kernel-3f9457ba2d2349cb2947fc7cf0ac55ce" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Kernel-3f9457ba2d2349cb2947fc7cf0ac55ce" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-PlantOve-e67af607617a9bbca3c70c982ccecafe" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-PlantOve-e67af607617a9bbca3c70c982ccecafe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Strategi-38c239c6b39f82025495248e75fe4487" afterPath="$PROJECT_DIR$/.nb-gradle/private/cache/openTCS-Strategi-38c239c6b39f82025495248e75fe4487" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/openTCS-API-Base/openTCS-API-Base_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/openTCS-API-Injection/openTCS-API-Injection_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/openTCS-PlantOverview/openTCS-PlantOverview_main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.nb-gradle/profiles/private/aux-config" afterPath="$PROJECT_DIR$/.nb-gradle/profiles/private/aux-config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterPanel.java" afterPath="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openTCS-Kernel/src/main/java/org/opentcs/kernel/StandardKernel.java" afterPath="$PROJECT_DIR$/openTCS-Kernel/src/main/java/org/opentcs/kernel/StandardKernel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -66,10 +81,11 @@
       <file leaf-file-name="LoopbackCommunicationAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3689">
-              <caret line="252" column="11" lean-forward="false" selection-start-line="252" selection-start-column="11" selection-end-line="252" selection-end-column="11" />
+            <state relative-caret-position="3825">
+              <caret line="260" column="11" lean-forward="false" selection-start-line="260" selection-start-column="11" selection-end-line="260" selection-end-column="11" />
               <folding>
-                <marker date="1512214563180" expanded="true" signature="8913:9187" ph="{...}" />
+                <marker date="1513771057154" expanded="true" signature="6780:6806" ph="{...}" />
+                <marker date="1513771057154" expanded="true" signature="9194:9468" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,19 +94,46 @@
       <file leaf-file-name="TestEnvironment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/test/java/org/opentcs/TestEnvironment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
+            <state relative-caret-position="472">
               <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleCommAdapterRegistry.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/main/java/org/opentcs/kernel/vehicles/VehicleCommAdapterRegistry.java">
+      <file leaf-file-name="LoopbackCommunicationAdapterPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+            <state relative-caret-position="116">
+              <caret line="1764" column="55" lean-forward="false" selection-start-line="1764" selection-start-column="55" selection-end-line="1764" selection-end-column="55" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransportOrderCreatorFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreatorFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransportOrderCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,21 +141,11 @@
       <file leaf-file-name="SerialCommunication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/SerialCommunication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2278">
-              <caret line="148" column="13" lean-forward="false" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
+            <state relative-caret-position="2720">
+              <caret line="175" column="13" lean-forward="false" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
               <folding>
-                <marker date="1511398301963" expanded="true" signature="5437:5623" ph="{...}" />
+                <marker date="1513851238063" expanded="true" signature="7435:7767" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicVehicleCommAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openTCS-API-Base/src/main/java/org/opentcs/drivers/vehicle/BasicVehicleCommAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4539">
-              <caret line="304" column="8" lean-forward="false" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,27 +180,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransportOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openTCS-API-Base/src/main/java/org/opentcs/data/order/TransportOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/openTCS-API-Base/src/main/java/org/opentcs/data/model/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -2365,10 +2385,16 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="16591026930545" />
+        <entry key="$PROJECT_DIR$" value="16645300984050" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3991810888" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1114575256" />
+        <entry key="$PROJECT_DIR$/openTCS-API-Base/build.gradle" value="2872186269" />
+        <entry key="$PROJECT_DIR$/openTCS-API-Injection/build.gradle" value="3498838041" />
         <entry key="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/build.gradle" value="129153037" />
+        <entry key="$PROJECT_DIR$/openTCS-Common/build.gradle" value="2747491244" />
+        <entry key="$PROJECT_DIR$/openTCS-Documentation/build.gradle" value="2867158849" />
+        <entry key="$PROJECT_DIR$/openTCS-PlantOverview/build.gradle" value="985737234" />
+        <entry key="$PROJECT_DIR$/openTCS-Strategies-Default/build.gradle" value="1341877096" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -3022,6 +3048,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java" />
+        <option value="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterPanel.java" />
+        <option value="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreatorFactory.java" />
+        <option value="$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreator.java" />
       </list>
     </option>
   </component>
@@ -3032,10 +3061,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="140" />
+    <option name="y" value="131" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -3063,6 +3092,46 @@
             <path>
               <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
               <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-API-Base" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-CommAdapter-Loopback" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-CommAdapter-Loopback" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-CommAdapter-Loopback" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-CommAdapter-Loopback" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="openTCS-CommAdapter-Loopback" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="virtualvehicle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="openTCS-Kernel" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -3094,16 +3163,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kernel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="openTCS-4.7.0-src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="openTCS-Kernel" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kernel" type="462c0819:PsiDirectoryNode" />
-              <item name="vehicles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="openTCS" type="b2602c69:ProjectViewProjectNode" />
@@ -3133,14 +3192,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="loop&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java&#10;bas&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-API-Base/src/main/java/org/opentcs/drivers/vehicle/BasicVehicleCommAdapter.java&#10;vehicle&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-API-Base/src/main/java/org/opentcs/drivers/vehicle/BasicVehicleCommAdapter.java&#10;Basic&#9;PSI&#9;JAVA://org.opentcs.drivers.vehicle.BasicVehicleCommAdapter&#10;drive&#9;PSI&#9;JAVA://org.opentcs.data.order.DriveOrder&#10;createTra&#9;PSI&#9;JAVA://org.opentcs.access.Kernel#createTransportOrder&#10;main&#9;PSI&#9;JAVA://org.opentcs.TestEnvironment#main" />
+    <property name="SearchEverywhereHistoryKey" value="ker&#9;PSI&#9;JAVA://org.opentcs.virtualvehicle.LoopbackCommunicationAdapterPanel#kernel&#10;loop&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java&#10;bas&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-API-Base/src/main/java/org/opentcs/drivers/vehicle/BasicVehicleCommAdapter.java&#10;vehicle&#9;FILE&#9;file://G:/openTCS-4.7.0-src/openTCS-API-Base/src/main/java/org/opentcs/drivers/vehicle/BasicVehicleCommAdapter.java&#10;Basic&#9;PSI&#9;JAVA://org.opentcs.drivers.vehicle.BasicVehicleCommAdapter&#10;drive&#9;PSI&#9;JAVA://org.opentcs.data.order.DriveOrder&#10;createTra&#9;PSI&#9;JAVA://org.opentcs.access.Kernel#createTransportOrder&#10;main&#9;PSI&#9;JAVA://org.opentcs.TestEnvironment#main" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gui_combined" />
@@ -3312,11 +3371,12 @@
     <option name="totallyTimeSpent" value="3051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3327,7 +3387,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17395833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39458272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3340,7 +3400,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -3349,7 +3408,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3365,10 +3424,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46741572" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22327965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3383,7 +3442,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Instance references changed to static references and new communication system added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instance references changed to static references and new communication system added" />
+    <MESSAGE value="Basic infrastructure of external transport order generation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic infrastructure of external transport order generation added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3392,64 +3452,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/openTCS-API-Base/src/main/java/org/opentcs/data/order/TransportOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openTCS-API-Base/src/main/java/org/opentcs/data/model/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1512214563180" expanded="true" signature="8913:9187" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509898691934" expanded="true" signature="12:777" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="29:99" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="55:63" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="771:775" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1006:1010" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1062:1064" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1110:1386" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1119:1384" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1139:1147" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1196:1202" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1221:1229" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1285:1291" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1515:1661" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1754:1799" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1809:1887" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1916:2230" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2242:2286" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2294:2352" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2367:2464" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3496,7 +3502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3504,7 +3509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3513,7 +3517,8 @@
         <state relative-caret-position="187">
           <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding>
-            <marker date="1512214563180" expanded="true" signature="8913:9187" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="6780:6806" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="9194:9468" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3529,27 +3534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509898691934" expanded="true" signature="12:777" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="29:99" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="55:63" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="771:775" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1006:1010" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1062:1064" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1110:1386" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1119:1384" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1139:1147" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1196:1202" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1221:1229" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1285:1291" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1515:1661" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1754:1799" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1809:1887" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1916:2230" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2242:2286" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2294:2352" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2367:2464" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3589,7 +3573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3597,7 +3580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3613,7 +3595,8 @@
         <state relative-caret-position="5490">
           <caret line="305" column="8" lean-forward="false" selection-start-line="305" selection-start-column="8" selection-end-line="305" selection-end-column="8" />
           <folding>
-            <marker date="1512214563180" expanded="true" signature="8913:9187" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="6780:6806" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="9194:9468" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3714,7 +3697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3729,7 +3711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3761,27 +3742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509898691934" expanded="true" signature="12:777" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="29:99" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="55:63" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="771:775" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1006:1010" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1062:1064" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1110:1386" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1119:1384" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1139:1147" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1196:1202" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1221:1229" ph="{" />
-            <marker date="1509898691934" expanded="true" signature="1285:1291" ph="}" />
-            <marker date="1509898691934" expanded="true" signature="1515:1661" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1754:1799" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1809:1887" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="1916:2230" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2242:2286" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2294:2352" ph="{...}" />
-            <marker date="1509898691934" expanded="true" signature="2367:2464" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3801,37 +3761,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/SerialCommunication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="148" column="13" lean-forward="false" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
+        <state relative-caret-position="2720">
+          <caret line="175" column="13" lean-forward="false" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
           <folding>
-            <marker date="1511398301963" expanded="true" signature="5437:5623" ph="{...}" />
+            <marker date="1513851238063" expanded="true" signature="7435:7767" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3689">
-          <caret line="252" column="11" lean-forward="false" selection-start-line="252" selection-start-column="11" selection-end-line="252" selection-end-column="11" />
+        <state relative-caret-position="3825">
+          <caret line="260" column="11" lean-forward="false" selection-start-line="260" selection-start-column="11" selection-end-line="260" selection-end-column="11" />
           <folding>
-            <marker date="1512214563180" expanded="true" signature="8913:9187" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="6780:6806" ph="{...}" />
+            <marker date="1513771057154" expanded="true" signature="9194:9468" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/test/java/org/opentcs/TestEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/main/java/org/opentcs/kernel/vehicles/VehicleCommAdapterRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3839,6 +3784,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3213">
           <caret line="223" column="19" lean-forward="false" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/main/java/org/opentcs/kernel/vehicles/VehicleCommAdapterRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreatorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-Kernel/src/test/java/org/opentcs/TestEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/TransportOrderCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openTCS-CommAdapter-Loopback/src/main/java/org/opentcs/virtualvehicle/LoopbackCommunicationAdapterPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="1764" column="55" lean-forward="false" selection-start-line="1764" selection-start-column="55" selection-end-line="1764" selection-end-column="55" />
           <folding />
         </state>
       </provider>
