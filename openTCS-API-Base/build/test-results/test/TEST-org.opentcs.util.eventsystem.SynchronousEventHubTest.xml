@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.eventsystem.SynchronousEventHubTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:19:12" hostname="DESKTOP-UBTRRGA" time="0.285">
+<testsuite name="org.opentcs.util.eventsystem.SynchronousEventHubTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:20" hostname="DESKTOP-UBTRRGA" time="0.563">
   <properties/>
-  <testcase name="shouldNotDeliverToUnregisteredListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.137"/>
-  <testcase name="shouldDeliverToRegisteredListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.08"/>
-  <testcase name="testAcceptingListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.067"/>
+  <testcase name="shouldNotDeliverToUnregisteredListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.438"/>
+  <testcase name="shouldDeliverToRegisteredListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.078"/>
+  <testcase name="testAcceptingListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.047"/>
   <testcase name="testRefusingListener" classname="org.opentcs.util.eventsystem.SynchronousEventHubTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

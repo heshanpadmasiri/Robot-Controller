@@ -1,61 +1,17 @@
-20171220-20:08:43-790 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-12-20 17:29:23), customization '-' version - (build date: -), Java: 1.8.0_131, Oracle Corporation; JVM: 25.131-b11, Oracle Corporation; OS: Windows 10, amd64
-20171220-20:08:44-020 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-20171220-20:08:44-202 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
-20171220-20:08:44-210 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
-20171220-20:08:46-974 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
-20171220-20:08:48-244 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
-20171220-20:08:57-210 [INFO|org.opentcs.kernel.controlcenter.KernelControlCenter@AWT-EventQueue-0] [menuButtonModelActionPerformed()]: Loading model: unnamed
-20171220-20:08:57-405 [INFO|org.opentcs.kernel.controlcenter.KernelControlCenter@AWT-EventQueue-0] [menuButtonModelActionPerformed()]: Finished loading the model.
-20171220-20:09:52-091 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
-20171220-20:09:52-156 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
-20171220-20:09:52-218 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171220-200952.txt...
-20171220-20:16:16-854 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
-20171220-20:16:16-854 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
-20171220-20:16:16-854 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
-20171220-20:16:16-854 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
-20171220-20:16:16-854 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
-20171220-20:16:16-870 [SEVERE|org.opentcs.util.logging.UncaughtExceptionLogger@AWT-EventQueue-0] [uncaughtException()]: Unhandled exception
-java.lang.NullPointerException
-	at org.opentcs.virtualvehicle.SerialCommunication.disconnectAdapter(SerialCommunication.java:92)
-	at org.opentcs.virtualvehicle.LoopbackCommunicationAdapter.terminate(LoopbackCommunicationAdapter.java:138)
-	at org.opentcs.kernel.controlcenter.vehicles.AttachmentManager.detachAdapterFromVehicle(AttachmentManager.java:187)
-	at org.opentcs.kernel.controlcenter.vehicles.AttachmentManager.lambda$detachAllAdapters$6(AttachmentManager.java:263)
-	at java.util.TreeMap.forEach(TreeMap.java:1005)
-	at org.opentcs.kernel.controlcenter.vehicles.AttachmentManager.detachAllAdapters(AttachmentManager.java:262)
-	at org.opentcs.kernel.controlcenter.vehicles.AttachmentManager.terminate(AttachmentManager.java:122)
-	at org.opentcs.kernel.KernelStateOperating.terminate(KernelStateOperating.java:249)
-	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:255)
-	at org.opentcs.kernel.controlcenter.KernelControlCenter.formWindowClosing(KernelControlCenter.java:533)
-	at org.opentcs.kernel.controlcenter.KernelControlCenter.access$000(KernelControlCenter.java:47)
-	at org.opentcs.kernel.controlcenter.KernelControlCenter$1.windowClosing(KernelControlCenter.java:350)
-	at java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:349)
-	at java.awt.Window.processWindowEvent(Window.java:2054)
-	at javax.swing.JFrame.processWindowEvent(JFrame.java:305)
-	at java.awt.Window.processEvent(Window.java:2013)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2294)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-20171220-20:16:19-852 [WARNING|org.opentcs.util.CyclicTask@AWT-EventQueue-0] [terminate()]: Already terminated
-20171220-20:16:20-364 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
-20171220-20:16:20-364 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
-20171220-20:16:21-365 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.
+20171224-03:41:16-649 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-12-24 01:03:33), customization '-' version - (build date: -), Java: 1.8.0_131, Oracle Corporation; JVM: 25.131-b11, Oracle Corporation; OS: Windows 10, amd64
+20171224-03:41:16-806 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20171224-03:41:16-899 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20171224-03:41:16-915 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20171224-03:41:18-858 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
+20171224-03:41:20-002 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20171224-03:41:31-005 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20171224-03:41:31-038 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20171224-03:41:31-092 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\openTCS-statistics-20171224-034131.txt...
+20171224-03:41:56-276 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20171224-03:41:56-276 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20171224-03:41:56-276 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20171224-03:41:56-276 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20171224-03:41:56-276 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20171224-03:41:56-858 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20171224-03:41:56-858 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20171224-03:41:57-865 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.

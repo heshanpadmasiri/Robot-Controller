@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="7.8">
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\Assignments.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="43" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\CompositeTransportOrderSelectionVeto.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\DefaultDispatcher.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="54" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="110" column="10" severity="error" message="More than 7 parameters (found 9)." source="com.puppycrawl.tools.checkstyle.checks.sizes.ParameterNumberCheck"/>
 <error line="113" column="40" severity="warning" message="Expected @param tag for &apos;assignments&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
@@ -20,186 +17,139 @@
 <error line="530" severity="warning" message="Line is longer than 100 characters (found 107)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\DefaultDispatcherConfiguration.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="13" severity="warning" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\OrderReservationPool.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="31" severity="warning" message="Line is longer than 100 characters (found 102)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="32" severity="warning" message="Line is longer than 100 characters (found 116)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\PeriodicVehicleRedispatchingTask.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="36" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\ProcessabilityChecker.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="109" column="3" severity="warning" message="Return count is 6 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 <error line="129" column="11" severity="error" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\TransportOrderSelectionVeto.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\TransportOrderSelector.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="119" column="3" severity="warning" message="Return count is 6 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\TransportOrderService.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="46" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\VehicleOrderSelection.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\VehicleSelector.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="55" severity="warning" message="Line is longer than 100 characters (found 101)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="55" column="72" severity="warning" message="Expected @param tag for &apos;transportOrderSelectionVeto&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="93" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\WithdrawalByOrder.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="38" column="6" severity="warning" message="Unused @param tag for &apos;newVehicle&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="44" column="36" severity="warning" message="Expected @param tag for &apos;newOrder&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\WithdrawalByVehicle.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="51" column="31" severity="warning" message="Expected @param tag for &apos;resetVehiclePosition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\NoOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\ParkingOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="33" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="110" column="3" severity="warning" message="Return count is 5 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\RechargeOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="33" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="110" column="3" severity="warning" message="Return count is 6 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\ReservedOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="27" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="96" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 <error line="106" severity="warning" message="Line is longer than 100 characters (found 113)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="120" severity="warning" message="Line is longer than 100 characters (found 103)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\TransportOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="43" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="122" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\VehicleOrderSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\parking\AbstractParkingPositionSupplier.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\parking\DefaultParkingPositionSupplier.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="53" column="3" severity="warning" message="Return count is 5 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\parking\ParkingPositionSupplier.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\recharging\DefaultRechargePositionSupplier.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="102" column="3" severity="warning" message="Return count is 6 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\orderselection\recharging\RechargePositionSupplier.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\vehicleselection\AssignedVehicleSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="85" column="3" severity="warning" message="Return count is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 <error line="101" severity="warning" message="Line is longer than 100 characters (found 104)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\vehicleselection\AvailableVehicleSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\vehicleselection\ClosestVehicleComparator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="18" severity="info" message="Class should define a constructor." source="com.puppycrawl.tools.checkstyle.checks.coding.MissingCtorCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\vehicleselection\OrderVehicleSelectionStrategy.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\dispatching\vehicleselection\VehicleCandidate.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\recovery\DefaultRecoveryEvaluator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="50" column="73" severity="warning" message="Expected @param tag for &apos;configuration&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\recovery\DefaultRecoveryEvaluatorConfiguration.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\recovery\StaticRecoveryEvaluator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\DefaultRouter.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\DefaultRouterConfiguration.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\PointRouter.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="50" column="3" severity="info" message="Redundant &apos;public&apos; modifier." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\PointRouterFactory.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\AbstractPointRouterFactory.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\DefaultModelGraphMapper.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\DijkstraPointRouterFactory.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluatorComposite.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluatorDistance.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluatorExplicit.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluatorHops.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\EdgeEvaluatorTravelTime.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\FloydWarshallPointRouterFactory.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\ModelEdge.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="14" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="21" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="23" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\ModelGraphMapper.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\ShortestPathConfiguration.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="46" severity="info" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="47" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="48" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -210,21 +160,17 @@
 <error line="55" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\routing\jgrapht\ShortestPathPointRouter.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="43" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="45" column="3" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\AllocationAdvisor.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\AllocatorCommand.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="48" column="3" severity="warning" message="Return count is 5 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
 <error line="207" severity="info" message="Class should define a constructor." source="com.puppycrawl.tools.checkstyle.checks.coding.MissingCtorCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\AllocatorTask.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="29" severity="info" message="Type Javadoc comment is missing an @author tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="64" column="45" severity="warning" message="Expected @param tag for &apos;kernel&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="65" column="49" severity="warning" message="Expected @param tag for &apos;reservationPool&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
@@ -232,16 +178,12 @@
 <error line="169" severity="warning" message="Line is longer than 100 characters (found 103)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\DefaultScheduler.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\DummyScheduler.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\ReservationEntry.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Strategies-Default\src\main\java\org\opentcs\strategies\basic\scheduling\ReservationPool.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="21" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 </file>
 </checkstyle>

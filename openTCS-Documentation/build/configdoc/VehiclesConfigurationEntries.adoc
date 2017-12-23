@@ -12,31 +12,3 @@ If not ignored, unknown positions reset the vehicle's position in the course mod
 
 |===
 
-.Configuration options with prefix 'vehicles'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|ignoreUnknownReportedPositions
-|Boolean
-|Whether to ignore unknown positions reported by a vehicle. +
-If not ignored, unknown positions reset the vehicle's position in the course model.
-
-|===
-
-.Configuration options with prefix 'vehicles'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|ignoreUnknownReportedPositions
-|Boolean
-|Whether to ignore unknown positions reported by a vehicle. +
-If not ignored, unknown positions reset the vehicle's position in the course model.
-
-|===
-

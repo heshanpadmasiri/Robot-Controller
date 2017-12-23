@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:20:29" hostname="DESKTOP-UBTRRGA" time="0.158">
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:19" hostname="DESKTOP-UBTRRGA" time="0.11">
   <properties/>
-  <testcase name="returnsNoActionForVehicleInParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.109"/>
-  <testcase name="returnsNullForUnavailableParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.023"/>
-  <testcase name="returnsNullforDontParkConfiguration" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.001"/>
-  <testcase name="returnsNullForUnprocessableParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.017"/>
-  <testcase name="returnsParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.005"/>
+  <testcase name="returnsNoActionForVehicleInParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.078"/>
+  <testcase name="returnsNullForUnavailableParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsNullforDontParkConfiguration" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
+  <testcase name="returnsNullForUnprocessableParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 19, 2017 3:50:29 PM org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategy selectOrder
+  <system-err><![CDATA[Dec 24, 2017 1:07:19 AM org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategy selectOrder
 WARNING: vehicle1: Did not find a suitable parking position.
 ]]></system-err>
 </testsuite>

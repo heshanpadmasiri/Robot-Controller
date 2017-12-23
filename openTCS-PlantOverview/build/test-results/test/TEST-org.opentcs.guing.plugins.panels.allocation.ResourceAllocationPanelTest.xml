@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:20:20" hostname="DESKTOP-UBTRRGA" time="1.166">
+<testsuite name="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:12" hostname="DESKTOP-UBTRRGA" time="0.922">
   <properties/>
-  <testcase name="testWrongKernelMode" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="1.111"/>
-  <testcase name="testVehicleCreated" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.024"/>
-  <testcase name="testVehicleRemoved" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.007"/>
-  <testcase name="testNoKernelConnection" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.012"/>
-  <testcase name="testKernelQueryNull" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.004"/>
-  <testcase name="testVehicleUpdateProcessed" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.006"/>
+  <testcase name="testWrongKernelMode" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.875"/>
+  <testcase name="testVehicleCreated" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.015"/>
+  <testcase name="testVehicleRemoved" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.016"/>
+  <testcase name="testNoKernelConnection" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
+  <testcase name="testKernelQueryNull" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
+  <testcase name="testVehicleUpdateProcessed" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

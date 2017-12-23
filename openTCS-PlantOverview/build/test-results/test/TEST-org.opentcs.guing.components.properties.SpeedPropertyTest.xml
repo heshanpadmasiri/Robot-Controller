@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.components.properties.SpeedPropertyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:20:18" hostname="DESKTOP-UBTRRGA" time="0.021">
+<testsuite name="org.opentcs.guing.components.properties.SpeedPropertyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:11" hostname="DESKTOP-UBTRRGA" time="0.016">
   <properties/>
-  <testcase name="speedPropertyNoBlank" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.005"/>
-  <testcase name="speedPropertyNegativeValue" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.002"/>
-  <testcase name="speedPropertyUnknownUnit" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.003"/>
-  <testcase name="speedPropertyEmtpy" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.002"/>
-  <testcase name="speedPropertyUnits" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.004"/>
-  <testcase name="speedPropertyConversion" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.002"/>
-  <testcase name="speedPropertyTest" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.001"/>
+  <testcase name="speedPropertyNoBlank" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
+  <testcase name="speedPropertyNegativeValue" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
+  <testcase name="speedPropertyUnknownUnit" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
+  <testcase name="speedPropertyEmtpy" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.016"/>
+  <testcase name="speedPropertyUnits" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
+  <testcase name="speedPropertyConversion" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
+  <testcase name="speedPropertyTest" classname="org.opentcs.guing.components.properties.SpeedPropertyTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

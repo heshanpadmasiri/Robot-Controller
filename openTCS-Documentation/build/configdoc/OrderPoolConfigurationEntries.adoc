@@ -15,37 +15,3 @@
 
 |===
 
-.Configuration options with prefix 'orderpool'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|sweepAge
-|Integer
-|The minimum age of orders to remove in a sweep (in ms).
-
-|sweepInterval
-|Long
-|The interval between sweeps (in ms).
-
-|===
-
-.Configuration options with prefix 'orderpool'
-[cols="2,1,3", options="header"]
-|===
-|Key
-|Type
-|Description
-
-|sweepAge
-|Integer
-|The minimum age of orders to remove in a sweep (in ms).
-
-|sweepInterval
-|Long
-|The interval between sweeps (in ms).
-
-|===
-

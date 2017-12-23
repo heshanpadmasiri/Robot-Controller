@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tcsStatusMessageSet timeStamp="2017-12-20T12:24:19.442+05:30">
+<tcsStatusMessageSet timeStamp="2017-12-24T01:04:49.956+05:30">
     <statusMessage xsi:type="vehicleStatusMessage" position="Point-000" processingState="PROCESSING_ORDER" state="EXECUTING" transportOrderName="TransportOrder-001" vehicleName="Vehicle-000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <precisePosition x="100" y="110" z="120"/>
     </statusMessage>

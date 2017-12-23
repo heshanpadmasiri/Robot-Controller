@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.exchange.ApplicationKernelProviderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-19T10:20:18" hostname="DESKTOP-UBTRRGA" time="1.234">
+<testsuite name="org.opentcs.guing.exchange.ApplicationKernelProviderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:11" hostname="DESKTOP-UBTRRGA" time="0.75">
   <properties/>
-  <testcase name="shouldConnectOnClientRegistration" classname="org.opentcs.guing.exchange.ApplicationKernelProviderTest" time="1.23"/>
-  <testcase name="shouldNotConnectIfAlreadyConnected" classname="org.opentcs.guing.exchange.ApplicationKernelProviderTest" time="0.003"/>
+  <testcase name="shouldConnectOnClientRegistration" classname="org.opentcs.guing.exchange.ApplicationKernelProviderTest" time="0.75"/>
+  <testcase name="shouldNotConnectIfAlreadyConnected" classname="org.opentcs.guing.exchange.ApplicationKernelProviderTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-20T06:54:40" hostname="DESKTOP-UBTRRGA" time="0.124">
+<testsuite name="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:52" hostname="DESKTOP-UBTRRGA" time="0.125">
   <properties/>
-  <testcase name="shouldAoutoAttachToFirstAvailableAdapter" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.03"/>
-  <testcase name="shouldDetachAdapterFromVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.051"/>
-  <testcase name="shouldNotAttachUnknownVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.038"/>
-  <testcase name="shouldAttachAdapterToVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.001"/>
+  <testcase name="shouldAoutoAttachToFirstAvailableAdapter" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.078"/>
+  <testcase name="shouldDetachAdapterFromVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.032"/>
+  <testcase name="shouldNotAttachUnknownVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.015"/>
+  <testcase name="shouldAttachAdapterToVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.0"/>
   <testcase name="shoudAutoAttachAdapterToVehicle" classname="org.opentcs.kernel.controlcenter.vehicles.AttachmentManagerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 20, 2017 12:24:40 PM org.opentcs.kernel.controlcenter.vehicles.AttachmentManager attachAdapterToVehicle
-WARNING: No vehicle entry found for 'UnknownVehicle'. Entries: org.opentcs.kernel.controlcenter.vehicles.VehicleEntryPool@469f1966
+  <system-err><![CDATA[Dec 24, 2017 1:06:52 AM org.opentcs.kernel.controlcenter.vehicles.AttachmentManager attachAdapterToVehicle
+WARNING: No vehicle entry found for 'UnknownVehicle'. Entries: org.opentcs.kernel.controlcenter.vehicles.VehicleEntryPool@1b5d89d6
 ]]></system-err>
 </testsuite>

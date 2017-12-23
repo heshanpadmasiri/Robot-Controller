@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="7.8">
 <file name="G:\openTCS-4.7.0-src\openTCS-Documentation\src\main\java\org\opentcs\documentation\ConfigDocGenerator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="0" severity="info" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="46" severity="info" message="Uncommented main method found." source="com.puppycrawl.tools.checkstyle.checks.UncommentedMainCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Documentation\src\main\java\org\opentcs\documentation\JAXBSchemaGenerator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="41" severity="info" message="Uncommented main method found." source="com.puppycrawl.tools.checkstyle.checks.UncommentedMainCheck"/>
 </file>
 <file name="G:\openTCS-4.7.0-src\openTCS-Documentation\src\main\java\org\opentcs\documentation\SamplesGenerator.java">
-<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="51" severity="info" message="Uncommented main method found." source="com.puppycrawl.tools.checkstyle.checks.UncommentedMainCheck"/>
 <error line="313" severity="info" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="313" column="11" severity="info" message="Redundant &apos;static&apos; modifier." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
