@@ -21,6 +21,7 @@ public class SerialCommunication {
     private static SerialPort serialPort;
     private static InputStream in;
     private static OutputStream out;
+    private static TransportOrderCreator orderCreator;
     static byte[] outMessage;
 
   public SerialCommunication() {
@@ -28,6 +29,7 @@ public class SerialCommunication {
       NameToIdMap = new ConcurrentHashMap<>();
       outMessage = new byte[4];
       messageLog = new ConcurrentHashMap<>();
+      orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
   }
   
   public static synchronized void clearCommunications() {
@@ -170,6 +172,15 @@ public class SerialCommunication {
                     idToNameMap.get(message[0]).processMessage(eMessage);
                     break;
                   }
+                case 'L':{
+                  //Todo: enter the point name
+                  System.out.println("Load message");
+                  byte[] message = new byte[3];
+                  in.read(message,0,3);
+                  System.out.println(Arrays.toString(message));
+                  orderCreator.createTransportOrderByPoint("Point-0010");//Change this
+                  break;
+                }
                 default:
                   break;
               }

@@ -188,31 +188,41 @@ public class LoopbackCommunicationAdapter
   
   private byte[] getByteMessage(MovementCommand cmd,byte[] header){
     // Todo insert command id
-      byte[] message = new byte[8];
+      byte[] message = new byte[9];
       for(int i = 0; i < header.length;i++){
         message[i] = header[i];
       }
       byte state = 0;
       int speed = cmd.getStep().getPath().getMaxVelocity();
-      if(speed == 0){
+    switch (speed) {
+      case 0:
         message[5] = 0;
-      } else if(speed == 200){
+        break;
+      case 200:
         message[5] = 1;
-      } else if(speed == 500){
+        break;
+      case 500:
         message[5] = 2;
-      } else if(speed == 1000){
+        break;
+      case 1000:
         message[5] = 3;
-      }
+        break;
+      default:
+        break;
+    }
       Map<String,String> properties = cmd.getStep().getPath().getProperties();
       if(properties.containsKey("side")){
         if(properties.get("side").equals("right")){
           state |= 1;
         }
       }
+      if(properties.containsKey("Area")){
+        message[6] = Byte.valueOf(properties.get("Area"));
+      }
       String operation = cmd.getOperation();
-      message[6] = state;
+      message[7] = state;
       if(cmd.isFinalMovement()){
-        message[7] = 1;
+        message[8] = 1;
       }
       message[4] = getOrderId(cmd);
       return message;
