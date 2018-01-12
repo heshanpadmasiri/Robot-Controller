@@ -21,7 +21,6 @@ public class StatusMessage {
   public int getCharge() {
     return charge;
   }
-  
-  
+   
   
 }

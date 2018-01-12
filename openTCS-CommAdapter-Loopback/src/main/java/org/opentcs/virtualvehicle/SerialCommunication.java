@@ -138,7 +138,7 @@ public class SerialCommunication {
                     System.out.println(Arrays.toString(message));
                     byte id = message[0];
                     byte orderId = message[1];
-                    byte state = message[2];
+                    byte state = message[2]; // current position
                     byte isComplete = message[3];
                     byte isError = message[4];
                     if(isComplete == 1){
