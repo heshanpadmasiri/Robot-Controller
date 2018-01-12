@@ -12,14 +12,14 @@ package org.opentcs.virtualvehicle;
  * @author Heshan
  */
 public class StatusMessage {
-  private int voltage;
+  private int charge;
 
-  public StatusMessage(int voltage) {
-    this.voltage = voltage;
+  public StatusMessage(int charge) {
+    this.charge = charge;
   }
 
-  public int getVoltage() {
-    return voltage;
+  public int getCharge() {
+    return charge;
   }
   
   

@@ -16,6 +16,7 @@ import org.opentcs.data.order.TransportOrder;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
+import org.opentcs.data.model.Vehicle;
 
 /**
  *
@@ -41,6 +42,14 @@ public class TransportOrderCreator {
       TransportOrderCreationTO orderTo = new TransportOrderCreationTO("External transport order-"+ UUID.randomUUID(),destinations);
       TransportOrder newOrder = kernal.createTransportOrder(orderTo);
       kernal.activateTransportOrder(newOrder.getReference());
+  }
+  
+  public void createTransportOrderByLocation(Vehicle vehicle, String locationName, String operation){
+    List<DestinationCreationTO> destinations = new LinkedList<>();
+    destinations.add(new DestinationCreationTO(locationName,operation));
+    TransportOrderCreationTO orderTo = new TransportOrderCreationTO("External transport order-" + UUID.randomUUID(), destinations).setIntendedVehicleName(vehicle.getName());
+    TransportOrder newOrder = kernal.createTransportOrder(orderTo);
+    kernal.activateTransportOrder(newOrder.getReference());
   }
 
   public void createTransportOrderByPoint(String pointName){

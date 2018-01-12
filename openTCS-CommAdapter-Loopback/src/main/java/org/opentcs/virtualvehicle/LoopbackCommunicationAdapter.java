@@ -79,7 +79,9 @@ public class LoopbackCommunicationAdapter
    */
   private boolean initialized;
   
+  
   private SerialCommunication serialCommunication;
+  private TransportOrderCreator orderCreator;
   
   
 
@@ -276,11 +278,29 @@ public class LoopbackCommunicationAdapter
         if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
               getProcessModel().setVehicleState(Vehicle.State.IDLE);
               SerialCommunication.clearCommunications();
-          }
+              if(!"Charging-station".equals(vehicle.getCurrentPosition().getName())){
+                if(orderCreator == null){
+                orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
+              }
+              orderCreator.createTransportOrderByLocation(vehicle, "Charging-station", "RECHARGE");
+              }
+              }
+              
       }      
     }else if(message instanceof StatusMessage){
       StatusMessage sMessage = (StatusMessage) message;
-      LOG.debug("Voltage Reading: " + sMessage.getVoltage());
+      LOG.debug("Charge Reading: " + sMessage.getCharge());
+      getProcessModel().setVehicleEnergyLevel(sMessage.getCharge());
+      if(sMessage.getCharge() < 30 && vehicle.getState() != Vehicle.State.CHARGING){
+        if(orderCreator == null){
+          orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
+        }
+        orderCreator.createTransportOrderByLocation(vehicle, "Charging-station", "RECHARGE");
+        getProcessModel().setVehicleState(Vehicle.State.CHARGING);
+      }
+      if(sMessage.getCharge() > 60 && vehicle.getState() == Vehicle.State.CHARGING){
+        getProcessModel().setVehicleState(Vehicle.State.IDLE);
+      }
     }else if(message instanceof EmergencyMessage){
       LOG.debug("Emergency message detected");
     }
