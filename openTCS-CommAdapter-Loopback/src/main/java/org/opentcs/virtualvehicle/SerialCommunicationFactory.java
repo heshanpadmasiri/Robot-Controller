@@ -24,6 +24,7 @@ public class SerialCommunicationFactory {
     public SerialCommunicationFactory(LoopbackCommunicationAdapter CommunicationAdapter){
         PortSelector dialog = new PortSelector(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
+        dialog.setAlwaysOnTop(true);
         Thread dialogThread = new Thread(dialog);
         dialogThread.start();
         try{
