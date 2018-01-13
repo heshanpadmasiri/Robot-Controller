@@ -12,8 +12,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import static java.util.Objects.requireNonNull;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -335,6 +337,7 @@ public class KernelControlCenter
     menuButtonOperating = new javax.swing.JRadioButtonMenuItem();
     newModelMenuItem = new javax.swing.JMenuItem();
     menuButtonModel = new javax.swing.JMenuItem();
+    menuDefaultLocations = new javax.swing.JMenuItem();
     jSeparator1 = new javax.swing.JPopupMenu.Separator();
     menuButtonExit = new javax.swing.JMenuItem();
     menuSettings = new javax.swing.JMenu();
@@ -419,6 +422,15 @@ public class KernelControlCenter
       }
     });
     menuKernel.add(menuButtonModel);
+
+    menuDefaultLocations.setText("Set default locations");
+    menuDefaultLocations.setToolTipText("Use this only if you know what you are doing!");
+    menuDefaultLocations.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        menuDefaultLocationsActionPerformed(evt);
+      }
+    });
+    menuKernel.add(menuDefaultLocations);
     menuKernel.add(jSeparator1);
 
     menuButtonExit.setText(bundle.getString("Exit")); // NOI18N
@@ -552,6 +564,16 @@ public class KernelControlCenter
       }
     }//GEN-LAST:event_newModelMenuItemActionPerformed
 
+  private void menuDefaultLocationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDefaultLocationsActionPerformed
+    // TODO add your handling code here:
+    DefaultLocationSelector dialog = new DefaultLocationSelector(kernel.getDefaultLocations(), this);
+    dialog.setVisible(true);
+    dialog.setAlwaysOnTop(true);
+    Thread dialogThread = new Thread(dialog);
+    dialogThread.start();
+       
+  }//GEN-LAST:event_menuDefaultLocationsActionPerformed
+
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JCheckBox autoScrollCheckBox;
   private javax.swing.ButtonGroup buttonGroupKernelMode;
@@ -567,6 +589,7 @@ public class KernelControlCenter
   private javax.swing.JMenuItem menuButtonModel;
   private javax.swing.JRadioButtonMenuItem menuButtonModelling;
   private javax.swing.JRadioButtonMenuItem menuButtonOperating;
+  private javax.swing.JMenuItem menuDefaultLocations;
   private javax.swing.JMenu menuHelp;
   private javax.swing.JMenuItem menuItemSaveSettings;
   private javax.swing.JMenu menuKernel;
@@ -576,4 +599,9 @@ public class KernelControlCenter
   private javax.swing.JTabbedPane tabbedPaneMain;
   // End of variables declaration//GEN-END:variables
   // CHECKSTYLE:ON
+  
+  public void setDefaultValues(Map<String,String> values){
+    kernel.setChargingLocation(values.get("charging-location"));
+  }
+  
 }

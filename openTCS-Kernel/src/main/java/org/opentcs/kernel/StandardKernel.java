@@ -12,6 +12,7 @@ import com.google.inject.Provider;
 import java.awt.Color;
 import java.io.IOException;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -124,6 +125,10 @@ final class StandardKernel
 
   private StandardKernel kernel;
   
+  private String chargingLocation;
+  
+  private HashMap<String,String> defaultLocations;
+  
   /**
    * Creates a new kernel.
    *
@@ -157,6 +162,13 @@ final class StandardKernel
     kernel = this;
     Thread kernelThread = new Thread(this, "kernelThread");
     kernelThread.start();
+    setChargingLocation("Recharge-Point");
+    initializeDefaultLocations();
+  }
+  
+  private void initializeDefaultLocations(){
+    defaultLocations = new HashMap<String,String>();
+    defaultLocations.put("recharge-location","recharge-point");
   }
 
   public StandardKernel getKernel() {
@@ -857,6 +869,16 @@ final class StandardKernel
     kernelState.setLocationType(ref, typeRef);
   }
 
+  public String getChargingLocation() {
+    return chargingLocation;
+  }
+
+  public void setChargingLocation(String chargingLocation) {
+    this.chargingLocation = chargingLocation;
+  }
+  
+  
+
   @Override
   @Deprecated
   public void connectLocationToPoint(TCSObjectReference<Location> locRef,
@@ -1321,6 +1343,11 @@ final class StandardKernel
     eventHub.removeEventListener(listener);
   }
 
+  @Override
+  public Map<String, String> getDefaultLocations() {
+    return defaultLocations;
+  }
+
   // Methods not declared in any interface start here.
   /**
    * Generates an event for a state change.
@@ -1361,4 +1388,5 @@ final class StandardKernel
     LOG.debug("Emitting model transition event: " + event);
     eventHub.processEvent(event);
   }
+  
 }
