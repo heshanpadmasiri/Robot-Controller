@@ -1,9 +1,9 @@
-20180113-14:04:30-342 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-12-24 01:03:33), customization '-' version - (build date: -), Java: 1.8.0_131, Oracle Corporation; JVM: 25.131-b11, Oracle Corporation; OS: Windows 10, amd64
-20180113-14:04:30-483 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-20180113-14:04:30-592 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
-20180113-14:04:30-639 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
-20180113-14:04:32-593 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
-20180113-14:04:33-843 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
-20180113-14:04:55-376 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
-20180113-14:04:55-376 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
-20180113-14:04:56-376 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.
+20180113-15:58:29-086 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2017-12-24 01:03:33), customization '-' version - (build date: -), Java: 1.8.0_131, Oracle Corporation; JVM: 25.131-b11, Oracle Corporation; OS: Windows 10, amd64
+20180113-15:58:29-258 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20180113-15:58:29-446 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20180113-15:58:29-446 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20180113-15:58:34-368 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
+20180113-15:58:35-806 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20180113-15:58:53-823 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20180113-15:58:53-823 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20180113-15:58:54-824 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.

@@ -169,6 +169,7 @@ final class StandardKernel
   private void initializeDefaultLocations(){
     defaultLocations = new HashMap<String,String>();
     defaultLocations.put("recharge-location","recharge-point");
+    defaultLocations.put("unload-location","unload-point");
   }
 
   public StandardKernel getKernel() {

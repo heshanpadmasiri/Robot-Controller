@@ -54,6 +54,8 @@ public class DefaultLocationSelector
     jLabel1 = new javax.swing.JLabel();
     txtRechargeLocation = new javax.swing.JTextField();
     btnOk = new javax.swing.JButton();
+    jLabel2 = new javax.swing.JLabel();
+    txtUnloadLocation = new javax.swing.JTextField();
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -83,6 +85,8 @@ public class DefaultLocationSelector
       }
     });
 
+    jLabel2.setText("Unload Location");
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
@@ -90,6 +94,10 @@ public class DefaultLocationSelector
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(txtUnloadLocation))
           .addGroup(layout.createSequentialGroup()
             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -106,7 +114,11 @@ public class DefaultLocationSelector
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtRechargeLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtUnloadLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
         .addComponent(btnOk)
         .addContainerGap())
     );
@@ -121,6 +133,7 @@ public class DefaultLocationSelector
   private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
     // TODO add your handling code here:
     defaultLocations.put("recharge-location", txtRechargeLocation.getText());
+    defaultLocations.put("unload-location",txtUnloadLocation.getText());
     done = true;
     dispose();
   }//GEN-LAST:event_btnOkActionPerformed
@@ -130,11 +143,14 @@ public class DefaultLocationSelector
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnOk;
   private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
   private javax.swing.JPanel jPanel1;
   private javax.swing.JTextField txtRechargeLocation;
+  private javax.swing.JTextField txtUnloadLocation;
   // End of variables declaration//GEN-END:variables
 
   private void setValues(Map<String,String> defaultValues){
     txtRechargeLocation.setText(defaultValues.get("recharge-location"));
+    txtUnloadLocation.setText(defaultValues.get("unload-location"));
   }
 }
