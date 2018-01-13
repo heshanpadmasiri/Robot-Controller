@@ -8,6 +8,7 @@
 package org.opentcs.access;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 import javax.annotation.Nullable;
@@ -564,5 +565,9 @@ public interface LocalKernel
   @ScheduledApiChange(when = "5.0", details = "Will be removed.")
   void setConfigurationItem(ConfigurationItemTO itemTO)
       throws CredentialsException;
+  
+  void setChargingLocation(String location);
+  
+  Map<String,String> getDefaultLocations();
 
 }

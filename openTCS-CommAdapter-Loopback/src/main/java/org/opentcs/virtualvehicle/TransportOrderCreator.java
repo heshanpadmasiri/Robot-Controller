@@ -15,6 +15,7 @@ import org.opentcs.data.order.TransportOrder;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.opentcs.data.model.Vehicle;
 
@@ -74,5 +75,14 @@ public class TransportOrderCreator {
 
       TransportOrder newOrder = kernal.createTransportOrder(orderTO);
       kernal.activateTransportOrder(newOrder.getReference());
+  }
+  
+  public boolean createReachargeOrder(Vehicle vehicle){
+    
+    Map<String,String> defaultLocations = kernal.getDefaultLocations();
+    if(!vehicle.getCurrentPosition().getName().equals(defaultLocations.get("recharge-location"))){      
+      createTransportOrderByLocation(vehicle, defaultLocations.get("recharge-locations"), "recharge");
+      return false;
+    } return true;
   }
 }

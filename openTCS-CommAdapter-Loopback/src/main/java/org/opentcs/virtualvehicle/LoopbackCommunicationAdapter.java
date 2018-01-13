@@ -83,7 +83,7 @@ public class LoopbackCommunicationAdapter
   
   private SerialCommunication serialCommunication;
   private TransportOrderCreator orderCreator;
-  
+  private volatile boolean isQued;
   
 
   /**
@@ -255,6 +255,18 @@ public class LoopbackCommunicationAdapter
     // automatically, where it will be picked up by the simulation task.
   }
 
+  private void sendToChargingStation(){
+    boolean atChargingStation = false;
+    if(!isQued){
+       atChargingStation = TransportOrderCreatorFactory.getTransportOrderCreator().createReachargeOrder(vehicle);
+      isQued = true;
+    }    
+    if(atChargingStation){
+      getProcessModel().setVehicleState(Vehicle.State.CHARGING);
+      isQued = false;
+    }
+  }
+    
   @Override
   public void processMessage(Object message) {
     // Process LimitSpeeed message which might pause the vehicle.
@@ -280,25 +292,15 @@ public class LoopbackCommunicationAdapter
         if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
               getProcessModel().setVehicleState(Vehicle.State.IDLE);
               SerialCommunication.clearCommunications();
-              if(!"Charging-station".equals(vehicle.getCurrentPosition().getName())){
-                if(orderCreator == null){
-                orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
-              }
-              orderCreator.createTransportOrderByLocation(vehicle, "Charging-station", "RECHARGE");
-              }
-              }
-              
+              sendToChargingStation();
+        }              
       }      
     }else if(message instanceof StatusMessage){
       StatusMessage sMessage = (StatusMessage) message;
       LOG.debug("Charge Reading: " + sMessage.getCharge());
       getProcessModel().setVehicleEnergyLevel(sMessage.getCharge());
       if(sMessage.getCharge() < 30 && vehicle.getState() != Vehicle.State.CHARGING){
-        if(orderCreator == null){
-          orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
-        }
-        orderCreator.createTransportOrderByLocation(vehicle, "Charging-station", "RECHARGE");
-        getProcessModel().setVehicleState(Vehicle.State.CHARGING);
+        sendToChargingStation();
       }
       if(sMessage.getCharge() > 60 && vehicle.getState() == Vehicle.State.CHARGING){
         getProcessModel().setVehicleState(Vehicle.State.IDLE);

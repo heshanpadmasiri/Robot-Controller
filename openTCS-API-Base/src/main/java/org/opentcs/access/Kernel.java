@@ -1592,6 +1592,8 @@ public interface Kernel
   void setSimulationTimeFactor(double factor)
       throws CredentialsException;
 
+  Map<String,String> getDefaultLocations();
+  
   /**
    * The various states a kernel instance may be running in.
    */
