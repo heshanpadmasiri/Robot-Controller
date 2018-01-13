@@ -63,4 +63,16 @@ public class TransportOrderCreator {
       TransportOrder newOrder = kernal.createTransportOrder(orderTO);
       kernal.activateTransportOrder(newOrder.getReference());
   }
+  
+  public void createTransportOrderByPoint(Vehicle vehicle, String pointName){
+      // List of destination the transport order the vehicle is supposed to travel to
+      List<DestinationCreationTO> destinations = new LinkedList<>();
+      destinations.add(new DestinationCreationTO(pointName, DriveOrder.Destination.OP_MOVE));
+
+      // Todo: check wether we have the explicitly set the vehicle for this to work as in the example
+      TransportOrderCreationTO orderTO = new TransportOrderCreationTO("External transport order-"+ UUID.randomUUID(), destinations).setIntendedVehicleName(vehicle.getName());
+
+      TransportOrder newOrder = kernal.createTransportOrder(orderTO);
+      kernal.activateTransportOrder(newOrder.getReference());
+  }
 }

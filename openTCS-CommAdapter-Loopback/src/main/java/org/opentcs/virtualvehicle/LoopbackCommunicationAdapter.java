@@ -16,6 +16,7 @@ import static java.util.Objects.requireNonNull;
 import java.util.Queue;
 import javax.inject.Inject;
 import org.opentcs.data.ObjectPropConstants;
+import org.opentcs.data.model.Point;
 import org.opentcs.data.model.Vehicle;
 import org.opentcs.data.model.Vehicle.Orientation;
 import org.opentcs.data.order.Route.Step;
@@ -188,6 +189,7 @@ public class LoopbackCommunicationAdapter
     return Byte.decode(data.get("id"));
   }
   
+  
   private byte[] getByteMessage(MovementCommand cmd,byte[] header){
     // Todo insert command id
       byte[] message = new byte[9];
@@ -305,7 +307,17 @@ public class LoopbackCommunicationAdapter
       LOG.debug("Emergency message detected");
     }
   }
-    
+   
+  // Todo: retask the vehicle based on the location update
+   public void updateLocation(int locationId){
+      getProcessModel().setVehiclePosition("Point-0" + locationId);
+      MovementCommand last = getSentQueue().poll();
+      Point destination = last.getFinalDestination();
+      if(orderCreator == null){
+          orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
+      }
+      orderCreator.createTransportOrderByPoint(vehicle, destination.getName());
+  }
 
   @Override
   public synchronized void initVehiclePosition(String newPos) {

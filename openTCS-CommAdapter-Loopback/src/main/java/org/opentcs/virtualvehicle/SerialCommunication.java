@@ -11,6 +11,7 @@ package org.opentcs.virtualvehicle;
 import gnu.io.*;
 import java.io.*;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -137,11 +138,12 @@ public class SerialCommunication {
                     in.read(message, 0, 5);
                     System.out.println(Arrays.toString(message));
                     byte id = message[0];
-                    byte orderId = message[1];
-                    byte state = message[2]; // current position
+                    byte orderId = message[1]; // current point
+                    byte state = message[2]; 
                     byte isComplete = message[3];
-                    byte isError = message[4];
+                    byte isError = message[4];                    
                     if(isComplete == 1){
+                      
                       if(messageLog.containsKey(orderId)){
                         System.out.println("Order:" + orderId + " completion recieved");
                         MovementCommandMessage cmd = messageLog.get(orderId);
@@ -149,6 +151,7 @@ public class SerialCommunication {
                         idToNameMap.get(id).processMessage(cmd);
                       } else {
                         System.out.println("Invalid order id no such order");
+                        idToNameMap.get(id).updateLocation(orderId);
                       }                      
                     } break;
                   }
