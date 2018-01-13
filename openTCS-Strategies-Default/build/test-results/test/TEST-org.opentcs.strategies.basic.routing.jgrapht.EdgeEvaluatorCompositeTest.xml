@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.routing.jgrapht.EdgeEvaluatorCompositeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:20" hostname="DESKTOP-UBTRRGA" time="0.0">
+<testsuite name="org.opentcs.strategies.basic.routing.jgrapht.EdgeEvaluatorCompositeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:41" hostname="DESKTOP-UBTRRGA" time="0.015">
   <properties/>
-  <testcase name="computeSumOfComponentWeights" classname="org.opentcs.strategies.basic.routing.jgrapht.EdgeEvaluatorCompositeTest" time="0.0"/>
+  <testcase name="computeSumOfComponentWeights" classname="org.opentcs.strategies.basic.routing.jgrapht.EdgeEvaluatorCompositeTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.KernelStateOperatingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:52" hostname="DESKTOP-UBTRRGA" time="1.91">
+<testsuite name="org.opentcs.kernel.KernelStateOperatingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:59" hostname="DESKTOP-UBTRRGA" time="2.344">
   <properties/>
-  <testcase name="shouldInitializeExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.847"/>
-  <testcase name="terminateKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.563"/>
+  <testcase name="shouldInitializeExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="1.281"/>
+  <testcase name="terminateKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.562"/>
   <testcase name="initializeKernelWithVehiclesAsUnavailable" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.0"/>
-  <testcase name="shouldTerminateExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.5"/>
+  <testcase name="shouldTerminateExtensionsAndComponents" classname="org.opentcs.kernel.KernelStateOperatingTest" time="0.501"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

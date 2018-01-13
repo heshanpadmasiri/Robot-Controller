@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.components.properties.AnglePropertyTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:09" hostname="DESKTOP-UBTRRGA" time="2.67">
+<testsuite name="org.opentcs.guing.components.properties.AnglePropertyTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:20" hostname="DESKTOP-UBTRRGA" time="3.173">
   <properties/>
-  <testcase name="anglePropertyModulo" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="2.53"/>
-  <testcase name="anglePropertyEmtpy" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.078"/>
-  <testcase name="anglePropertyUnits" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyModulo" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="2.907"/>
+  <testcase name="anglePropertyEmtpy" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.187"/>
+  <testcase name="anglePropertyUnits" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.016"/>
   <testcase name="anglePropertyTest" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
-  <testcase name="anglePropertyUnknownUnit" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
+  <testcase name="anglePropertyUnknownUnit" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.016"/>
   <testcase name="anglePropertyNegativeValue" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
   <testcase name="anglePropertyNoBlank" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.0"/>
   <testcase name="anglePropertyConversion" classname="org.opentcs.guing.components.properties.AnglePropertyTest" time="0.047"/>

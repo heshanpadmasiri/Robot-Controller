@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.components.properties.LengthPropertyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:11" hostname="DESKTOP-UBTRRGA" time="0.016">
+<testsuite name="org.opentcs.guing.components.properties.LengthPropertyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:24" hostname="DESKTOP-UBTRRGA" time="0.031">
   <properties/>
-  <testcase name="coordinatePropertyTest" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
+  <testcase name="coordinatePropertyTest" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.015"/>
   <testcase name="lengthPropertyTest" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
   <testcase name="lengthPropertyUnknownUnit" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
   <testcase name="lengthPropertyEmtpy" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
-  <testcase name="lengthPropertyUnits" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.016"/>
+  <testcase name="lengthPropertyUnits" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
   <testcase name="lengthPropertyNegativeValue" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
-  <testcase name="lengthPropertyNoBlank" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.0"/>
+  <testcase name="lengthPropertyNoBlank" classname="org.opentcs.guing.components.properties.LengthPropertyTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

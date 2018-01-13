@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:55" hostname="DESKTOP-UBTRRGA" time="0.016">
+<testsuite name="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:02" hostname="DESKTOP-UBTRRGA" time="0.031">
   <properties/>
-  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.0"/>
-  <testcase name="shouldOutputSampleResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.016"/>
+  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.016"/>
+  <testcase name="shouldOutputSampleResponseSet" classname="org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 24, 2017 1:06:55 AM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
+  <system-err><![CDATA[Jan 13, 2018 9:44:02 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="scriptResponse" parsingSuccessful="true" id="test.tcs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -13,7 +13,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </response>
 </tcsResponseSet>
 
-Dec 24, 2017 1:06:55 AM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
+Jan 13, 2018 9:44:02 PM org.opentcs.kernel.xmlorders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="transportResponse" executionSuccessful="true" orderName="TOrder-0001" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

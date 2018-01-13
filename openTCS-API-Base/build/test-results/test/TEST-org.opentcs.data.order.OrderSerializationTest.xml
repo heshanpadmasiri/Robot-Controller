@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.data.order.OrderSerializationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:20" hostname="DESKTOP-UBTRRGA" time="0.062">
+<testsuite name="org.opentcs.data.order.OrderSerializationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:08" hostname="DESKTOP-UBTRRGA" time="0.11">
   <properties/>
-  <testcase name="shouldSerializeAndDeserializeTransportOrder" classname="org.opentcs.data.order.OrderSerializationTest" time="0.062"/>
-  <testcase name="shouldSerializeAndDeserializeOrderSequence" classname="org.opentcs.data.order.OrderSerializationTest" time="0.0"/>
+  <testcase name="shouldSerializeAndDeserializeTransportOrder" classname="org.opentcs.data.order.OrderSerializationTest" time="0.094"/>
+  <testcase name="shouldSerializeAndDeserializeOrderSequence" classname="org.opentcs.data.order.OrderSerializationTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

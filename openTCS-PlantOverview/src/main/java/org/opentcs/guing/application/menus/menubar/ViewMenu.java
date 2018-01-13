@@ -139,7 +139,7 @@ public class ViewMenu
     menuOrderSequenceView.setEnabled(mode == OperationMode.OPERATING);
     menuTransportOrderView.setEnabled(mode == OperationMode.OPERATING);
     menuAddDrawingView.setEnabled(mode == OperationMode.OPERATING);
-    menuAddBitmap.setEnabled(mode == OperationMode.MODELLING);
+    menuAddBitmap.setEnabled(true);
 
     if (menuViewToolBars != null) {
       menuViewToolBars.setOperationMode(mode);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.configuration.ConfigurationStoreTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:20" hostname="DESKTOP-UBTRRGA" time="0.109">
+<testsuite name="org.opentcs.util.configuration.ConfigurationStoreTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:09" hostname="DESKTOP-UBTRRGA" time="0.125">
   <properties/>
-  <testcase name="testgetByte" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.109"/>
+  <testcase name="testgetByte" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.125"/>
   <testcase name="testgetLong" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
   <testcase name="testgetFloat" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>
   <testcase name="testgetShort" classname="org.opentcs.util.configuration.ConfigurationStoreTest" time="0.0"/>

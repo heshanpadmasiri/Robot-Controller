@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:19" hostname="DESKTOP-UBTRRGA" time="0.015">
+<testsuite name="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:41" hostname="DESKTOP-UBTRRGA" time="0.016">
   <properties/>
   <testcase name="returnUnassignableSelectionForUnavailableProcessingVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
   <testcase name="returnAssignableSelectionForAvailableIntendedVehicleForOrder" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
   <testcase name="returnAssignableSelectionForAvailableProcessingVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
   <testcase name="returnNullForOrderWithoutSequenceOrIntendedVehicle" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
   <testcase name="returnUnassignableSelectionForUnavailableIntendedVehicleForOrder" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
-  <testcase name="returnAssignableSelectionForAvailableIntendedVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.015"/>
-  <testcase name="returnUnassignableSelectionForUnavailableIntendedVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
+  <testcase name="returnAssignableSelectionForAvailableIntendedVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.0"/>
+  <testcase name="returnUnassignableSelectionForUnavailableIntendedVehicleForSequence" classname="org.opentcs.strategies.basic.dispatching.vehicleselection.AssignedVehicleSelectionStrategyTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

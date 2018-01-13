@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:19" hostname="DESKTOP-UBTRRGA" time="0.031">
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:41" hostname="DESKTOP-UBTRRGA" time="0.032">
   <properties/>
-  <testcase name="returnsNullForNoSuitableRechargeLocation" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.031"/>
+  <testcase name="returnsNullForNoSuitableRechargeLocation" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.032"/>
   <testcase name="returnsNoActionForChargingVehicle" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.0"/>
   <testcase name="returnsOrderForRechargableProcessableVehicle" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.0"/>
   <testcase name="returnsNullForUnprocessableOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.0"/>
   <testcase name="returnsNullForUndegradedEnergyLevel" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.0"/>
   <testcase name="returnsNullForDontRecharge" classname="org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategyTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 24, 2017 1:07:19 AM org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategy selectOrder
+  <system-err><![CDATA[Jan 13, 2018 9:44:41 PM org.opentcs.strategies.basic.dispatching.orderselection.RechargeOrderSelectionStrategy selectOrder
 WARNING: vehicle: Did not find a suitable recharge sequence for vehicle
 ]]></system-err>
 </testsuite>

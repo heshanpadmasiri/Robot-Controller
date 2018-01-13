@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.configuration.ConfigurationItemTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:20" hostname="DESKTOP-UBTRRGA" time="0.0">
+<testsuite name="org.opentcs.util.configuration.ConfigurationItemTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:09" hostname="DESKTOP-UBTRRGA" time="0.015">
   <properties/>
   <testcase name="testgetKey" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
   <testcase name="testConfigurationItem" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
   <testcase name="testgetValue" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
   <testcase name="testgetConstraint" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
-  <testcase name="testEquals" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
+  <testcase name="testEquals" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.015"/>
   <testcase name="testgetDescription" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
   <testcase name="testgetNamespace" classname="org.opentcs.util.configuration.ConfigurationItemTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

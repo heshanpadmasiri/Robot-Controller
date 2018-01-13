@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.gui.StringListCellRendererTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:31" hostname="DESKTOP-UBTRRGA" time="0.86">
+<testsuite name="org.opentcs.util.gui.StringListCellRendererTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:27" hostname="DESKTOP-UBTRRGA" time="1.016">
   <properties/>
-  <testcase name="returnsNullForNullValue" classname="org.opentcs.util.gui.StringListCellRendererTest" time="0.797"/>
-  <testcase name="returnsLabelWithNameAsText" classname="org.opentcs.util.gui.StringListCellRendererTest" time="0.063"/>
+  <testcase name="returnsNullForNullValue" classname="org.opentcs.util.gui.StringListCellRendererTest" time="1.0"/>
+  <testcase name="returnsLabelWithNameAsText" classname="org.opentcs.util.gui.StringListCellRendererTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

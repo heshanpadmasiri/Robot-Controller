@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:12" hostname="DESKTOP-UBTRRGA" time="0.922">
+<testsuite name="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:25" hostname="DESKTOP-UBTRRGA" time="1.234">
   <properties/>
-  <testcase name="testWrongKernelMode" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.875"/>
-  <testcase name="testVehicleCreated" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.015"/>
+  <testcase name="testWrongKernelMode" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="1.172"/>
+  <testcase name="testVehicleCreated" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.031"/>
   <testcase name="testVehicleRemoved" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.016"/>
   <testcase name="testNoKernelConnection" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
-  <testcase name="testKernelQueryNull" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
+  <testcase name="testKernelQueryNull" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.015"/>
   <testcase name="testVehicleUpdateProcessed" classname="org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

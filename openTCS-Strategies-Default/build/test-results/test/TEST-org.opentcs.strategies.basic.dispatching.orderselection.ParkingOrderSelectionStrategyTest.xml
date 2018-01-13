@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:19" hostname="DESKTOP-UBTRRGA" time="0.11">
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:41" hostname="DESKTOP-UBTRRGA" time="0.172">
   <properties/>
-  <testcase name="returnsNoActionForVehicleInParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.078"/>
-  <testcase name="returnsNullForUnavailableParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsNoActionForVehicleInParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.094"/>
+  <testcase name="returnsNullForUnavailableParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.047"/>
   <testcase name="returnsNullforDontParkConfiguration" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
-  <testcase name="returnsNullForUnprocessableParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.016"/>
+  <testcase name="returnsNullForUnprocessableParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.015"/>
   <testcase name="returnsParkOrder" classname="org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategyTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Dec 24, 2017 1:07:19 AM org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategy selectOrder
+  <system-err><![CDATA[Jan 13, 2018 9:44:41 PM org.opentcs.strategies.basic.dispatching.orderselection.ParkingOrderSelectionStrategy selectOrder
 WARNING: vehicle1: Did not find a suitable parking position.
 ]]></system-err>
 </testsuite>

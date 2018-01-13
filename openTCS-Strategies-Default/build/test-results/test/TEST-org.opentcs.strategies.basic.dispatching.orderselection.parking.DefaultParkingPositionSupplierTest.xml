@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:37:18" hostname="DESKTOP-UBTRRGA" time="0.718">
+<testsuite name="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:14:40" hostname="DESKTOP-UBTRRGA" time="0.922">
   <properties/>
-  <testcase name="returnsEmptyForUnknownAssignedParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.703"/>
-  <testcase name="returnsClosestParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.015"/>
-  <testcase name="returnsEmptyForAllBlocksReserved" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.0"/>
+  <testcase name="returnsEmptyForUnknownAssignedParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.891"/>
+  <testcase name="returnsClosestParkingPosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.016"/>
+  <testcase name="returnsEmptyForAllBlocksReserved" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.015"/>
   <testcase name="returnsEmptyForUnknownVehiclePosition" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.0"/>
   <testcase name="returnsEmptyForNoParkingPositionsFromKernel" classname="org.opentcs.strategies.basic.dispatching.orderselection.parking.DefaultParkingPositionSupplierTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

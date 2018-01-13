@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.documentation.ReceiveCommAdapterMessageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-23T19:36:52" hostname="DESKTOP-UBTRRGA" time="0.031">
+<testsuite name="org.opentcs.documentation.ReceiveCommAdapterMessageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-13T16:13:58" hostname="DESKTOP-UBTRRGA" time="0.094">
   <properties/>
-  <testcase name="shouldReceiveMessageFromVehicle" classname="org.opentcs.documentation.ReceiveCommAdapterMessageTest" time="0.031"/>
+  <testcase name="shouldReceiveMessageFromVehicle" classname="org.opentcs.documentation.ReceiveCommAdapterMessageTest" time="0.094"/>
   <testcase name="shouldReceiveMessageFromTransportOrder" classname="org.opentcs.documentation.ReceiveCommAdapterMessageTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
