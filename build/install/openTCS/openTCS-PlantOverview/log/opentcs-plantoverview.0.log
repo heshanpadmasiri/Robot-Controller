@@ -108,3 +108,16 @@ Caused by: java.net.ConnectException: Connection refused: connect
 20180113-21:51:43-793 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@AWT-EventQueue-0] [release()]: No shared kernel to unregister with, aborting.
 20180113-21:51:43-793 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@AWT-EventQueue-0] [release()]: No shared kernel to unregister with, aborting.
 20180113-21:51:50-325 [INFO|org.opentcs.guing.application.OpenTCSView@AWT-EventQueue-0] [stop()]: GUI terminating...
+20180114-21:07:31-536 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2018-01-13 21:37:51), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20180114-21:07:31-739 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20180114-21:07:31-786 [INFO|org.opentcs.guing.RunPlantOverview@main] [findRegisteredModules()]: Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
+20180114-21:07:31-786 [INFO|org.opentcs.guing.RunPlantOverview@main] [findRegisteredModules()]: Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+20180114-21:07:39-334 [INFO|org.opentcs.guing.util.PanelRegistry@main] [<init>()]: Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+20180114-21:07:39-334 [INFO|org.opentcs.guing.util.PanelRegistry@main] [<init>()]: Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+20180114-21:07:39-334 [INFO|org.opentcs.guing.util.PanelRegistry@main] [<init>()]: Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+20180114-21:07:42-825 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@main] [release()]: No shared kernel to unregister with, aborting.
+20180114-21:07:42-840 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@main] [register()]: No shared kernel to register with, aborting.
+20180114-21:07:44-794 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@AWT-EventQueue-0] [release()]: No shared kernel to unregister with, aborting.
+20180114-21:07:56-686 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@AWT-EventQueue-0] [release()]: No shared kernel to unregister with, aborting.
+20180114-21:07:56-686 [WARNING|org.opentcs.guing.exchange.OpenTCSEventDispatcher@AWT-EventQueue-0] [release()]: No shared kernel to unregister with, aborting.
+20180114-21:08:03-360 [INFO|org.opentcs.guing.application.StatusPanel@AWT-EventQueue-0] [setLogMessage()]: Model "test2_2" successfully persisted.

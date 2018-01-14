@@ -1,0 +1,9 @@
+20180114-21:26:49-306 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2018-01-13 21:37:51), customization '-' version - (build date: -), Java: 1.8.0_131, Oracle Corporation; JVM: 25.131-b11, Oracle Corporation; OS: Windows 10, amd64
+20180114-21:26:49-509 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20180114-21:26:49-619 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20180114-21:26:49-619 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20180114-21:26:51-697 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
+20180114-21:26:52-885 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20180114-21:27:04-299 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20180114-21:27:04-361 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20180114-21:27:04-424 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\openTCS-statistics-20180114-212704.txt...

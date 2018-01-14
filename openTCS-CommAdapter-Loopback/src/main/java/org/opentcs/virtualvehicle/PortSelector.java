@@ -7,6 +7,8 @@
  */
 package org.opentcs.virtualvehicle;
 
+import java.util.List;
+
 /**
  *
  * @author Heshan
@@ -15,6 +17,7 @@ public class PortSelector
     extends javax.swing.JDialog implements Runnable{
 
   private volatile boolean done;
+  private volatile long startTime;
   /**
    * Creates new form PortSelector
    */
@@ -22,14 +25,27 @@ public class PortSelector
     super(parent, modal);
     done = false;
     initComponents();
+    startTime = System.currentTimeMillis();
   }
 
   @Override
   public void run() {
-    while(!done){
-      
+    List<String> portNames = SerialCommunicationFactory.getAvailableSerialPortNames();
+    txtPortName.setText((portNames.size() > 0) ? portNames.get(0): "Check your serial connection");
+    while(!done){ 
+      long escapedTime = System.currentTimeMillis() - startTime;
+      long remaing = (10000 - escapedTime) / 1000;
+      btnOk.setText("Select (" + remaing + ")");
+      if (remaing <= 0 && validatePort(txtPortName.getText())){
+        done = true;
+      }
     } 
-    System.out.println("Port selector thread done!");
+    SerialCommunicationFactory.setPortId(txtPortName.getText());
+    dispose();
+  }
+  
+  private boolean validatePort(String portName){
+    return SerialCommunicationFactory.getAvailableSerialPortNames().contains(portName);
   }
 
   /**
@@ -44,37 +60,38 @@ public class PortSelector
 
     ContentPane = new javax.swing.JPanel();
     jPanel1 = new javax.swing.JPanel();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    jlPortList = new javax.swing.JList<>();
     jPanel3 = new javax.swing.JPanel();
-    jLabel1 = new javax.swing.JLabel();
+    mainLbl = new javax.swing.JLabel();
+    txtPortName = new javax.swing.JTextField();
     jPanel2 = new javax.swing.JPanel();
     btnOk = new javax.swing.JButton();
-    jButton1 = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     setTitle("Select COM port");
 
-    jlPortList.setModel(SerialCommunicationFactory.getListModel());
-    jlPortList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-    jScrollPane1.setViewportView(jlPortList);
+    mainLbl.setText("Enter COM port:");
 
-    jLabel1.setText("Select COM port:");
+    txtPortName.setText("jTextField1");
 
     javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
     jPanel3.setLayout(jPanel3Layout);
     jPanel3Layout.setHorizontalGroup(
       jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel3Layout.createSequentialGroup()
-        .addGap(0, 0, 0)
-        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(mainLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(txtPortName)))
         .addContainerGap())
     );
     jPanel3Layout.setVerticalGroup(
       jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel3Layout.createSequentialGroup()
         .addContainerGap()
-        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+        .addComponent(mainLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(txtPortName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap())
     );
 
@@ -84,31 +101,20 @@ public class PortSelector
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-          .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addContainerGap())
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
-        .addContainerGap())
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
-    btnOk.setText("Ok");
+    btnOk.setText("Select");
     btnOk.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnOkActionPerformed(evt);
-      }
-    });
-
-    jButton1.setText("Refresh");
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1ActionPerformed(evt);
       }
     });
 
@@ -117,19 +123,15 @@ public class PortSelector
     jPanel2Layout.setHorizontalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(jButton1)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .addComponent(btnOk)
+        .addContainerGap(162, Short.MAX_VALUE)
+        .addComponent(btnOk, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap())
     );
     jPanel2Layout.setVerticalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(btnOk, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-          .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(btnOk, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         .addContainerGap())
     );
 
@@ -149,7 +151,7 @@ public class PortSelector
       .addGroup(ContentPaneLayout.createSequentialGroup()
         .addContainerGap()
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
@@ -174,28 +176,24 @@ public class PortSelector
   }// </editor-fold>//GEN-END:initComponents
 
   private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
-    // TODO add your handling code here:
-    SerialCommunicationFactory.setPortId(jlPortList.getSelectedValue());
-    done = true;
-    dispose();
+    // TODO add your handling code here:   
+    if(validatePort(txtPortName.getText())){
+      done = true;
+    }
+    else {
+      mainLbl.setText("Port you entered is invalid please try again:");
+    }
   }//GEN-LAST:event_btnOkActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jlPortList.setModel(SerialCommunicationFactory.getListModel());
-    }//GEN-LAST:event_jButton1ActionPerformed
 
   
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JPanel ContentPane;
   private javax.swing.JButton btnOk;
-  private javax.swing.JButton jButton1;
-  private javax.swing.JLabel jLabel1;
   private javax.swing.JPanel jPanel1;
   private javax.swing.JPanel jPanel2;
   private javax.swing.JPanel jPanel3;
-  private javax.swing.JScrollPane jScrollPane1;
-  private javax.swing.JList<String> jlPortList;
+  private javax.swing.JLabel mainLbl;
+  private javax.swing.JTextField txtPortName;
   // End of variables declaration//GEN-END:variables
 }
