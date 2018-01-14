@@ -122,7 +122,7 @@ public class LoopbackCommunicationAdapter
       initVehiclePosition(initialPos);
     }
 
-    getProcessModel().setVehicleState(Vehicle.State.IDLE);
+    getProcessModel().setVehicleState(Vehicle.State.UNKNOWN);
     
     initialized = true;
   }
@@ -189,6 +189,28 @@ public class LoopbackCommunicationAdapter
     return Byte.decode(data.get("id"));
   }
   
+  public void updateState(byte state){
+    switch(state){
+      case 0:
+        getProcessModel().setVehicleState(Vehicle.State.UNKNOWN);
+        break;
+      case 1:
+        getProcessModel().setVehicleState(Vehicle.State.UNAVAILABLE);
+        break;
+      case 2:
+        getProcessModel().setVehicleState(Vehicle.State.ERROR);
+        break;
+      case 3:
+        getProcessModel().setVehicleState(Vehicle.State.IDLE);
+        break;
+      case 4:
+        getProcessModel().setVehicleState(Vehicle.State.EXECUTING);
+        break;
+      case 5:
+        getProcessModel().setVehicleState(Vehicle.State.CHARGING);
+        break;
+    }
+  }
   
   private byte[] getByteMessage(MovementCommand cmd,byte[] header){
     // Todo insert command id
@@ -196,38 +218,31 @@ public class LoopbackCommunicationAdapter
       for(int i = 0; i < header.length;i++){
         message[i] = header[i];
       }
+      
+      int speed = cmd.getStep().getPath().getMaxVelocity() % 100;
+      if (speed > 9){
+        speed = 9;
+      }
+      message[5] = (byte) speed;
       byte state = 0;
-      int speed = cmd.getStep().getPath().getMaxVelocity();
-    switch (speed) {
-      case 0:
-        message[5] = 0;
-        break;
-      case 200:
-        message[5] = 1;
-        break;
-      case 500:
-        message[5] = 2;
-        break;
-      case 1000:
-        message[5] = 3;
-        break;
-      default:
-        break;
-    }
       Map<String,String> properties = cmd.getStep().getPath().getProperties();
       if(properties.containsKey("side")){
         if(properties.get("side").equals("right")){
           state |= 1;
         }
       }
+      byte area = 0;
       if(properties.containsKey("Area")){
-        message[6] = Byte.valueOf(properties.get("Area"));
+        area = Byte.valueOf(properties.get("Area"));
       }
+      area <<= 1;
+      state |= area;
       String operation = cmd.getOperation();
-      message[7] = state;
       if(cmd.isFinalMovement()){
-        message[8] = 1;
+        state |= 64;
       }
+      message[7] = state;
+      
       message[4] = getOrderId(cmd);
       return message;
   }
@@ -274,12 +289,15 @@ public class LoopbackCommunicationAdapter
       SetSpeedMultiplier lsMessage = (SetSpeedMultiplier) message;
       int multiplier = lsMessage.getMultiplier();
       getProcessModel().setVehiclePaused(multiplier == 0);
+      
     }else if(message instanceof EnergyStateMessage){
       EnergyStateMessage eSMessage = (EnergyStateMessage) message;
       getProcessModel().setVehicleEnergyLevel(eSMessage.getCurrentEnergyState());
+      
     }else if(message instanceof VehicleStateMessage){
       VehicleStateMessage vSMessage = (VehicleStateMessage) message;
       getProcessModel().setVehicleState(vSMessage.getCurrentState());
+      
     }else if(message instanceof MovementCommandMessage){      
       MovementCommandMessage mCMessage = (MovementCommandMessage) message;      
       MovementCommand sentCmd = getSentQueue().poll();
@@ -294,17 +312,20 @@ public class LoopbackCommunicationAdapter
               SerialCommunication.clearCommunications();
               sendToChargingStation();
         }              
-      }      
+      }
+      
     }else if(message instanceof StatusMessage){
       StatusMessage sMessage = (StatusMessage) message;
       LOG.debug("Charge Reading: " + sMessage.getCharge());
       getProcessModel().setVehicleEnergyLevel(sMessage.getCharge());
-      if(sMessage.getCharge() < 30 && vehicle.getState() != Vehicle.State.CHARGING){
+      updateState(sMessage.getState());
+      if(sMessage.getCharge() < vehicle.getEnergyLevelCritical() && vehicle.getState() != Vehicle.State.CHARGING){
         sendToChargingStation();
       }
-      if(sMessage.getCharge() > 60 && vehicle.getState() == Vehicle.State.CHARGING){
+      if(sMessage.getCharge() > vehicle.getEnergyLevelGood() && vehicle.getState() == Vehicle.State.CHARGING){
         getProcessModel().setVehicleState(Vehicle.State.IDLE);
       }
+      
     }else if(message instanceof EmergencyMessage){
       LOG.debug("Emergency message detected");
     }

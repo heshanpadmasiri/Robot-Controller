@@ -139,9 +139,10 @@ public class SerialCommunication {
                     System.out.println(Arrays.toString(message));
                     byte id = message[0];
                     byte orderId = message[1]; // current point
-                    byte state = message[2]; 
+                    byte state = message[4]; 
                     byte isComplete = message[3];
-                    byte isError = message[4];                    
+                    
+                    idToNameMap.get(id).updateState(state);
                     if(isComplete == 1){
                       
                       if(messageLog.containsKey(orderId)){
@@ -161,7 +162,7 @@ public class SerialCommunication {
                     byte[] message = new byte[5];
                     in.read(message, 0, 5);
                     System.out.println(Arrays.toString(message));
-                    StatusMessage statusMessage = new StatusMessage(message[1]);
+                    StatusMessage statusMessage = new StatusMessage(message[1],message[2]);
                     idToNameMap.get(message[0]).processMessage(statusMessage);
                     break;
                   }

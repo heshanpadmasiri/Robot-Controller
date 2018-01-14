@@ -1,0 +1,17 @@
+20180113-21:49:18-864 [INFO|org.opentcs.util.Environment@main] [logSystemInfo()]: openTCS baseline version: 4.7.0-SNAPSHOT (build date: 2018-01-13 21:37:51), customization '-' version - (build date: -), Java: 1.8.0_151, Oracle Corporation; JVM: 25.151-b12, Oracle Corporation; OS: Windows 10, amd64
+20180113-21:49:18-989 [INFO|org.cfg4j.provider.ConfigurationProviderBuilder@main] [build()]: Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+20180113-21:49:19-083 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+20180113-21:49:19-083 [INFO|org.opentcs.kernel.RunKernel@main] [findRegisteredModules()]: Integrating injection module org.opentcs.kernel.LoopbackCommAdapterModule
+20180113-21:49:22-333 [INFO|org.opentcs.kernel.persistence.XMLFileUserAccountPersister@main] [loadUserAccounts()]: Account data file does not exist, no user accounts available.
+20180113-21:49:23-693 [INFO|org.opentcs.kernel.StandardKernel@main] [setState()]: Switching kernel to state 'MODELLING'
+20180113-21:50:20-671 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'OPERATING'
+20180113-21:50:20-734 [INFO|org.opentcs.kernel.vehicles.VehicleCommAdapterRegistry@AWT-EventQueue-0] [<init>()]: Setting up communication adapter factory: org.opentcs.virtualvehicle.LoopbackCommunicationAdapterFactory
+20180113-21:50:20-890 [INFO|org.opentcs.kernel.statistics.StatisticsCollector@AWT-EventQueue-0] [initialize()]: Enabling logging to G:\openTCS-4.7.0-src\build\install\openTCS\openTCS-Kernel\.\log\statistics\openTCS-statistics-20180113-215020.txt...
+20180113-21:51:54-607 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Terminating connection listener...
+20180113-21:51:54-607 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Received termination signal.
+20180113-21:51:54-607 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver$ConnectionListener@xmlOrderListenerThread] [run()]: Terminated connection listener.
+20180113-21:51:54-607 [INFO|org.opentcs.kernel.xmlhost.orders.XMLTelegramOrderReceiver@AWT-EventQueue-0] [terminate()]: Connection listener thread has terminated.
+20180113-21:51:54-622 [INFO|org.opentcs.strategies.basic.dispatching.DefaultDispatcher@AWT-EventQueue-0] [terminate()]: Terminating...
+20180113-21:51:55-201 [INFO|org.opentcs.kernel.StandardKernel@AWT-EventQueue-0] [setState()]: Switching kernel to state 'SHUTDOWN'
+20180113-21:51:55-201 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Terminating...
+20180113-21:51:56-201 [INFO|org.opentcs.kernel.StandardKernel@kernelThread] [run()]: Kernel thread finished.

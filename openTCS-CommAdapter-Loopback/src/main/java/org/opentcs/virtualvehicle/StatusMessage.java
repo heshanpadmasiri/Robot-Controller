@@ -12,15 +12,23 @@ package org.opentcs.virtualvehicle;
  * @author Heshan
  */
 public class StatusMessage {
-  private int charge;
+  private byte charge;
+  private byte state;
 
-  public StatusMessage(int charge) {
+  public StatusMessage(byte charge, byte state) {
     this.charge = charge;
+    this.state = state;
   }
 
-  public int getCharge() {
+  public byte getCharge() {
     return charge;
   }
+
+  public byte getState() {
+    return state;
+  }
+  
+  
    
   
 }
