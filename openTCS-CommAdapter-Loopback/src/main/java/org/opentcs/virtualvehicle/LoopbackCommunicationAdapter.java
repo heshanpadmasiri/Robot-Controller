@@ -241,6 +241,22 @@ public class LoopbackCommunicationAdapter
       if(cmd.isFinalMovement()){
         state |= 64;
       }
+      byte vehicleState = 0;
+      switch(vehicle.getProcState()){
+        case UNAVAILABLE:
+          vehicleState = 0;
+          break;
+        case IDLE:
+          vehicleState = 1;
+          break;
+        case AWAITING_ORDER:
+          vehicleState = 2;
+          break;
+        case PROCESSING_ORDER:
+          vehicleState = 3;
+          break;
+      }
+      state |= vehicleState << 5;
       message[7] = state;
       
       message[4] = getOrderId(cmd);
