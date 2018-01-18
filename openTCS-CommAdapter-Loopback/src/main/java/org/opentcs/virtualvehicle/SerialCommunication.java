@@ -14,6 +14,8 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SerialCommunication {      
     private static ConcurrentMap<Byte,LoopbackCommunicationAdapter> idToNameMap;
@@ -24,6 +26,7 @@ public class SerialCommunication {
     private static OutputStream out;
     private static TransportOrderCreator orderCreator;
     static byte[] outMessage;
+    private static final Logger LOG = LoggerFactory.getLogger(SerialCommunication.class);
 
   public SerialCommunication() {
       idToNameMap = new ConcurrentHashMap<>();
@@ -63,7 +66,7 @@ public class SerialCommunication {
         else
         {
             CommPort commPort = portIdentifier.open(this.getClass().getName(),2000);
-            
+            LOG.info("Connection Success");
             if ( commPort instanceof SerialPort )
             {
                 serialPort = (SerialPort) commPort;
@@ -126,13 +129,11 @@ public class SerialCommunication {
         
         public void serialEvent(SerialPortEvent arg0) { 
             try
-            {
+              {
                 byte[] header = new byte[3];
                 in.read(header, 0, 3);
-              
-              switch (header[0]) {
-                case 'A':
-                  {
+                LOG.debug(Arrays.toString(header));
+                if(header[0] == 'A' && header[1] == 'G' && header[2] == 'V'){                
                     System.out.println("AGV Message:");
                     byte[] message = new byte[5];
                     in.read(message, 0, 5);
@@ -154,9 +155,10 @@ public class SerialCommunication {
                         System.out.println("Invalid order id no such order");
                         idToNameMap.get(id).updateLocation(orderId);
                       }                      
-                    } break;
+                    } 
                   }
-                case 'S':
+            
+                if(header[0] == 'S' && header[1] == 'T' && header[2] == 'S')
                   {
                     System.out.println("Status message");
                     byte[] message = new byte[5];
@@ -164,31 +166,27 @@ public class SerialCommunication {
                     System.out.println(Arrays.toString(message));
                     StatusMessage statusMessage = new StatusMessage(message[1],message[2]);
                     idToNameMap.get(message[0]).processMessage(statusMessage);
-                    break;
+                   
                   }
-                case 'E':
+                if(header[0] == 'E' && header[1] == 'M' && header[2] == 'G')
                   {
                     System.out.println("Emergency message");
                     byte[] message = new byte[3];
                     in.read(message, 0, 3);
                     System.out.println(Arrays.toString(message));
                     EmergencyMessage eMessage = new EmergencyMessage();
-                    idToNameMap.get(message[0]).processMessage(eMessage);
-                    break;
+                    idToNameMap.get(message[0]).processMessage(eMessage);                    
                   }
-                case 'L':{
+                if(header[0] == 'L' && header[1] == 'D' && header[2] == 'A'){
                   //Todo: enter the point name
                   System.out.println("Load message");
                   byte[] message = new byte[3];
                   in.read(message,0,3);
                   System.out.println(Arrays.toString(message));
                   orderCreator.createTransportOrderByPoint("Point-0010");//Change this
-                  break;
+                  
                 }
-                default:
-                  break;
-              }
-            }
+              }            
             catch ( IOException e )
             {
                 e.printStackTrace();
