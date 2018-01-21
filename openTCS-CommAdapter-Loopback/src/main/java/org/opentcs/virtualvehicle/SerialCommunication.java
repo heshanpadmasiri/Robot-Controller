@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 public class SerialCommunication {      
     private static ConcurrentMap<Byte,LoopbackCommunicationAdapter> idToNameMap;
     private static ConcurrentMap<LoopbackCommunicationAdapter,Byte> NameToIdMap;
-    private static ConcurrentMap<Byte,MovementCommandMessage> messageLog;
+    private static ConcurrentMap<Integer,MovementCommandMessage> messageLog;
     private static SerialPort serialPort;
     private static InputStream in;
     private static OutputStream out;
@@ -34,6 +34,12 @@ public class SerialCommunication {
       outMessage = new byte[4];
       messageLog = new ConcurrentHashMap<>();
       orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
+  }
+  
+  public static int decodeByte(byte head, byte tail){
+      int iHead = head;
+      int iTail = tail;
+      return (iHead << 7) + iTail;
   }
   
   public static synchronized void clearCommunications() {
@@ -53,7 +59,8 @@ public class SerialCommunication {
      message[3] = id;     
      outMessage = message;    
      System.out.println("Message updated to:" + Arrays.toString(outMessage));
-     messageLog.put(message[4],commandMessage);
+     int orderId = decodeByte(message[4],message[5]);
+     messageLog.put(orderId,commandMessage);
   }    
   
     synchronized void  connect ( String portName ) throws Exception
@@ -139,7 +146,7 @@ public class SerialCommunication {
                     in.read(message, 0, 5);
                     System.out.println(Arrays.toString(message));
                     byte id = message[0];
-                    byte orderId = message[1]; // current point
+                    int orderId =decodeByte(message[1], message[2]); // current point
                     byte state = message[4]; 
                     byte isComplete = message[3];
                     
