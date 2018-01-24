@@ -281,8 +281,8 @@ public class LoopbackCommunicationAdapter
     System.out.println("Reacharge order generation");
     boolean atChargingStation = false;
     if(!isQued){
-        System.out.println("Sending to recharge point");
-       atChargingStation = TransportOrderCreatorFactory.getTransportOrderCreator().createReachargeOrder(vehicle);
+       System.out.println("Sending to recharge point");
+       atChargingStation = TransportOrderCreatorFactory.getTransportOrderCreator().createReachargeOrder(vehicle,getProcessModel());
       isQued = true;
     }    
     if(atChargingStation){

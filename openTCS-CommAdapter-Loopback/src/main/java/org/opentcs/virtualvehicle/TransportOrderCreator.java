@@ -78,11 +78,11 @@ public class TransportOrderCreator {
       kernal.activateTransportOrder(newOrder.getReference());
   }
   
-  public boolean createReachargeOrder(Vehicle vehicle){
+  public boolean createReachargeOrder(Vehicle vehicle, LoopbackVehicleModel vehicleModel){
     
     Map<String,String> defaultLocations = kernal.getDefaultLocations();
     System.out.println("default recharge location:" + defaultLocations.get("recharge-location"));
-    if(!vehicle.getCurrentPosition().getName().equals(defaultLocations.get("recharge-location"))){
+    if(!vehicleModel.getVehiclePosition().equals(defaultLocations.get("recharge-location"))){
       System.out.println("recharge order created");
       createTransportOrderByPoint(vehicle, defaultLocations.get("recharge-location"));      
       return false;
