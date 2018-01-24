@@ -183,10 +183,10 @@ public class LoopbackCommunicationAdapter
     return Arrays.asList(componentsFactory.createPanel(this));
   }
   
-  private byte getOrderId(MovementCommand cmd){
-    Map<String,String> data = cmd.getStep().getDestinationPoint().getProperties();
-    assert data.containsKey("id");
-    return Byte.decode(data.get("id"));
+  private int getOrderId(MovementCommand cmd){
+    String destinationName = cmd.getStep().getPath().getDestinationPoint().getName();
+    String destinationId = destinationName.substring(6);
+    return Integer.parseInt(destinationId);    
   }
   
   public void updateState(byte state){
@@ -220,10 +220,12 @@ public class LoopbackCommunicationAdapter
       }
       
       int speed = cmd.getStep().getPath().getMaxVelocity() % 100;
+      System.out.println("Speed in path:" + speed);
       if (speed > 9){
         speed = 9;
       }
-      message[5] = (byte) speed;
+      speed = 1;
+      message[6] = (byte) speed;
       byte state = 0;
       Map<String,String> properties = cmd.getStep().getPath().getProperties();
       if(properties.containsKey("side")){
@@ -239,27 +241,16 @@ public class LoopbackCommunicationAdapter
       state |= area;
       String operation = cmd.getOperation();
       if(cmd.isFinalMovement()){
-        state |= 64;
+        state |= 128;
       }
-      byte vehicleState = 0;
-      switch(vehicle.getProcState()){
-        case UNAVAILABLE:
-          vehicleState = 0;
-          break;
-        case IDLE:
-          vehicleState = 1;
-          break;
-        case AWAITING_ORDER:
-          vehicleState = 2;
-          break;
-        case PROCESSING_ORDER:
-          vehicleState = 3;
-          break;
-      }
-      state |= vehicleState << 5;
-      message[7] = state;
+      byte vehicleState = 3;
       
-      message[4] = getOrderId(cmd);
+      state |= vehicleState << 5;
+      message[7] = state;      
+      int orderId = getOrderId(cmd);
+      
+      message[4] = (byte) (orderId >> 7);
+      message[5] =  (byte) (orderId & 127);
       return message;
   }
   
@@ -270,11 +261,11 @@ public class LoopbackCommunicationAdapter
     
     byte[] header = {'A','G','V'};
     byte[] message = getByteMessage(cmd,header);
-    
+    LOG.debug("transport order recieved");
     MovementCommandMessage commandMessage= new MovementCommandMessage(cmd,false,message); 
+    LOG.debug("movement message generated");
     try{
-     System.out.println(message[2] + "--" + message[3]);     
-      
+     System.out.println(message[2] + "--" + message[3]);           
      SerialCommunication.sendMessage(this,commandMessage);
     } catch(Exception ex){
       LOG.debug("Unnable to send serial message!");
@@ -287,14 +278,18 @@ public class LoopbackCommunicationAdapter
   }
 
   private void sendToChargingStation(){
+    System.out.println("Reacharge order generation");
     boolean atChargingStation = false;
     if(!isQued){
+        System.out.println("Sending to recharge point");
        atChargingStation = TransportOrderCreatorFactory.getTransportOrderCreator().createReachargeOrder(vehicle);
       isQued = true;
     }    
     if(atChargingStation){
+      System.out.println("Vehicle already at recharge point");
       getProcessModel().setVehicleState(Vehicle.State.CHARGING);
       isQued = false;
+      SerialCommunication.clearCommunications();
     }
   }
     
@@ -321,12 +316,12 @@ public class LoopbackCommunicationAdapter
       if (sentCmd != null && sentCmd.equals(curCmd)) {
         // Let the vehicle manager know we've finished this command.
         LOG.debug("Movement order" + curCmd.toString() + "executed");
+        System.out.println("orders remaining:" + getSentQueue().size() + "::" + getCommandQueue().size());
         getProcessModel().commandExecuted(curCmd);
-        getProcessModel().setVehiclePosition(curCmd.getStep().getDestinationPoint().getName());
-        if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
-              getProcessModel().setVehicleState(Vehicle.State.IDLE);
+        getProcessModel().setVehiclePosition(curCmd.getStep().getDestinationPoint().getName());        
+        if (curCmd.isFinalMovement()) {              
               SerialCommunication.clearCommunications();
-              sendToChargingStation();
+              //sendToChargingStation();
         }              
       }
       
@@ -349,9 +344,11 @@ public class LoopbackCommunicationAdapter
    
   // Todo: retask the vehicle based on the location update
    public void updateLocation(int locationId){
-      getProcessModel().setVehiclePosition("Point-0" + locationId);
+      String locationName = String.format("Point-%04d",locationId);
+      System.out.println("location update:" + locationName);
       MovementCommand last = getSentQueue().poll();
       Point destination = last.getFinalDestination();
+      getProcessModel().setVehiclePosition(locationName);      
       if(orderCreator == null){
           orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
       }
@@ -440,6 +437,7 @@ public class LoopbackCommunicationAdapter
       SerialCommunicationFactory serialCommunicationFactory;           
       serialCommunicationFactory = new SerialCommunicationFactory(this);
       this.serialCommunication = serialCommunicationFactory.getSerialCommunication();
+      LOG.debug("communication established");
     }catch(Exception e){
       System.out.println("Error!");
     }

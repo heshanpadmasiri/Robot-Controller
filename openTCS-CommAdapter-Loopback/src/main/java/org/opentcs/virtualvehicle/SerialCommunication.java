@@ -25,13 +25,13 @@ public class SerialCommunication {
     private static InputStream in;
     private static OutputStream out;
     private static TransportOrderCreator orderCreator;
-    static byte[] outMessage;
+    static byte[] defaultMessage = {'A','G','V',0,0,0,0,0,0,0};    
+    static byte[] outMessage = {'A','G','V',0,0,0,0,0,0,0};    
     private static final Logger LOG = LoggerFactory.getLogger(SerialCommunication.class);
 
   public SerialCommunication() {
       idToNameMap = new ConcurrentHashMap<>();
-      NameToIdMap = new ConcurrentHashMap<>();
-      outMessage = new byte[4];
+      NameToIdMap = new ConcurrentHashMap<>();      
       messageLog = new ConcurrentHashMap<>();
       orderCreator = TransportOrderCreatorFactory.getTransportOrderCreator();
   }
@@ -43,7 +43,8 @@ public class SerialCommunication {
   }
   
   public static synchronized void clearCommunications() {
-    outMessage = new byte[4];
+      
+     outMessage = defaultMessage;
   }
   
   public static synchronized void connectToCommunicationAdapter(Byte id, LoopbackCommunicationAdapter communicationAdapter){
@@ -152,14 +153,14 @@ public class SerialCommunication {
                     
                     idToNameMap.get(id).updateState(state);
                     if(isComplete == 1){
-                      
+                      System.out.println("recieved order id: " + orderId);
                       if(messageLog.containsKey(orderId)){
                         System.out.println("Order:" + orderId + " completion recieved");
                         MovementCommandMessage cmd = messageLog.get(orderId);
                         messageLog.remove(orderId);
                         idToNameMap.get(id).processMessage(cmd);
                       } else {
-                        System.out.println("Invalid order id no such order");
+                        System.out.println("Invalid order id no such order, id:" + id);
                         idToNameMap.get(id).updateLocation(orderId);
                       }                      
                     } 
@@ -190,7 +191,7 @@ public class SerialCommunication {
                   byte[] message = new byte[3];
                   in.read(message,0,3);
                   System.out.println(Arrays.toString(message));
-                  orderCreator.createTransportOrderByPoint("Point-0010");//Change this
+                  orderCreator.createLodingOrder();
                   
                 }
               }            

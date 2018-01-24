@@ -66,6 +66,7 @@ public class TransportOrderCreator {
   }
   
   public void createTransportOrderByPoint(Vehicle vehicle, String pointName){
+      System.out.println("Creating order by point to: " + pointName);
       // List of destination the transport order the vehicle is supposed to travel to
       List<DestinationCreationTO> destinations = new LinkedList<>();
       destinations.add(new DestinationCreationTO(pointName, DriveOrder.Destination.OP_MOVE));
@@ -80,9 +81,18 @@ public class TransportOrderCreator {
   public boolean createReachargeOrder(Vehicle vehicle){
     
     Map<String,String> defaultLocations = kernal.getDefaultLocations();
-    if(!vehicle.getCurrentPosition().getName().equals(defaultLocations.get("recharge-location"))){      
-      createTransportOrderByLocation(vehicle, defaultLocations.get("recharge-locations"), "recharge");
+    System.out.println("default recharge location:" + defaultLocations.get("recharge-location"));
+    if(!vehicle.getCurrentPosition().getName().equals(defaultLocations.get("recharge-location"))){
+      System.out.println("recharge order created");
+      createTransportOrderByPoint(vehicle, defaultLocations.get("recharge-location"));      
       return false;
     } return true;
+  }
+  
+  public void createLodingOrder(){
+    System.out.println("Start loading order creation");
+    Map<String,String> defaultLocations = kernal.getDefaultLocations();
+    createTransportOrderByPoint(defaultLocations.get("unload-location"));//Change this
+    System.out.println("Loading order created");
   }
 }
