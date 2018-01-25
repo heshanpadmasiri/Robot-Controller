@@ -9,6 +9,8 @@ package org.opentcs.access;
 
 import java.awt.Color;
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -1592,7 +1594,7 @@ public interface Kernel
   void setSimulationTimeFactor(double factor)
       throws CredentialsException;
 
-  Map<String,String> getDefaultLocations();
+  DefaultLocation getDefaultLocations();
   
   /**
    * The various states a kernel instance may be running in.

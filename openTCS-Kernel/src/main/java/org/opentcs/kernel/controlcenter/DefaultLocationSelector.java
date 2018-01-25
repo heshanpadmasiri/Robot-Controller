@@ -9,6 +9,7 @@ package org.opentcs.kernel.controlcenter;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.opentcs.access.DefaultLocation;
 
 /**
  *
@@ -18,17 +19,17 @@ public class DefaultLocationSelector
     extends javax.swing.JDialog implements Runnable{
 
   private volatile boolean done;
-  private KernelControlCenter controlCenter;
-  private Map<String,String> defaultLocations;
+  private KernelControlCenter controlCenter;  
+  private DefaultLocation defaultLocation;
   /**
    * Creates new form DefaultLocationSelector
    */
-  public DefaultLocationSelector(Map<String,String> defaultValues,KernelControlCenter controlCenter) {
+  public DefaultLocationSelector(DefaultLocation defaultLocation,KernelControlCenter controlCenter) {
     done = false;
-    this.controlCenter = controlCenter;
-    this.defaultLocations = defaultValues;
+    this.controlCenter = controlCenter; 
+    this.defaultLocation = defaultLocation;
     initComponents();
-    setValues(defaultValues);
+    setValues(defaultLocation);
     
   }
 
@@ -132,8 +133,8 @@ public class DefaultLocationSelector
 
   private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
     // TODO add your handling code here:
-    defaultLocations.put("recharge-location", txtRechargeLocation.getText());
-    defaultLocations.put("unload-location",txtUnloadLocation.getText());
+    defaultLocation.enterValue("recharge-location", txtRechargeLocation.getText());
+    defaultLocation.enterValue("unload-location",txtUnloadLocation.getText());
     done = true;
     dispose();
   }//GEN-LAST:event_btnOkActionPerformed
@@ -149,8 +150,8 @@ public class DefaultLocationSelector
   private javax.swing.JTextField txtUnloadLocation;
   // End of variables declaration//GEN-END:variables
 
-  private void setValues(Map<String,String> defaultValues){
-    txtRechargeLocation.setText(defaultValues.get("recharge-location"));
-    txtUnloadLocation.setText(defaultValues.get("unload-location"));
+  private void setValues(DefaultLocation defaultValues){
+    txtRechargeLocation.setText(defaultValues.getValue("recharge-location"));
+    txtUnloadLocation.setText(defaultValues.getValue("unload-location"));
   }
 }

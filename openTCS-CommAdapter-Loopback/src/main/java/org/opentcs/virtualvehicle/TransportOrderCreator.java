@@ -17,6 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import org.opentcs.access.DefaultLocation;
 import org.opentcs.data.model.Vehicle;
 
 /**
@@ -80,19 +81,19 @@ public class TransportOrderCreator {
   
   public boolean createReachargeOrder(Vehicle vehicle, LoopbackVehicleModel vehicleModel){
     
-    Map<String,String> defaultLocations = kernal.getDefaultLocations();
-    System.out.println("default recharge location:" + defaultLocations.get("recharge-location"));
-    if(!vehicleModel.getVehiclePosition().equals(defaultLocations.get("recharge-location"))){
+    DefaultLocation defaultLocations = kernal.getDefaultLocations();
+    System.out.println("default recharge location:" + defaultLocations.getValue("recharge-location"));
+    if(!vehicleModel.getVehiclePosition().equals(defaultLocations.getValue("recharge-location"))){
       System.out.println("recharge order created");
-      createTransportOrderByPoint(vehicle, defaultLocations.get("recharge-location"));      
+      createTransportOrderByPoint(vehicle, defaultLocations.getValue("recharge-location"));      
       return false;
     } return true;
   }
   
   public void createLodingOrder(){
     System.out.println("Start loading order creation");
-    Map<String,String> defaultLocations = kernal.getDefaultLocations();
-    createTransportOrderByPoint(defaultLocations.get("unload-location"));//Change this
+    DefaultLocation defaultLocations = kernal.getDefaultLocations();
+    createTransportOrderByPoint(defaultLocations.getValue("unload-location"));//Change this
     System.out.println("Loading order created");
   }
 }

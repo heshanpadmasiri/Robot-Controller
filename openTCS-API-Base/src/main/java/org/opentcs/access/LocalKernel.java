@@ -568,6 +568,6 @@ public interface LocalKernel
   
   void setChargingLocation(String location);
   
-  Map<String,String> getDefaultLocations();
+  
 
 }

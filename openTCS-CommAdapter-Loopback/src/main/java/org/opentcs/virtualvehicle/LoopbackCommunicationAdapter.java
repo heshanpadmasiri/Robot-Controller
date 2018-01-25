@@ -321,7 +321,7 @@ public class LoopbackCommunicationAdapter
         getProcessModel().setVehiclePosition(curCmd.getStep().getDestinationPoint().getName());        
         if (curCmd.isFinalMovement()) {              
               SerialCommunication.clearCommunications();
-              //sendToChargingStation();
+              sendToChargingStation();
         }              
       }
       

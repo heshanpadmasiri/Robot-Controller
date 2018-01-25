@@ -26,6 +26,7 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import org.opentcs.access.CredentialsException;
+import org.opentcs.access.DefaultLocation;
 import org.opentcs.access.Kernel;
 import org.opentcs.access.Kernel.State;
 import org.opentcs.access.LocalKernel;
@@ -127,7 +128,7 @@ final class StandardKernel
   
   private String chargingLocation;
   
-  private HashMap<String,String> defaultLocations;
+  private DefaultLocation defaultLocation;
   
   /**
    * Creates a new kernel.
@@ -165,11 +166,20 @@ final class StandardKernel
     setChargingLocation("Recharge-Point");
     initializeDefaultLocations();
   }
+
+  @Override
+  public DefaultLocation getDefaultLocations() {
+    return defaultLocation;
+  }
   
   private void initializeDefaultLocations(){
-    defaultLocations = new HashMap<String,String>();
-    defaultLocations.put("recharge-location","recharge-point");
-    defaultLocations.put("unload-location","unload-point");
+    defaultLocation = DefaultLocation.getInstance();
+    if (!defaultLocation.containsValue("recharge-locations")){
+      defaultLocation.enterValue("recharge-locations", "recharge-point");
+    }
+    if (!defaultLocation.containsValue("unload-location")){
+      defaultLocation.enterValue("unload-location","unload-point");
+    }
   }
 
   public StandardKernel getKernel() {
@@ -1343,11 +1353,7 @@ final class StandardKernel
     LOG.debug("method entry");
     eventHub.removeEventListener(listener);
   }
-
-  @Override
-  public Map<String, String> getDefaultLocations() {
-    return defaultLocations;
-  }
+ 
 
   // Methods not declared in any interface start here.
   /**
