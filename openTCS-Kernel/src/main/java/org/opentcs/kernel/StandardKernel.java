@@ -30,6 +30,7 @@ import org.opentcs.access.DefaultLocation;
 import org.opentcs.access.Kernel;
 import org.opentcs.access.Kernel.State;
 import org.opentcs.access.LocalKernel;
+import org.opentcs.access.Storage;
 import org.opentcs.access.TCSKernelStateEvent;
 import org.opentcs.access.TCSModelTransitionEvent;
 import org.opentcs.access.TravelCosts;
@@ -173,7 +174,7 @@ final class StandardKernel
   }
   
   private void initializeDefaultLocations(){
-    defaultLocation = DefaultLocation.getInstance();
+    defaultLocation = Storage.getInstance().readStorage();
     if (!defaultLocation.containsValue("recharge-locations")){
       defaultLocation.enterValue("recharge-locations", "recharge-point");
     }
@@ -201,6 +202,7 @@ final class StandardKernel
     // Note that the actual shutdown of extensions should happen when the kernel
     // thread (see run()) finishes, not here.
     // Set the terminated flag and wake up this kernel's thread for termination.
+    Storage.getInstance().saveStorage(defaultLocation);
     initialized = false;
     terminationSemaphore.release();
   }
